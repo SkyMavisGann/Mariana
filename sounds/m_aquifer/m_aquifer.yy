@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 84.648,
+  "duration": 84.592,
   "parent": {
     "name": "music",
     "path": "folders/Sounds/music.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "m_aquifer.mp3",
+  "soundFile": "m_aquifer.ogg",
   "type": 1,
-  "volume": 0.76,
+  "volume": 0.77,
 }

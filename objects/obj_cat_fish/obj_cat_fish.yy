@@ -13,7 +13,10 @@
     "name": "docile",
     "path": "folders/Objects/fish/docile.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_creature_parent",
+    "path": "objects/obj_creature_parent/obj_creature_parent.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

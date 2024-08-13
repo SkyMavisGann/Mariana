@@ -11,7 +11,7 @@ HP = maxHP;
 maxInFrames = 30;
 InFrames = 0 ;
 
-
+age = 0;
 
 swim_speed = 5;
 

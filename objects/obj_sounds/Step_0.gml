@@ -10,6 +10,7 @@ stopDeadMusic(m_watery_grave);
 stopDeadMusic(m_hull_sale);
 stopDeadMusic(m_are_there_any_crabs_in_here);
 stopDeadMusic(m_The_5th_Wall);
+stopDeadMusic(m_brine);
 
 //play music
 if (musicTimer = 0) {
@@ -29,6 +30,8 @@ if (musicTimer = 0) {
 	case Room2:
 		audio_sound_gain(m_surface_tension, 0, 600);
 		audio_sound_gain(m_The_5th_Wall, 0, 600);
+		audio_sound_gain(m_hull_sale, 0, 600);
+		audio_sound_gain(m_brine, 0, 600);
 		if (!audio_is_playing(m_aquifer)) {
 			audio_sound_gain(m_aquifer, 0, 0);
 			audio_sound_gain(m_aquifer, global.volume_setting, 4000);
@@ -115,6 +118,34 @@ if (musicTimer = 0) {
 			audio_play_sound(switchto, 1000, true);
 		}
 	break;
+	
+	case Room2_Brine1:
+	//Standard
+	// fade music would be playing then stop dead music
+	//set volume to zero
+	//set to volume setting with fade then if the song isn't already playing play it
+		audio_sound_gain(m_aquifer, 0, 600);
+		var switchto = m_brine;
+		if (audio_is_playing(switchto) != true) {
+			audio_sound_gain(switchto, 0, 0);
+			audio_sound_gain(switchto, global.volume_setting, 2000);
+			audio_play_sound(switchto, 1000, true);
+		}
+	break;
+	case room_shop_middle:
+	//Standard
+	// fade music would be playing then stop dead music
+	//set volume to zero
+	//set to volume setting with fade then if the song isn't already playing play it
+		audio_sound_gain(m_aquifer, 0, 600);
+		var switchto = m_hull_sale;
+		if (audio_is_playing(switchto) != true) {
+			audio_sound_gain(switchto, 0, 0);
+			audio_sound_gain(switchto, global.volume_setting, 2000);
+			audio_play_sound(switchto, 1000, true);
+		}
+	break;
+	
 	
 	
 

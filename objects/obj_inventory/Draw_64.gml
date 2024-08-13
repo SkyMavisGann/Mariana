@@ -53,6 +53,7 @@ for (var i = 0; i < op_length; i++) {
 		  //draw other lines
 		draw_text_color(x+op_border + op_space + string_width(global.inventory[i-1]) + full_length, y+op_border, global.inventory[i], _c, _c, _c, _c, 1 );
 		
+				
 		//if (array_length(global.inventory) > 0) {
 		//	if (sprite_exists((convertTo("spr", global.inventory[i])))) {
 		//		draw_sprite_ext(convertTo("spr", global.inventory[i]), 0, x+op_border + op_space + string_width(global.inventory[i-1]) + full_length - 15, y+op_border + 20,1, 1, 0, c_white, 1);
@@ -74,6 +75,31 @@ for (var i = 0; i < op_length; i++) {
 		  }
 		  full_length += (op_space + string_width(global.inventory[i-1]));
 	}
-}
+	//show Red Names
+	if (i = array_length(global.inventory) - 1) {
+		with (obj_diver) {
+			var nearest = instance_nearest(x,y, obj_item_parent);
+			if (nearest != noone && distance_to_object(nearest) < 100) {
+				with (nearest) {
+					if (showName) {
+						draw_text_color(obj_inventory.x+obj_inventory.op_border + obj_inventory.op_space + string_width(global.inventory[i]) + full_length, obj_inventory.y+obj_inventory.op_border, (convertTo("name", object_get_name(object_index))) , c_red, c_red, c_red, c_red, obj_game.text_opacity * 4);				
+					}
+				}
+			}
+		}
+	}
 
+}
+if (array_length(global.inventory) < 1) {
+	with (obj_diver) {
+		var nearest = instance_nearest(x,y, obj_item_parent);
+		if (nearest != noone && distance_to_object(nearest) < 100) {
+			with (nearest) {
+				if (showName) {
+					draw_text_color(obj_inventory.x+obj_inventory.op_border + obj_inventory.op_space*0, obj_inventory.y+obj_inventory.op_border, (convertTo("name", object_get_name(object_index))), c_red, c_red, c_red, c_red, obj_game.text_opacity * 4);				
+				}
+			}
+		}
+	}
+}
 

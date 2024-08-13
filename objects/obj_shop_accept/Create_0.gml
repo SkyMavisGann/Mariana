@@ -79,7 +79,7 @@ switch (item) {
 						return ["Pearl", "Ice"];
 					break;
 					case "Fish Food":
-						return ["Scales", "Water", "Water"];
+						return ["Fins", "Water", "Water"];
 					break;
 					case "Wet Burrito":
 						return ["Oris Tentacle", "Ice"];

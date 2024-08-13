@@ -48,13 +48,25 @@ function itemScript(itemName){
 						  if i <= 0 {
 							  //draw line 1
 								  full_length = 0;
+								  
+								  if (string_width(itemName) > 960) {
+								  show_debug_message("String width: " + string(full_length));
+								  obj_diver.inventory_full = true;
+								  showName = true;
+								  } else {
+									obj_diver.inventory_full = false;
+									showName = false;
+								  }
+								  
 							  } else {
 								  //draw other lines
 								  if (full_length + string_width(global.inventory[i - 1]) + string_width(itemName) > 960) {
 								  show_debug_message("String width: " + string(full_length + string_width(global.inventory[i - 1])));
 								  obj_diver.inventory_full = true;
+								  showName = true;
 								  } else {
-								  obj_diver.inventory_full = false;
+									obj_diver.inventory_full = false;
+									showName = false;
 								  }
 									full_length += (20 + string_width(global.inventory[i-1]));
 									// casopiea edgecase

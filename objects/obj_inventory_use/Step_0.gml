@@ -51,7 +51,24 @@ audio_play_sound(sfx_select, 2, false);
 							break;
 							//secial item        
 						    case "Ice": 
-								say(["You cannot use this item.", "Also you probably shouldn't keep ice in your pockets for too long"]);
+								obj_diver.StaredAtWater++;
+								switch (obj_diver.StaredAtWater) 
+								{
+									case 2:
+										say(["You stare at the ice willing it to melt.", "It didn't work but if you stare more maybe it will."]);
+									break;
+									case 3:
+										say(["You stare at the ice willing it to melt!", "It works!"]);
+										array_delete(global.inventory, obj_inventory.pos, 1);
+										buyItem("Water");
+										obj_diver.StaredAtWater = 0;
+									break;
+									default:
+										say(["You cannot use this item.", "Also you probably shouldn't keep ice in your pockets for too long"]);
+									break;
+								}	
+								
+								
 								if (!array_contains(obj_settings.achivements, "Read ice")) {
 									array_push(obj_settings.achivements, "Read ice");
 								}
@@ -187,6 +204,21 @@ audio_play_sound(sfx_select, 2, false);
 								}
 								array_set(global.equipped, 2, "Night Vision Goggles");
 								array_delete(global.inventory, obj_inventory.pos, 1) 
+							break;
+							case "Fish Food":
+								with (obj_diver) {
+									var nearestFish = instance_nearest(x, y, obj_Cat_Fish)
+									if (distance_to_object(nearestFish) < 500) {
+										if (array_contains(global.pets, obj_Cat_Fish) != -1) {
+											say(splitText("You hold out the fish food. Your pet swims over and eats it."));
+										} else {
+											global.petsAge[array_length(global.pets)] = obj_Cat_Fish.age;
+											array_push(global.pets, obj_Cat_Fish);
+										}
+									
+									}
+								}
+								
 							break;
 							//Default
 							default: 

@@ -1,14 +1,17 @@
 
-age++;
+
 image_xscale = clamp(scale, 1, 2);
 image_yscale = clamp(scale, 1, 2);
-scale = (age / 30000) + 0.8;
+
 
 path_speed = swim_speed;
 	
 if (instance_exists(obj_diver)) {
-	if (array_contains(global.pets, obj_Cat_Fish)) {
 
+	if (array_contains(global.pets, obj_Cat_Fish) != -1) {
+		global.petsAge[array_contains(global.pets, obj_Cat_Fish)]++;
+		age = global.petsAge[array_contains(global.pets, obj_Cat_Fish)];
+		scale = (age / 30000) + 0.8;
 		dist_x = obj_diver.x - x;
 		dist_y = obj_diver.y - y;
 
@@ -23,7 +26,7 @@ if (instance_exists(obj_diver)) {
 						}
 					}
 				}
-			}	
+			}
 		}
 	
 		if (ds_queue_size(targets) != 0) {
@@ -31,7 +34,7 @@ if (instance_exists(obj_diver)) {
 				move_towards_point(ds_queue_head(targets).x, ds_queue_head(targets).y, swim_speed);
 				if (place_meeting(x, y, ds_queue_head(targets))) {
 					with (ds_queue_head(targets)) {
-						if (flashAlpha == 0) {
+						if (flashAlpha <= 0.5) {
 							flashAlpha = 1;
 							HP -= clamp(scale, 0.8, 2);
 						}
@@ -43,8 +46,10 @@ if (instance_exists(obj_diver)) {
 			}
 		
 		} else {
-	
-			if (dist > 250) {
+			if (dist > 800) {
+				x = obj_diver.x;
+				y = obj_diver.y;
+			} else if (dist > 250) {
 				move_towards_point(obj_diver.x, obj_diver.y, swim_speed);
 			} else {
 				if (age % switchDirTime == 0) {
@@ -57,6 +62,7 @@ if (instance_exists(obj_diver)) {
 			}
 		}
 	} else {
+		age++;
 		if (age > 300) {
 			age = 140;
 		}

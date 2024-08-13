@@ -13,7 +13,7 @@ swimMax = 12;
 speX = 0;
 speY = 0;
 
-
+StaredAtWater = 0;
 hsp = 0;
 vsp = 0;
 default_move_speed = swim_speed;
@@ -28,7 +28,7 @@ boosterCooldown = 0;
 
 attackedFromX = 0;
 attackedFromY = 0;
-
+loadPetAge = false;
 
 bubbleTimer = 0;
 
@@ -49,6 +49,7 @@ if !variable_global_exists("equipped") {
 	global.equipped = ["Basic Harpoon", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
 	global.player_health = global.max_player_health;
 	global.pets = [];
+	global.petsAge = [];
 	//player_attack_damage = 1;
 	inventory_full = false;
 	obj_oxygen_indicator.refilling = 0;

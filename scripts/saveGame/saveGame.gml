@@ -103,6 +103,8 @@ function saveGame(saveName){
 						inventory : global.inventory,
 						player_health : global.player_health,
 						equipped : global.equipped,
+						pets : global.pets,
+						petsAge : global.petsAge,
 						bosses_beaten : global.bosses_beaten,
 						timesEnteredSub : obj_settings.timesEnteredSub,
 						oxygen : global.oxygen,

@@ -83,6 +83,8 @@ audio_play_sound(sfx_select, 2, false);
 				changeVolume(m_with_baited_breath_start);
 				changeVolume(m_are_there_any_crabs_in_here);
 				changeVolume(m_there_is_definitely_a_crab_in_here);
+				changeVolume(m_The_5th_Wall);
+				changeVolume(m_brine);
 				option[1, 3] = ("Volume: " + string(global.volume_setting*100)); 
 			break;
 			//back

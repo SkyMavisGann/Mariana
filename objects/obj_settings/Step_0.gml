@@ -15,17 +15,29 @@ if (needsToBeLoaded == true) {
 			global.oxygen = _loadEntity.oxygen;
 			obj_settings.achivements = _loadEntity.achivements;
 			global.oceanDepth = _loadEntity.oceanDepth;
+			
+			
 			//0.1.0
 			try {
 				global.roomsWithCorpses = _loadEntity.roomsWithCorpses;
 				global.doorInRoomMain = _loadEntity.doorInRoomMain;
+				global.pets = _loadEntity.pets;
 			} catch(e) {
 				global.roomsWithCorpses = [];
 				global.doorInRoomMain = [];
+				global.pets = [];
+				
 				for (var i = 0; i < real(Room3); i++) {
 					array_push(global.doorInRoomMain, 0);
 				}
 				array_set(global.doorInRoomMain, Room1, [[Room1], [0, 0]]);
+			}
+			//0.1.2
+			try {
+				global.petsAge  = _loadEntity.petsAge;
+				
+			} catch(e) {
+				global.petsAge = [];
 			}
 			var num_chests = _loadEntity.num_chests;
 			var num_items = _loadEntity.num_items;
@@ -36,6 +48,7 @@ if (needsToBeLoaded == true) {
 		}
 	} else {
 		with (obj_diver) {
+			
 			var num_chests = _loadEntity.num_chests;
 			var num_items = _loadEntity.num_items;
 			var num_dead = _loadEntity.num_dead;
@@ -100,6 +113,14 @@ if (needsToBeLoaded == true) {
 			laidEggs = _loadEntity.laidEggs;
 			layingEggsAge = _loadEntity.layingEggsAge;
 			
+		}
+	}
+	with (obj_diver) {
+		for (var i = 0; i < array_length(global.pets); i++) {
+			if (instance_exists(global.pets[i])) {
+				global.pets[i].x = x;
+				global.pets[i].y = y;
+			}
 		}
 	}
 	//Do items

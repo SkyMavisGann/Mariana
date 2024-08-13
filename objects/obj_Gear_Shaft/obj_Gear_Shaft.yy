@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_Gear",
-    "path": "sprites/spr_Gear/spr_Gear.yy",
+    "name": "spr_Gear_Shaft",
+    "path": "sprites/spr_Gear_Shaft/spr_Gear_Shaft.yy",
   },
   "spriteMaskId": null,
   "visible": true,
