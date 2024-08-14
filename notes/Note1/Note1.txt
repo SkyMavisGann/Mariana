@@ -2,3 +2,9 @@ muro scaling
 374
 374
 no interpolation
+
+if you were in a house your doors would be unlocked, so in order to leave if you couldn't open the door
+for some reason, you have to break the windows
+
+if your door is locked you are not in your house, thus there would be no need to break the windows
+

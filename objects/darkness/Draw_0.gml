@@ -4,6 +4,9 @@ if (array_length(global.equipped) >= 3) {
 	if (global.equipped[2] == "Luciferin") {
 		hasLight = 1;
 		color = 0;
+	} else if (global.equipped[9] == "Color Mod" && global.equipped[2] == "Night Vision Goggles") {
+		hasLight = 3;
+		color = 1;
 	} else if (global.equipped[2] == "Night Vision Goggles") {
 		hasLight = 2;
 		color = 1;
@@ -50,6 +53,34 @@ switch(room) {
 		var level = playerY / 8000;
 		draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 10));	
 		draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 10));
+
+	break;
+	case (Room2_Puzzle1):
+
+		var level = playerY;
+		draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 10));	
+		draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 0.6));
+
+	break;
+	case (Room2_City1):
+
+		var level = playerY;
+		draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 10));	
+		draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 0.5));
+
+	break;
+	case (Room2_City1_House1):
+
+		var level = playerY;
+		draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 10));	
+		draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 0.6));
+
+	break;
+	case (Room2_City1_Red1):
+
+		var level = playerY;
+		draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 10));	
+		draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 0.6));
 
 	break;
 	case (Room3):

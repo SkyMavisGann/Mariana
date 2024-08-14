@@ -220,6 +220,20 @@ audio_play_sound(sfx_select, 2, false);
 								}
 								
 							break;
+							case "Color Mod":
+								var equippmentSlot = 9;
+								if (global.equipped[2] == "Night Vision Goggles") {
+									instance_destroy();
+									if (global.equipped[equippmentSlot] != 0.0) {
+											dropItem(convertTo("obj", string(global.equipped[equippmentSlot])));
+									}
+									array_set(global.equipped, equippmentSlot, "Color Mod");
+									array_delete(global.inventory, obj_inventory.pos, 1);
+								} else {
+									say(splitText("You must be wearing night vision goggles to equip this mod."));
+								}
+								
+							break;
 							//Default
 							default: 
 							say(["You cannot use this item."]);

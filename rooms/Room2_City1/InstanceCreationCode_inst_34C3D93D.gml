@@ -1,2 +1,2 @@
-destination = Room2_City1_House2
+destination = Room2_City1_Lever1;
 code = "House2"

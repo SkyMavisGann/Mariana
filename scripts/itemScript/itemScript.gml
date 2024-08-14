@@ -1,7 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // To be put in step event
 function itemScript(itemName){
-	draw_set_font(spr_font_fundant);
+	draw_set_font(global.font_main);
+	draw_set_valign(fa_top);
+	draw_set_halign(fa_left);
 	if (array_length(global.inventory) < 1 && instance_exists(obj_diver)) { 
 		obj_diver.inventory_full = false;
 	}
@@ -50,7 +52,7 @@ function itemScript(itemName){
 								  full_length = 0;
 								  
 								  if (string_width(itemName) > 960) {
-								  show_debug_message("String width: " + string(full_length));
+								  show_debug_message("String width: " + string(full_length + string_width(itemName)));
 								  obj_diver.inventory_full = true;
 								  showName = true;
 								  } else {
@@ -60,8 +62,8 @@ function itemScript(itemName){
 								  
 							  } else {
 								  //draw other lines
-								  if (full_length + string_width(global.inventory[i - 1]) + string_width(itemName) > 960) {
-								  show_debug_message("String width: " + string(full_length + string_width(global.inventory[i - 1])));
+								  if (full_length + string_width(global.inventory[i - 1]) + string_width(itemName) > 1574) {
+								  show_debug_message("String width: " + string(full_length + string_width(global.inventory[i - 1]) + + string_width(itemName)));
 								  obj_diver.inventory_full = true;
 								  showName = true;
 								  } else {
@@ -86,4 +88,5 @@ function itemScript(itemName){
 			}
 		}
 	}
+	draw_set_font(spr_font_fundant);
 }
