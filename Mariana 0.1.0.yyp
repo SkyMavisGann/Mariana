@@ -74,6 +74,7 @@
   "resources": [
     {"id":{"name":"obj_parent_test2","path":"objects/obj_parent_test2/obj_parent_test2.yy",},},
     {"id":{"name":"obj_Thorium","path":"objects/obj_Thorium/obj_Thorium.yy",},},
+    {"id":{"name":"Room2_City1_Yellow1","path":"rooms/Room2_City1_Yellow1/Room2_City1_Yellow1.yy",},},
     {"id":{"name":"spr_house1","path":"sprites/spr_house1/spr_house1.yy",},},
     {"id":{"name":"obj_weapon_parent","path":"objects/obj_weapon_parent/obj_weapon_parent.yy",},},
     {"id":{"name":"sfx_move_selected","path":"sounds/sfx_move_selected/sfx_move_selected.yy",},},
@@ -211,6 +212,7 @@
     {"id":{"name":"obj_sub_int","path":"objects/obj_sub_int/obj_sub_int.yy",},},
     {"id":{"name":"obj_siphiobia","path":"objects/obj_siphiobia/obj_siphiobia.yy",},},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
+    {"id":{"name":"obj_Yellow_Key","path":"objects/obj_Yellow_Key/obj_Yellow_Key.yy",},},
     {"id":{"name":"obj_collision_parent","path":"objects/obj_collision_parent/obj_collision_parent.yy",},},
     {"id":{"name":"attackDiamond","path":"scripts/attackDiamond/attackDiamond.yy",},},
     {"id":{"name":"sfx_oris_moan3","path":"sounds/sfx_oris_moan3/sfx_oris_moan3.yy",},},
@@ -597,6 +599,7 @@
     {"roomId":{"name":"Room2_City1_Lever2","path":"rooms/Room2_City1_Lever2/Room2_City1_Lever2.yy",},},
     {"roomId":{"name":"Room2_Brine1","path":"rooms/Room2_Brine1/Room2_Brine1.yy",},},
     {"roomId":{"name":"Room2_City1_Red1","path":"rooms/Room2_City1_Red1/Room2_City1_Red1.yy",},},
+    {"roomId":{"name":"Room2_City1_Yellow1","path":"rooms/Room2_City1_Yellow1/Room2_City1_Yellow1.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},

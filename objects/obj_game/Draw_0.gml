@@ -28,13 +28,11 @@ if (instance_exists(obj_diver)) {
 					}
 				}
 			}
-			if ((array_contains(obj_settings.achivements, "Doored")) == -1) {
-				with (obj_diver) {
-					if (distance_to_object(obj_Interactable_Parent) < 15) {
-						draw_text_color(obj_diver.xprevious+50, obj_diver.yprevious-25, global._fhinputKeys[obj_settings.key_select], _c, _c, _c, _c, obj_game.text_opacity);
-					}
-					
+			with (obj_diver) {
+				if (distance_to_object(obj_Interactable_Parent) < 15) {
+					draw_text_color(obj_diver.xprevious+50, obj_diver.yprevious-25, global._fhinputKeys[obj_settings.key_select], _c, _c, _c, _c, obj_game.text_opacity);
 				}
+					
 			}
 			if ((array_contains(obj_settings.achivements, "Attacked")) == -1) {
 				with (obj_diver) {
