@@ -7,3 +7,4 @@ despawn = 52000;
 pickupability = false;
 
 sprite_index = convertTo("spr", object_get_name(object_index));
+description = "A sandwich with ham, cheese, tomato, and lettuce. Its sopping wet but the bread is still intact. Can be used once to restore 1 health."

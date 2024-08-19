@@ -75,7 +75,7 @@ audio_play_sound(sfx_select, 2, false);
 							break;
 							case "Water":
 								if (array_contains(obj_settings.achivements, "Read ice")) {
-									say(["Hey don't look at me, I warned you"]);
+									say(["Hey don't look at me, I warned you."]);
 								} else {
 									say(["Somehow this ice became water."]);
 								}
@@ -124,10 +124,7 @@ audio_play_sound(sfx_select, 2, false);
 								array_delete(global.inventory, obj_inventory.pos, 1) 
 							break;
 							case "Pocket Fish":
-								say(["Congradulations!", "You are using the pocket fish correctly!"]);
-							break;
-							case "Holy Fish":
-								say(["Look what you've done.", "You really put a fish in the same pocket as your keys.", "You disgust me."]);
+								say(["Yep, still in your pocket."]);
 							break;
 							case "Water Copter":
 									instance_destroy();
@@ -152,10 +149,10 @@ audio_play_sound(sfx_select, 2, false);
 								array_delete(global.inventory, obj_inventory.pos, 1);
 							break;
 							case "Broken Compass":
-								say(["Its a broken compass!", "It points where ever you point the compass."]);
+								say(["You point the compass. It points where you pointed it. You'd be lost without it."]);
 							break;
 							case "Mystery Key":
-								say(splitText("If you try to open the right door with this key in your inventory it will open."));
+								say(splitText("To use this item try to open a door. The use button will not do anything."));
 							break;
 							case "Steel Harpoon":
 								instance_destroy();

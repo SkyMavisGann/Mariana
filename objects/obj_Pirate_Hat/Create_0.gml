@@ -8,3 +8,4 @@ despawn = 52000;
 pickupability = false;
 
 sprite_index = convertTo("spr", object_get_name(object_index));
+description = "Looks like its a costume. Can be equipped."

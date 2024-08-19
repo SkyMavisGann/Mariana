@@ -8,3 +8,4 @@ despawn = 52000;
 pickupability = false;
 
 sprite_index = convertTo("spr", object_get_name(object_index));
+description = "Slots perfectly into the night vision goggles. Replaces the green tint for a subtler blue one. Can be equipped."

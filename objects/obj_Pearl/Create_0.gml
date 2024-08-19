@@ -6,4 +6,4 @@ randDir2 = irandom_range(-2,2);
 
 despawn = 52000;
 pickupability = false;
-
+description = "A shiny pearl. Its relatively heavy for its size. Cannot be used. Can be Traded."

@@ -8,3 +8,4 @@ despawn = 52000;
 pickupability = false;
 
 sprite_index = convertTo("spr", object_get_name(object_index));
+description = "A meter that displays your depth. Well used but has no rust. Can be equipped.";

@@ -8,3 +8,4 @@ despawn = 52000;
 pickupability = false;
 
 sprite_index = convertTo("spr", object_get_name(object_index));
+description = "A red key. If you try to open the right door with this key in your inventory it will open.";

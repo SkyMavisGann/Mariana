@@ -9,3 +9,4 @@ pickupability = false;
 if (!array_contains(obj_settings.achivements, "Found thorium")) {
 	array_push(obj_settings.achivements, "Found thorium");
 }
+description = "A nicely cut black rock. It glows even in the the light."

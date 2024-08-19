@@ -37,6 +37,9 @@ if !instance_exists(obj_inventory_use) && !instance_exists(obj_text) && (string_
 			var _sml = menu_level;
 		
 			instance_create_layer(0, 0, "menu_layer", obj_inventory_use);
+			if (!instance_exists(obj_item_desc)) {
+				instance_create_layer(0, 0, "menu_layer", obj_item_desc);
+			}
 			global.inventory_menu = true;
 		
 			// set pos back

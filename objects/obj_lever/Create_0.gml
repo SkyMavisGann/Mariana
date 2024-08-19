@@ -8,3 +8,4 @@ despawn = 52000;
 pickupability = false;
 
 sprite_index = convertTo("spr", object_get_name(object_index));
+description = "A metal lever, looks like it slots into a lever base.";

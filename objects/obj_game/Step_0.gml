@@ -67,6 +67,9 @@ if (global.inventory_menu == false && object_exists(obj_inventory_use)) {
 	with (obj_inventory_use) {
 		instance_destroy();
 	}
+	with (obj_item_desc) {
+		instance_destroy();
+	}
 }
 
 

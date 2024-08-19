@@ -292,6 +292,7 @@
     {"id":{"name":"spr_oxygen_indicator","path":"sprites/spr_oxygen_indicator/spr_oxygen_indicator.yy",},},
     {"id":{"name":"spr_tubeworm","path":"sprites/spr_tubeworm/spr_tubeworm.yy",},},
     {"id":{"name":"obj_Mystery_Key","path":"objects/obj_Mystery_Key/obj_Mystery_Key.yy",},},
+    {"id":{"name":"obj_item_desc","path":"objects/obj_item_desc/obj_item_desc.yy",},},
     {"id":{"name":"path_shark","path":"paths/path_shark/path_shark.yy",},},
     {"id":{"name":"spr_floating","path":"sprites/spr_floating/spr_floating.yy",},},
     {"id":{"name":"obj_shark","path":"objects/obj_shark/obj_shark.yy",},},

@@ -8,3 +8,4 @@ despawn = 52000;
 pickupability = false;
 
 sprite_index = convertTo("spr", object_get_name(object_index));
+description = "The fin of a deep sea fish. It has small prickly hairs on it. Cannot be used. Can be Traded.";

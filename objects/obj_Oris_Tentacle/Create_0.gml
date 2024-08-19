@@ -8,3 +8,4 @@ despawn = 52000;
 pickupability = false;
 
 sprite_index = convertTo("spr", object_get_name(object_index));
+description = "The squishy tip of the tentacle of the oris squid. In the light it glistens. Cannot be used. Can be traded."

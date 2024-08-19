@@ -7,3 +7,4 @@ randDir2 = irandom_range(-1,2);
 despawn = 52000;
 pickupability = false;
 
+description = "You feel lucky.";

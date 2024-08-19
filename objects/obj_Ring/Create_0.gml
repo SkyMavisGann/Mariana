@@ -7,3 +7,5 @@ randDir2 = irandom_range(-2,2);
 despawn = 52000;
 pickupability = false;
 
+description = "A copper ring with a silver gear on top."
+

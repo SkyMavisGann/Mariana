@@ -6,5 +6,5 @@ randDir2 = irandom_range(-2,2);
 
 despawn = 52000;
 pickupability = false;
-
+description = "Kinda just looks like a broken boat propeller. Can be equipped.";
 

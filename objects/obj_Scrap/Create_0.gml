@@ -6,3 +6,5 @@ randDir2 = irandom_range(1,2);
 
 despawn = 52000;
 pickupability = false;
+
+description = "A bit of rusty scrap. Cannot be used. Can be Traded."

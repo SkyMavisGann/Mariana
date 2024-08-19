@@ -7,3 +7,4 @@ randDir2 = irandom_range(-2,2);
 despawn = 69000;
 pickupability = false;
 
+description = "Congratulations! You are using the pocket fish correctly!"
