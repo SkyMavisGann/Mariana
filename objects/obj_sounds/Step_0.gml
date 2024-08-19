@@ -1,4 +1,22 @@
+//random ambient sounds
 
+
+var seconds = current_time / 1000;
+if (round(seconds) % 30 == 0) {
+	if (rando == 2 && instance_exists(obj_diver)) {
+		rando++;
+		randomSign = irandom_range(-3, 3);
+		randomSign2 = irandom_range(-3, 3);
+
+		audio_play_sound_at(asset_get_index("sfx_randomAmbient" + 
+		string(irandom_range(1, 5))), obj_diver.x + (1000 * (randomSign)), 
+		obj_diver.y - (1000 * (randomSign2)), 100, 10, 5000, 0.5, false, 1, global.volume_setting, 0, 
+		random_range(0.8, 1.2));
+	}
+
+} else {
+	rando = irandom_range(1, 2);	
+}
 
 //remove 1 from timer every tick
 if musicTimer >= 1 {musicTimer -= 1;}

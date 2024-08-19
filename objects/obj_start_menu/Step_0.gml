@@ -78,18 +78,7 @@ audio_play_sound(sfx_select, 2, false);
 				} else {
 					global.volume_setting = 1.00;
 				}
-				changeVolume(m_surface_tension);
-				changeVolume(m_aquifer);
-				changeVolume(m_hull_sale);
-				changeVolume(m_hydrogen);
-				changeVolume(m_shifting_tide);
-				changeVolume(m_thorium);
-				changeVolume(m_victory);
 				changeVolume(m_watery_grave);
-				changeVolume(m_with_baited_breath_loop);
-				changeVolume(m_with_baited_breath_start);
-				changeVolume(m_are_there_any_crabs_in_here);
-				changeVolume(m_there_is_definitely_a_crab_in_here);
 				option[1, 3] = ("Volume: " + string(global.volume_setting*100)); 
 			break;
 			//back

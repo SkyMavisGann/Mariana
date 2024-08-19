@@ -11,7 +11,7 @@ if (global.inventory[obj_inventory.pos] != itemName) {
 	object = convertTo("obj", itemName);
 	var tempObj = instance_create_layer(-100, 100, "player_layer", object);
 	if (variable_instance_exists(tempObj, "description")) {
-		textToDisplay = splitTextLength(tempObj.description, 725);
+		textToDisplay = splitTextLength(tempObj.description, lengthToDisplay);
 	}
 	
 	text_length[0] = string_length(textToDisplay[0]);

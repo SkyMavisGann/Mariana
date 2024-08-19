@@ -34,7 +34,7 @@ show_debug_message("String Length: " + string(string_length(currentText)));
 }
 
 function splitTextLength(currentText, lengthToSplit){
-draw_set_font(spr_font_fundant);
+draw_set_font(global.font_main);
 show_debug_message("Input: " + string(currentText));
 show_debug_message("String Length: " + string(string_length(currentText)));
 	textArray = [];

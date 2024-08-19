@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "m_watery_grave",
+  "name": "sfx_randomAmbient2",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 75.4885,
+  "duration": 8.074739,
   "parent": {
-    "name": "music",
-    "path": "folders/Sounds/music.yy",
+    "name": "SFX",
+    "path": "folders/Sounds/SFX.yy",
   },
   "preload": false,
-  "sampleRate": 48000,
-  "soundFile": "m_watery_grave.ogg",
-  "type": 1,
-  "volume": 1.0,
+  "sampleRate": 44100,
+  "soundFile": "sfx_randomAmbient2.ogg",
+  "type": 0,
+  "volume": 0.28,
 }
