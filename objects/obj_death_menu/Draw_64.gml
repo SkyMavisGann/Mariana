@@ -1,13 +1,13 @@
 // draw options
 
 draw_set_font(global.font_main);
-draw_set_valign(fa_top);
-draw_set_halign(fa_left);
+draw_set_valign(fa_center);
+draw_set_halign(fa_center);
 
 
 //center
 
-x = view_get_wport(view_camera[0])/2;
+x = (display_get_width() / 2) - sprite_width;
 y = view_get_hport(view_camera[0])/2;
  
 //dr menu background

@@ -120,13 +120,34 @@ if (flashAlpha = 0.32) {
 
 //---------------------------- TAKKING OF DAMAGE
 if global.player_health <= 0 {
-	with (instance_create_layer(x, y, "player_layer", obj_dead_diver)) {
-		container = global.inventory;
+	
+	if (!instance_exists(obj_diver_death)) {
+		audio_play_sound(sfx_damageTake0, 1, false, global.volume_setting + 0.2, 0, 0.6);
+		audio_play_sound(sfx_magic, 1, false, global.volume_setting + 0.2, 0, 0.7);
+		image_alpha = 0;
+		var ins = instance_create_layer(x,y, "in_front_of_player", obj_diver_death);
+		ins.image_index = 0;
+		var shine = instance_create_layer(x, y, "behind_diver", vfx_shine_player_Death);
+		shine.image_index = 0;
 	}
-	saveGame(string(room) + ".save");
-	saveGame("savedgame.save");
-	show_debug_message("Died");
-	array_push(global.roomsWithCorpses, room);
+} else {
+	global.spawnedBody = false;
+}
+if (instance_exists(obj_diver_death) && obj_diver_death.image_index == obj_diver_death.image_number - 2) {
+	audio_play_sound(sfx_damageTake0, 1, false, global.volume_setting + 0.2, 0, 0.4);
+}
+if (instance_exists(obj_diver_death) && obj_diver_death.image_index == obj_diver_death.image_number) {
+	if (!global.spawnedBody) {
+		
+		with (instance_create_layer(x, y, "player_layer", obj_dead_diver)) {
+			container = global.inventory;
+		}
+		global.spawnedBody = true;
+		saveGame(string(room) + ".save");
+		saveGame("savedgame.save");
+		show_debug_message("Died");
+		array_push(global.roomsWithCorpses, room);
+	}
 	room_goto(roomDeath);
 }
 

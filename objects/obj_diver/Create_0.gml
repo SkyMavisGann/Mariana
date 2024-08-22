@@ -50,6 +50,7 @@ if !variable_global_exists("equipped") {
 	global.player_health = global.max_player_health;
 	global.pets = [];
 	global.petsAge = [];
+	global.spawnedBody = false;
 	//player_attack_damage = 1;
 	inventory_full = false;
 	obj_oxygen_indicator.refilling = 0;

@@ -118,6 +118,9 @@ if (mapOpen == true && global.paused == false) {
 	if (room == Room1) {
 		var x_pos = obj_diver.x - ((obj_diver.x +128)/ scale_number);
 		var y_pos = obj_diver.y - ((obj_diver.y +16448)/ scale_number);
+	} else if (room == Room2) {
+		var x_pos = obj_diver.x - ((obj_diver.x +128)/ scale_number);
+		var y_pos = obj_diver.y - ((obj_diver.y + 16448 + 15000)/ scale_number);
 	} else {
 		var x_pos = obj_diver.x - ((obj_diver.x +128 + global.doorInRoomMain[room][1][0])/ scale_number);
 		var y_pos = obj_diver.y - ((obj_diver.y +16448 + global.doorInRoomMain[room][1][1])/ scale_number);
@@ -148,6 +151,15 @@ switch(room) {
 			}
 		}
 	break;
+}
+if (instance_exists(obj_diver_death)) {
+	if (cameraScale < 1 && changeOnce) {
+		cameraScale = 1;
+		changeOnce = false;
+	}
+	changeScaleTo = 0.75;
+	cameraScaleMinimum = 0.70;
+	cameraScalingSpeed = 0.01;
 }
 
 scalingIntervalCheck++;
@@ -181,9 +193,9 @@ if (doScaling == true) {
 	
 	with (obj_diver) {
 		if (obj_game.cameraScale < changeScaleTo && obj_game.scalingTimer == 1) {
-			obj_game.cameraScale += 0.001;
+			obj_game.cameraScale += obj_game.cameraScalingSpeed;
 		} else if (obj_game.cameraScale > changeScaleTo && obj_game.scalingTimer == 1) {
-			obj_game.cameraScale -= 0.001;
+			obj_game.cameraScale -= obj_game.cameraScalingSpeed;
 		}
 		obj_game.distanceFromDiver = changeScaleTo;
 	}
@@ -191,5 +203,5 @@ if (doScaling == true) {
 
 
 camera_set_view_border(view_camera[0], 1980, 1080);
-camera_set_view_size(view_camera[0], 756 * clamp(cameraScale, 1, 1.5), 425 * clamp(cameraScale, 1, 1.5));
+camera_set_view_size(view_camera[0], 756 * clamp(cameraScale, cameraScaleMinimum, cameraScaleMaximum), 425 * clamp(cameraScale, cameraScaleMinimum, cameraScaleMaximum));
 

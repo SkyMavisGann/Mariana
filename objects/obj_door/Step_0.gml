@@ -6,8 +6,11 @@ if ((distance_to_object(obj_diver) < 15) && global.inventoried == false && globa
 		}
 		if (room == Room1) {
 			array_set(global.doorInRoomMain, destination, [[], [x, y]]);
+		} else if (room == Room2) {
+			array_set(global.doorInRoomMain, destination, [[], [x, y + 15000]]);
 		} else {
-			array_set(global.doorInRoomMain, destination, [[], [x + global.doorInRoomMain[room][1][0],y + global.doorInRoomMain[room][1][1]]]);
+			array_set(global.doorInRoomMain, destination, [[], 
+			[x + global.doorInRoomMain[room][1][0], y + global.doorInRoomMain[room][1][1]]]);
 		}
 		saveGame(string(curLocation) + ".save");
 		room_goto(destination);

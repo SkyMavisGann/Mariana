@@ -5,6 +5,11 @@ if (instance_exists(obj_diver)) {
 		obj_settings.previousRoom = curLocation;
 	}
 }
+if (room == Room2) {
+	array_set(global.doorInRoomMain, room, [find_room_path(room), [0, 15000]]);
+} else if (room == Room1) {
+	array_set(global.doorInRoomMain, room, [find_room_path(room), [0, 0]]);
+}
 switch(global.next) { 
 
 	case 2:

@@ -146,7 +146,7 @@ if (musicTimer = 0) {
 		var switchto = m_brine;
 		if (audio_is_playing(switchto) != true) {
 			audio_sound_gain(switchto, 0, 0);
-			audio_sound_gain(switchto, global.volume_setting, 2000);
+			audio_sound_gain(switchto, global.volume_setting / 2, 2000);
 			audio_play_sound(switchto, 1000, true);
 		}
 	break;

@@ -15,6 +15,7 @@ if (needsToBeLoaded == true) {
 			global.oxygen = _loadEntity.oxygen;
 			obj_settings.achivements = _loadEntity.achivements;
 			global.oceanDepth = _loadEntity.oceanDepth;
+			global.spawnedBody = _loadEntity.spawnedBody;
 			
 			
 			//0.1.0

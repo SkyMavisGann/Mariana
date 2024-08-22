@@ -1,4 +1,6 @@
 
+
+
 if (!instance_exists(vfx_flying_object)) {
 	if (global.equipped[1] == "Booster") {
 		draw_sprite_ext(spr_Booster, 0, x, y-10, image_xscale *1.5,image_yscale * 1.5, 0, c_gray, 1);

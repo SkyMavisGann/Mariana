@@ -3,7 +3,7 @@ if (!instance_exists(obj_inventory_use) || !instance_exists(obj_inventory)) {
 	instance_destroy();
 }
 
-if (global.inventory[obj_inventory.pos] != itemName) {
+if (array_length(global.inventory) > 0 && global.inventory[obj_inventory.pos] != itemName) {
 	pos = 0;
 	menu_level = 0;
 	textToDisplay = [""];

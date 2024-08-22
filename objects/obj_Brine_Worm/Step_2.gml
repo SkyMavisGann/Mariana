@@ -1,8 +1,8 @@
 
-if (instance_exists(obj_diver) && distance_to_object(obj_diver) < 6000) {
+if (instance_exists(obj_diver) && distance_to_object(obj_diver) < 9000) {
 	
 	var starfish = instance_nearest(x,y, obj_Starfish_place);
-	if (abs(y - obj_diver.y) < abs(y - starfish.y)) {
+	if (abs(y - obj_diver.y) < abs(y - starfish.y) || distance_to_object(starfish) > distance_to_object(obj_diver)) {
 		EEx = obj_diver.x;
 	} else {
 		EEx = starfish.x;
@@ -13,7 +13,7 @@ if (instance_exists(obj_diver) && distance_to_object(obj_diver) < 6000) {
 		HideOnce = true;
 	}
 	var seconds = current_time / 10000;
-	if (seconds < HideTime + 1.5) {
+	if (seconds < HideTime + 1) {
 		EEx = clamp(x + (sign(HideDirection) * 100), obj_diver.x - 5300, obj_diver.x + 5300);
 	}
 	var pd = point_direction(x, y, EEx, EEy);
@@ -43,3 +43,17 @@ if (instance_exists(obj_diver) && distance_to_object(obj_diver) < 6000) {
 	speed = 0;
 }
 collision();
+
+if (audio_emitter_exists(audio_emitter)) {
+	audio_emitter_position(audio_emitter, x, y, 0);
+}
+var seconds = current_time / 1000;
+if (round(seconds) % 2 == 0) {
+	if (rando == 2 && instance_exists(obj_diver)) {
+		rando++;
+
+		audio_play_sound_on(audio_emitter, asset_get_index("sfx_worm" + string(irandom_range(1, 3))), false, 1, global.volume_setting * 2, 0,voicePitch + random_range(-0.10, 0.10));
+	}
+} else {
+	rando = irandom_range(1, 2);	
+}

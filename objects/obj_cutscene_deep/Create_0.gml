@@ -6,7 +6,7 @@ op_border = 34;
 op_space = 64;
 
 pos = 0;
-currentlySaying = ["Go ahead, Come to us. Come down to the bottom, I dare you."]
+currentlySaying = ["What have you done to us? Come to us. Come down to the bottom. See what you have forced upon us."]
 op_length = 0;
 menu_level = 0;
 
@@ -16,6 +16,5 @@ draw_char = 0;
 
 setup = false;
 
-currentlySaying = ["Go ahead, Come to us. Come down to the bottom, I dare you."];
 
 once = false;

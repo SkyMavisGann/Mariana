@@ -84,4 +84,11 @@ function collision() {
 
 }
 	
+audio_emitter = audio_emitter_create();
+
+audio_emitter_falloff(audio_emitter, 50, 900, 2);
+
+
+voicePitch = random_range(0.8, 1.1);
+rando = irandom_range(1, 2);
 

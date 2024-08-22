@@ -24,7 +24,7 @@ y = 780;
 var textSpeed = 0.15
 if (draw_char < text_length[menu_level]) {
 	if (string_length(currentlySaying) > draw_char + 2) {
-		if (string_char_at(currentlySaying, draw_char + 2) == "," || string_char_at(currentlySaying, draw_char + 2) == ".") {
+		if (string_char_at(currentlySaying, draw_char + 2) == "," || string_char_at(currentlySaying, draw_char + 2) == "." || string_char_at(currentlySaying, draw_char + 2) == "?") {
 			textSpeed = textSpeed * 0.1;
 		}
 		if (string_char_at(currentlySaying, draw_char + 2) == " ") {

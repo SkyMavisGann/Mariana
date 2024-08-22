@@ -34,3 +34,8 @@ text_counter = 0;
 destination = room_next(room);
 curLocation = room;
 
+cameraScaleMinimum = 1;
+cameraScaleMaximum = 1.5;
+cameraScalingSpeed = 0.001;
+changeOnce = true;
+
