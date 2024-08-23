@@ -91,6 +91,15 @@ audio_play_sound(sfx_select, 2, false);
 							}
 								 array_delete(global.inventory, obj_inventory.pos, 1) 
 							break;
+							case "Fish Soul":
+								instance_destroy();
+								if global.max_player_health < 8 {
+									say(["You're filled with resolve."]);
+									global.max_player_health += 1;
+									audio_play_sound(sfx_Gain_Health, 1, false, global.volume_setting, 0, 1);
+								}
+								array_delete(global.inventory, obj_inventory.pos, 1) 
+							break;
 							case "Wet Burrito":
 							instance_destroy();
 							if global.player_health < global.max_player_health {
@@ -125,6 +134,11 @@ audio_play_sound(sfx_select, 2, false);
 							break;
 							case "Pocket Fish":
 								say(["Yep, still in your pocket."]);
+							break;
+							case "Holy Fish":
+								say(["You Squeeze. . ."]);
+								array_delete(global.inventory, obj_inventory.pos, 1);
+								buyItem("Fish Soul");
 							break;
 							case "Water Copter":
 									instance_destroy();

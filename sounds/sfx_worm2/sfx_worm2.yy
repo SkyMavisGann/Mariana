@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 3.803787,
+  "duration": 4.771429,
   "parent": {
     "name": "BrineWorm",
     "path": "folders/Sounds/SFX/BrineWorm.yy",

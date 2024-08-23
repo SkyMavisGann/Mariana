@@ -32,7 +32,46 @@ if (array_contains(global.bosses_beaten, "Siphi")) {
 				
 				}
 			}
+			loop += (delta_time / 5000);
+			if (loop > 2500) {
+				loop = 0;
+				var rando = irandom_range(1, 2);
+				switch (rando) {
+					default:
+						for (var i = 0; i < array_length(stemBody); i++) {
+							if (stemBody[i].sprite_index == spr_stem) {
+								stemBody[i].sprite_index = spr_stem_explode;
+								audio_play_sound_at(sfx_zap,stemBody[i].x, stemBody[i].y, 0, 100, 1200, 2, false, 1, global.volume_setting / 4, 0, random_range(0.5, 0.8));
+							}
+						}
+					break;
+					case 2:
+					for (var i = 0; i < array_length(stemBody); i++) {
+						if (instance_exists(stemBody[i].zooid)) {
+							if (stemBody[i].zooid.sprite_index == spr_zooid) {
+								stemBody[i].zooid.sprite_index = spr_zooid_beam;
+								audio_play_sound_at(sfx_zap,stemBody[i].zooid.x, stemBody[i].zooid.y, 0, 100, 1200, 2, false, 1, global.volume_setting / 6, 0, random_range(1.2, 1.6));
+							}
+						}
+					}
+					break;
+				}
+			}
+			if (!variable_instance_exists(id, "rand")) {
+				rand = irandom_range(1, 2);
+			}
+			var seconds = current_time / 100;
+			if (round(seconds) % 20 == 0) {
+				if (rand == 2 && instance_exists(obj_diver)) {
+					rand++;
 
+				audio_play_sound_at(asset_get_index("sfx_siph" + string(irandom_range(1, 3))),x, y, 0, 100, 1200, 2, false, 1, global.volume_setting, 0, random_range(0.9, 1.25));
+				}
+			} else {
+				rand = irandom_range(1, 2);	
+			}
+			
+			
 	} else {
 		speed = 0;
 	}
@@ -51,6 +90,14 @@ if (array_contains(global.bosses_beaten, "Siphi")) {
 			musicStart = true;
 		}
 		var hp = calculateRemainingZooids();
+		if (hp <= 10) {
+			image_blend = make_color_rgb(225, 225, 255)
+			swim_speed = 6;
+			if (audioOnce) {
+				audio_play_sound(sfx_magic, 10, false, global.volume_setting * 2, 0, 0.6);
+				audioOnce = false;
+			}
+		} 
 		if (hp <= 0) {
 			default_swim_speed = 0;
 			swim_speed = 0;

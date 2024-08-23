@@ -8,3 +8,4 @@ HP = maxHP;
 
 flashAlpha = 0;
 flashColor = make_color_rgb(230, 150, 64);
+soundOnce = true;

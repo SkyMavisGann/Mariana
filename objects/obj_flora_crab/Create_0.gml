@@ -48,3 +48,5 @@ randomNum = irandom_range(120, 200);
 needsToStop = false;
 
 needsToMoveLeftRight = -1;
+
+rando = irandom_range(1, 2);	

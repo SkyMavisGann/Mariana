@@ -43,7 +43,7 @@ bossRewardAnimationFrameTimer = 0;
 gamepad_set_axis_deadzone(0, 0.3);
 
 if !variable_global_exists("equipped") {
-	global.max_player_health = 4;
+	global.max_player_health = 2;
 	global.attack_damage = 1;
 	global.inventory = ["Air Tank", "Soggy Sandwich"];
 	global.equipped = ["Basic Harpoon", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];

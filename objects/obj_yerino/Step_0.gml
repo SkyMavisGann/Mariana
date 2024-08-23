@@ -116,14 +116,17 @@ if (array_contains(global.bosses_beaten, "Yerino")) {
 	
 			case "diamond":
 			attackDiamond();
+			
 			break;
 	
 			case "column":
 			attackColumn();
+			audio_play_sound_at(sfx_yerino2,x, y, 0, 100, 1200, 2, false, 1, global.volume_setting, 0, random_range(0.7, 1.1));
 			break;
 	
 			case "screach":
 			attackDeathScreach();
+			audio_play_sound_at(sfx_yerino3,x, y, 0, 100, 1200, 2, false, 1, global.volume_setting, 0, random_range(1.0, 1.25));
 			break;
 	
 			default:
@@ -132,4 +135,5 @@ if (array_contains(global.bosses_beaten, "Yerino")) {
 		}
 
 	}
+	
 }

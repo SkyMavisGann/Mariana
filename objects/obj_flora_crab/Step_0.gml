@@ -118,4 +118,18 @@ if (distance_to_object(obj_diver) < 800) {
 		instance_destroy(leftArm);
 		instance_destroy();
 		}
+	if (!variable_instance_exists(id, "rando")) {
+		rando = irandom_range(1, 2);
+	}
+	var seconds = current_time / 100;
+	if (round(seconds) % 10 == 0) {
+		if (rando == 2 && instance_exists(obj_diver)) {
+			rando++;
+
+		audio_play_sound_at(sfx_crab,x, y, 0, 100, 500, 2, false, 1, global.volume_setting / 2, 0, random_range(0.9, 1.25));
+		}
+	} else {
+		rando = irandom_range(1, 2);	
+	}
+		
 }

@@ -36,7 +36,7 @@ switch (room) {
 		option[0, 7] = "Pocket Fish";
 		option[0, 8] = "Ring";
 		option[0, 9] = "Broken Compass";
-		option[0, 10] = "Lucky Seashell";
+		option[0, 10] = "Gear Shaft";
 		option[0, 11] = "Booster Mod";
 	break;
 }

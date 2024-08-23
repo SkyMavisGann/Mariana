@@ -8,6 +8,7 @@ if (needsToBeLoaded == true) {
 			x = _loadEntity.x;
 			y = _loadEntity.y;
 			global.player_health = _loadEntity.player_health;
+			global.max_player_health = _loadEntity.max_player_health;
 			global.inventory = _loadEntity.inventory;
 			global.bosses_beaten = _loadEntity.bosses_beaten;
 			global.equipped = _loadEntity.equipped;
@@ -46,6 +47,12 @@ if (needsToBeLoaded == true) {
 			var num_fish = _loadEntity.num_fish;
 			var num_eggs = _loadEntity.num_eggs;
 			var num_dest = _loadEntity.num_dest;
+			
+			if (array_contains(global.bosses_beaten, "Siphi") != -1) {
+				with (obj_siphiobia_segment) {
+					instance_destroy();
+				}
+			}
 		}
 	} else {
 		with (obj_diver) {

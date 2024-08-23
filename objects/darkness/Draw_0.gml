@@ -103,7 +103,9 @@ gpu_set_colorwriteenable(0.1, 0.1, 0.1, 1);
 gpu_set_blendmode_ext(bm_zero,bm_inv_src_color);
 for (var i = 0; i < instance_number(obj_light_parent); i++) {
 	var thorium = instance_find(obj_light_parent, i);
-	draw_sprite_ext(thorium.sprite_index, thorium.image_index,thorium.x - x + sprite_width/2, thorium.y - y + sprite_height/2, thorium.image_xscale, thorium.image_yscale, thorium.image_angle, c_white, thorium.image_alpha);
+	if (sprite_exists(thorium.sprite_index)) {
+		draw_sprite_ext(thorium.sprite_index, thorium.image_index,thorium.x - x + sprite_width/2, thorium.y - y + sprite_height/2, thorium.image_xscale, thorium.image_yscale, thorium.image_angle, c_white, thorium.image_alpha);
+	}
 }
 gpu_set_blendmode(bm_normal);
 gpu_set_colorwriteenable(1, 1, 1, 1);

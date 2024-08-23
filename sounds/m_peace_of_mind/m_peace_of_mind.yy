@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 97.989975,
+  "duration": 97.9795,
   "parent": {
     "name": "music",
     "path": "folders/Sounds/music.yy",
   },
   "preload": false,
-  "sampleRate": 44100,
+  "sampleRate": 48000,
   "soundFile": "m_peace_of_mind.ogg",
-  "type": 0,
+  "type": 1,
   "volume": 1.0,
 }

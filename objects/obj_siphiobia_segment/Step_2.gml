@@ -31,4 +31,8 @@ if (array_contains(obj_settings.achivements, "Lunked") && instance_exists(obj_di
 			y = goaly;
 		}
 	}
+	
+if (sprite_index = spr_stem_explode && image_index >= image_number - 1) {
+	sprite_index = spr_stem;
+}
 

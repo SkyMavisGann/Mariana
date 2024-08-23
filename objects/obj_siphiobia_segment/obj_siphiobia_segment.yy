@@ -13,7 +13,10 @@
     "name": "hostile",
     "path": "folders/Objects/fish/hostile.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_light_parent",
+    "path": "objects/obj_light_parent/obj_light_parent.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

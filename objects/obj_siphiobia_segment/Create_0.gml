@@ -13,7 +13,7 @@ allTentaclesAbove = [];
 scale = 1.5;
 image_xscale = scale;
 image_yscale = scale;
-length = sprite_width - (3 * scale);
+length = sprite_width - 24 - (3 * scale);
 
 zooid = instance_create_layer(x, y, "behind_diver", obj_Zooid);
 zooid.squidId = id;

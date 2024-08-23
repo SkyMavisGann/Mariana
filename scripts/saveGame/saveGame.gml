@@ -102,6 +102,7 @@ function saveGame(saveName){
 						achivements : obj_settings.achivements,
 						inventory : global.inventory,
 						player_health : global.player_health,
+						max_player_health : global.max_player_health,
 						equipped : global.equipped,
 						pets : global.pets,
 						petsAge : global.petsAge,

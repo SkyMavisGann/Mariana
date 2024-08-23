@@ -122,8 +122,7 @@ if (flashAlpha = 0.32) {
 if global.player_health <= 0 {
 	
 	if (!instance_exists(obj_diver_death)) {
-		audio_play_sound(sfx_damageTake0, 1, false, global.volume_setting + 0.2, 0, 0.6);
-		audio_play_sound(sfx_magic, 1, false, global.volume_setting + 0.2, 0, 0.7);
+		audio_play_sound(sfx_die, 1, false, global.volume_setting + 0.2, 0, 1);
 		image_alpha = 0;
 		var ins = instance_create_layer(x,y, "in_front_of_player", obj_diver_death);
 		ins.image_index = 0;
@@ -133,9 +132,7 @@ if global.player_health <= 0 {
 } else {
 	global.spawnedBody = false;
 }
-if (instance_exists(obj_diver_death) && obj_diver_death.image_index == obj_diver_death.image_number - 2) {
-	audio_play_sound(sfx_damageTake0, 1, false, global.volume_setting + 0.2, 0, 0.4);
-}
+
 if (instance_exists(obj_diver_death) && obj_diver_death.image_index == obj_diver_death.image_number) {
 	if (!global.spawnedBody) {
 		

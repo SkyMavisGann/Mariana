@@ -35,3 +35,4 @@ afterGrabbingWait = 0;
 
 subimg = 0;
 age = 0;
+rando = irandom_range(1, 2);	

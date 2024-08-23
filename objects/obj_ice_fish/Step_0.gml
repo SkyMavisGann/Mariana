@@ -73,7 +73,7 @@ if (age > 12000 && laidEggs = false) {
 	
 	var seaweed = instance_nearest(x, y-20, obj_seaweed);
 	var crab = instance_nearest(x, y, obj_flora_crab);
-	if (seaweed > crab) {
+	if (!instance_exists(crab) || seaweed > crab) {
 		if (distance_to_object(seaweed) > 20) {
 			move_towards_point(seaweed.x, seaweed.y-20, swim_speed);
 			path_ended = true;

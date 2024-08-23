@@ -73,16 +73,19 @@ switch (item) {
 						return ["Thorium", "Scrap", "Ice"];
 					break;
 					case "Steel Harpoon":
-						return ["Scrap", "Scrap", "Scrap"];
+						return ["Scrap", "Scrap"];
 					break;
 					case "Night Vision Goggles":
-						return ["Pearl", "Ice"];
+						return ["Pearl", "Ice", "Fins"];
 					break;
 					case "Fish Food":
 						return ["Fins", "Water", "Water"];
 					break;
 					case "Wet Burrito":
 						return ["Oris Tentacle", "Ice"];
+					break;
+					case "Gear Shaft":
+						return ["Oris Tentacle", "Fins", "Oris Tentacle", "Air Tank"];
 					break;
 					default:
 						return ["Ice"];
