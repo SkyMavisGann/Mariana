@@ -1,1 +1,1 @@
-age = irandom_range(500, 5000);
+age = 6000

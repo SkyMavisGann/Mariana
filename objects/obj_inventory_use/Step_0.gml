@@ -94,7 +94,7 @@ audio_play_sound(sfx_select, 2, false);
 							case "Fish Soul":
 								instance_destroy();
 								if global.max_player_health < 8 {
-									say(["You're filled with resolve."]);
+									say(["Your resolve strengthens."]);
 									global.max_player_health += 1;
 									audio_play_sound(sfx_Gain_Health, 1, false, global.volume_setting, 0, 1);
 								}

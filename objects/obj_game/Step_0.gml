@@ -205,3 +205,15 @@ if (doScaling == true) {
 camera_set_view_border(view_camera[0], 1980, 1080);
 camera_set_view_size(view_camera[0], 756 * clamp(cameraScale, cameraScaleMinimum, cameraScaleMaximum), 425 * clamp(cameraScale, cameraScaleMinimum, cameraScaleMaximum));
 
+
+//give final heart
+if (room == Room2_City1_Mural1 && instance_exists(obj_diver) && obj_diver.x < 1100) {
+	if ((array_contains(obj_settings.achivements, "SuvivorMural")) == -1) {
+		array_push(obj_settings.achivements, "SuvivorMural");
+		if global.max_player_health < 8 {
+			say(["Seeing the survivors mural. . .", "It strengthens your resolve."]);
+			global.max_player_health += 1;
+			audio_play_sound(sfx_Gain_Health, 1, false, global.volume_setting, 0, 1);
+		}
+	}
+}

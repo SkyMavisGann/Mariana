@@ -24,7 +24,7 @@ if (instance_exists(obj_diver)) {
 }
 if (room == Room1_thorium1) {
 	var level = playerY / 1000;
-	draw_sprite_ext(spr_static, image_index, playerX, playerY, 3, 3, 0, c_white, level / 10);
+	draw_sprite_ext(spr_static, image_index, playerX, playerY, 3, 3, 0, c_white, level / 6);
 }
 
 if (!surface_exists(surf)) {
@@ -81,6 +81,13 @@ switch(room) {
 		var level = playerY;
 		draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 10));	
 		draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 0.6));
+
+	break;
+	case (Room2_City1_Mural1):
+
+		var level = playerY;
+		draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 10));	
+		draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 0.7));
 
 	break;
 	case (Room2_Brine1):

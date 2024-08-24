@@ -48,11 +48,7 @@ if (needsToBeLoaded == true) {
 			var num_eggs = _loadEntity.num_eggs;
 			var num_dest = _loadEntity.num_dest;
 			
-			if (array_contains(global.bosses_beaten, "Siphi") != -1) {
-				with (obj_siphiobia_segment) {
-					instance_destroy();
-				}
-			}
+			
 		}
 	} else {
 		with (obj_diver) {
@@ -63,6 +59,11 @@ if (needsToBeLoaded == true) {
 			var num_fish = _loadEntity.num_fish;
 			var num_eggs = _loadEntity.num_eggs;
 			var num_dest = _loadEntity.num_dest;
+		}
+	}
+	if (array_contains(global.bosses_beaten, "Siphi") != -1) {
+		with (obj_siphiobia_segment) {
+			instance_destroy();
 		}
 	}
 	with (obj_dead_diver) {instance_destroy();}
