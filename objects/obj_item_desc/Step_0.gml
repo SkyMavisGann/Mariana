@@ -9,10 +9,11 @@ if (array_length(global.inventory) > 0 && global.inventory[obj_inventory.pos] !=
 	textToDisplay = [""];
 	itemName = global.inventory[obj_inventory.pos];
 	object = convertTo("obj", itemName);
-	var tempObj = instance_create_layer(-100, 100, "player_layer", object);
+	var tempObj = instance_create_layer(-1000, 1000, "player_layer", object);
 	if (variable_instance_exists(tempObj, "description")) {
 		textToDisplay = splitTextLength(tempObj.description, lengthToDisplay);
 	}
+	instance_destroy(tempObj);
 	
 	text_length[0] = string_length(textToDisplay[0]);
 	draw_char = 0;

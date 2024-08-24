@@ -1,4 +1,4 @@
-container = [obj_Wet_Burrito, obj_Pearl];
+container = [obj_Wet_Burrito, obj_Mauler_Fin, obj_Mauler_Fin];
 //chest duplicating catachall
 if (place_meeting(x,y, obj_chest)) {
 	instance_destroy();

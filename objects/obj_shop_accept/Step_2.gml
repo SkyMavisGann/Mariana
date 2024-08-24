@@ -67,16 +67,21 @@ if (!instance_exists(obj_text)) {
 									}
 								}
 								
-								buyItem(obj_shop.option[0, obj_shop.pos]);
-								switch (buyingItem) {
-									case ("Booster"):
-										say(splitText("Enjoy your new "+ buyingItem + "!" + " Now you can boost through the current."));
-									break;
-									default:
-										say(splitText("Enjoy your new "+ buyingItem + "!"));
-									break;
+								if (!buyItem(obj_shop.option[0, obj_shop.pos])) {
+									say(splitText("Oh, you don't have enough space. Just take the stuff back and come back with more space."));
+									for (var i = 0; i < array_length(getPrices(obj_shop.option[0, obj_shop.pos])); ++i) {
+										addItem(getPrices(obj_shop.option[0, obj_shop.pos])[i]);
+									}
+								} else {
+									switch (buyingItem) {
+										case ("Booster"):
+											say(splitText("Enjoy your new "+ buyingItem + "!" + " Now you can boost through the current."));
+										break;
+										default:
+											say(splitText("Enjoy your new "+ buyingItem + "!"));
+										break;
+									}
 								}
-								
 							} else {
 								obj_muro.annoyance++;
 								var missingItem = string(deepCopyPrice[0]);

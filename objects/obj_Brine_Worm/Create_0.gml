@@ -14,7 +14,7 @@ image_xscale = scale;
 image_yscale = scale;
 length = sprite_width - (3 * scale);
 
-damage = 1;
+damage = 2;
 laidEggs = false;
 layingEggsAge = 0;
 

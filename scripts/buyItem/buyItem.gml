@@ -32,6 +32,9 @@ var full_length;
 	}
 	if (inventory_full == false && (itemName != "game")) {
 		addItem(itemName);
+		return true;
+	} else {
+		return false;
 	}
 	draw_set_font(spr_font_fundant);
 }

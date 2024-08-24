@@ -96,16 +96,28 @@ audio_play_sound(sfx_select, 2, false);
 								if global.max_player_health < 8 {
 									say(["Your resolve strengthens."]);
 									global.max_player_health += 1;
+									global.player_health += 1;
 									audio_play_sound(sfx_Gain_Health, 1, false, global.volume_setting, 0, 1);
 								}
 								array_delete(global.inventory, obj_inventory.pos, 1) 
 							break;
 							case "Wet Burrito":
 							instance_destroy();
-							if global.player_health < global.max_player_health {
+							if global.player_health <= global.max_player_health - 2 {
 								global.player_health += 2;
+							} else {
+								global.player_health = global.max_player_health;
 							}
-								 array_delete(global.inventory, obj_inventory.pos, 1) 
+							array_delete(global.inventory, obj_inventory.pos, 1) 
+							break;
+							case "Sopping Wet Bagel Half":
+							instance_destroy();
+							if global.player_health <= global.max_player_health - 4 {
+								global.player_health += 4;
+							} else {
+								global.player_health = global.max_player_health;
+							}
+							array_delete(global.inventory, obj_inventory.pos, 1) 
 							break;
 							case "Booster":
 								instance_destroy();

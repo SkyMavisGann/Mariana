@@ -15,14 +15,13 @@ switch (room) {
 		option[0, 2] = "Air Tank";
 		option[0, 3] = "Soggy Sandwich";
 		option[0, 4] = "Ancient Map";
-		option[0, 5] = "Mystery Key";
-		option[0, 6] = "Water Copter";
-		option[0, 7] = "Pearl";
-		option[0, 8] = "Mermaid Repellant";
-		option[0, 9] = "Pocket Fish";
-		option[0, 10] = "Ring";
-		option[0, 11] = "Broken Compass";
-		option[0, 12] = "Lucky Seashell";
+		option[0, 5] = "Water Copter";
+		option[0, 6] = "Pearl";
+		option[0, 7] = "Mermaid Repellant";
+		option[0, 8] = "Pocket Fish";
+		option[0, 9] = "Ring";
+		option[0, 10] = "Broken Compass";
+		option[0, 11] = "Lucky Seashell";
 		option[0, 12] = "Steel Harpoon";
 	break;
 	case room_shop_middle:
@@ -32,8 +31,8 @@ switch (room) {
 		option[0, 3] = "Ancient Map";
 		option[0, 4] = "Fish Food";
 		option[0, 5] = "Pearl";
-		option[0, 6] = "Wet Burrito";
-		option[0, 7] = "Pocket Fish";
+		option[0, 6] = "Mystery Key";
+		option[0, 7] = "Wet Burrito";
 		option[0, 8] = "Ring";
 		option[0, 9] = "Broken Compass";
 		option[0, 10] = "Gear Shaft";

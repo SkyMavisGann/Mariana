@@ -308,6 +308,7 @@
     {"name":"inst_63E48EDF","path":"rooms/Room2_Brine1/Room2_Brine1.yy",},
     {"name":"inst_4384B189","path":"rooms/Room2_Brine1/Room2_Brine1.yy",},
     {"name":"inst_62DA975A","path":"rooms/Room2_Brine1/Room2_Brine1.yy",},
+    {"name":"inst_7BFA1CB","path":"rooms/Room2_Brine1/Room2_Brine1.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -663,6 +664,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_63E48EDF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Starfish_place","path":"objects/obj_Starfish_place/obj_Starfish_place.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":10400.0,"y":1152.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4384B189","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Starfish_place","path":"objects/obj_Starfish_place/obj_Starfish_place.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":10432.0,"y":832.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_62DA975A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Starfish_place","path":"objects/obj_Starfish_place/obj_Starfish_place.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":6448.0,"y":1538.0845,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7BFA1CB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Brine_Worm","path":"objects/obj_Brine_Worm/obj_Brine_Worm.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5056.0,"y":1664.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"behind_diver","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_668CA8D8_1_1_2_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":null,"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":608.0,"y":256.0,},
