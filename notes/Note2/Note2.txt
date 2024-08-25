@@ -7,7 +7,7 @@ X mural of you the god. Gives final heart.
 X siph sounds
 X Siph reward
 
-muro to have a talk option and a shop option
+muro to have a talk option and a shop option, also talks about the item while hovering over it.
 
 credits
 menu screen

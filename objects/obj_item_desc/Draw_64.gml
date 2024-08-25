@@ -14,12 +14,12 @@ if (setup == false) {
 
 }
 
-width = 425;
+width = 433;
 height = 16 + (18 * (menu_level + 1));
 
 //center
 
-x = 488;
+x = 490;
 y = 200;
  
 //dr menu background

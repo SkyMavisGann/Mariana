@@ -150,6 +150,7 @@ if (needsToBeLoaded == true) {
 if (needsDeathLoaded == true) {
 	global.player_health = global.max_player_health;
 	
+	
 	global.oxygen = 60;
 	switchMusicTo(m_peace_of_mind, sfx_move_selected, false, 100);
 	if (file_exists(string(Room1) + ".save")) {
@@ -176,6 +177,8 @@ if (needsDeathLoaded == true) {
 	var num_fish = _loadEntity.num_fish;
 	var num_eggs = _loadEntity.num_eggs;
 	var num_dest = _loadEntity.num_dest;
+	
+	obj_diver.playIntroAnimation = true;
 	
 	for (var i = 0; i < num_dead; i++) {
 		_loadEntity = array_pop(_loadData);

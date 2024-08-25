@@ -4,6 +4,79 @@ if (!instance_exists(harpoon1)) {
 	instance_create_layer(0, 0, "player_layer", harpoon1);
 }
 
+if (array_contains(obj_settings.achivements, "PlayedTheGame") == -1) {
+	playIntroAnimation = true;
+	array_push(obj_settings.achivements, "PlayedTheGame");
+}
+step += delta_time;
+var seconds = step / 1000;
+if (playIntroAnimation) {
+	
+	
+	if (seconds < 1000) {
+		var vx = 700;
+		var vy = 880;
+			var angleBetween = point_direction(x, y, vx, vy) + 90;
+			var hypot = sqrt(sqr(vx) + sqr(vy));
+			var TentacleX = ((hypot * 1) * dsin(angleBetween + image_angle));
+			var TentacleY = ((hypot * 1) * dcos(angleBetween + image_angle));
+			var xChanged = (TentacleX / max(abs(TentacleX), abs(TentacleY)));
+			var yChanged = (TentacleY / max(abs(TentacleX), abs(TentacleY)));
+			if (seconds < 500) {
+				swimAccelerationX = 6;
+				speX = 10;
+				swimAccelerationY = 6;
+				speY = 12;
+			}
+			
+			if (!audio_is_playing(sfx_splash)) {
+				audio_play_sound(sfx_splash, 0, false, global.volume_setting, 0, 1);
+			}
+			if (!audio_is_playing(sfx_boost)) {
+				audio_sound_gain(sfx_boost, global.volume_setting, 0);
+				audio_play_sound(sfx_boost, 1, true, global.volume_setting + 0.1);
+			}
+			if (delta_time & 10 == 0) {
+				instance_create_layer(x + irandom_range(-10, 10) ,y + irandom_range(-10, 10), "behind_diver", vfx_bubble);
+			}
+			swimAccelerationX = clamp(swimAccelerationX + (xChanged * 0.02), -9, 9);
+			speX = clamp(speX + swimAccelerationX, -abs(swimMax), abs(swimMax));
+				
+			swimAccelerationY = clamp(swimAccelerationY + (yChanged * 0.02), -9, 9);
+			speY = clamp(speY + swimAccelerationY, -abs(swimMax), abs(swimMax));
+		} else {
+			audio_sound_gain(sfx_boost, 0, 500);
+			var Adrag = 0.1;
+			if (swimAccelerationX > 0) {
+				swimAccelerationX -= Adrag;
+			} else if (swimAccelerationX < 0) {
+				swimAccelerationX += Adrag;
+			}
+			if (swimAccelerationY > 0) {
+				swimAccelerationY -= Adrag;
+			} else if (swimAccelerationY < 0) {
+				swimAccelerationY += Adrag;
+			}
+		}
+		if (!place_meeting(x+speX,y+speY,obj_collision_parent)) {
+			x += speX;
+			y += speY;
+		}
+		if (place_meeting(x+speX,y,obj_collision_parent)) {
+			swimAccelerationX = 0;
+			speX = 0;
+			
+		}
+		if (place_meeting(x,y+speY,obj_collision_parent)) {
+			swimAccelerationY = 0;
+			speY = 0;
+		}
+		if (speY == 0 && speX == 0) {
+			playIntroAnimation = false;
+		}
+}
+
+
 //floating animation
 if (attackingANI = 0 && ((sprite_index != spr_divr_attacking_side) || (sprite_index != spr_diver_attacking_up) || (sprite_index != spr_diver_attacking_down))) {
 	if ((keyboard_check(obj_settings.key_left) = 0) && (keyboard_check(obj_settings.key_right) = 0)) {

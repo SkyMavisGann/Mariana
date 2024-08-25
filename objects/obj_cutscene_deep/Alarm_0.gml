@@ -1,1 +1,2 @@
-room_goto(Room1);
+
+step = 0;

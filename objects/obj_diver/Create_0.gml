@@ -29,6 +29,7 @@ boosterCooldown = 0;
 attackedFromX = 0;
 attackedFromY = 0;
 loadPetAge = false;
+step = 0;
 
 bubbleTimer = 0;
 
@@ -39,10 +40,12 @@ blindness = 0;
 
 bossRewardAnimationFrame = 6;
 bossRewardAnimationFrameTimer = 0;
+playIntroAnimation = false;
 
 gamepad_set_axis_deadzone(0, 0.3);
 
 if !variable_global_exists("equipped") {
+	
 	global.max_player_health = 2;
 	global.attack_damage = 1;
 	global.inventory = ["Air Tank", "Soggy Sandwich"];
@@ -64,6 +67,7 @@ if !variable_global_exists("equipped") {
 	}
 	array_set(global.doorInRoomMain, Room1, [[Room1], [0, 0]]);
 }
+
 
 if (array_length(global.equipped) < 3) {
 	array_push(global.equipped, 0.0);

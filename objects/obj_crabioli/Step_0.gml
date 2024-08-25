@@ -139,7 +139,7 @@ if (array_contains(global.bosses_beaten, "Crab")) {
 		if (rando == 2 && instance_exists(obj_diver)) {
 			rando++;
 
-		audio_play_sound_at(sfx_crab,x, y, 0, 100, 500, 2, false, 1, global.volume_setting / 2, 0, random_range(0.5, 0.8));
+		audio_play_sound_at(sfx_crab,x, y, 0, 100, 500, 2, false, 1, global.volume_setting, 0, random_range(0.3, 0.5));
 		}
 	} else {
 		rando = irandom_range(1, 2);	
