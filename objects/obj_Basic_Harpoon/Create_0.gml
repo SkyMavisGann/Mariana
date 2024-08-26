@@ -9,3 +9,4 @@ pickupability = false;
 
 sprite_index = convertTo("spr", object_get_name(object_index));
 description = "A basic metal harpoon that does 1 damage. Has moderate range. Can be equipped."
+

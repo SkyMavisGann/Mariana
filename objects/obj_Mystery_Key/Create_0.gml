@@ -8,3 +8,4 @@ despawn = 52000;
 pickupability = false;
 
 description = "If you try to open the right door with this key in your inventory it will open.";
+shopDescription = "If you're looking for answers how about this? A mysterious key that literally nobody knows what unlocks? You never know when you might stumble across a door and wish you had this."

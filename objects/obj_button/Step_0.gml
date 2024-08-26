@@ -2,7 +2,9 @@ if (!instance_exists(obj)) {
 	instance_destroy();
 } else if (menu_level != obj.menu_level) {
 	obj.buttons = [];
-	instance_destroy();
+	with (obj_button) {
+		instance_destroy();
+	}
 }
 
 if (position_meeting(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), id)) {

@@ -8,3 +8,4 @@ despawn = 52000;
 pickupability = false;
 
 description = "Has runes on the front and back. It looks really old. At a glance you can tell its not very accurate. Perhaps the people who made the map barely knew what it looked like down here. Can be equipped.";
+shopDescription = "Would you like to buy a map of the trench? I promise it's not older than a century or two.";

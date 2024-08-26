@@ -9,3 +9,4 @@ pickupability = false;
 
 sprite_index = convertTo("spr", object_get_name(object_index));
 description = "Slots perfectly into the booster pack. Looks like it will feed a constant stream of air from your air tank to the booster. Can be equipped."
+shopDescription = "Alright alright, heres the deal: the standard booster is nothing compared to this. Yes it has its downsides. You need to actually fueld it, but! With this device you will contstantly boost. How about that?"

@@ -8,4 +8,4 @@ despawn = 52000;
 pickupability = false;
 
 description = "A copper ring with a silver gear on top."
-
+shopDescription = "Some old ring I found. I bet it has mystical powers!"

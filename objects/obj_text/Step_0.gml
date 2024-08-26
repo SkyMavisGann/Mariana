@@ -28,7 +28,7 @@ if (menu_level >= 3) {
 }
 
 if (pos == length) {
-	instance_destroy();
+	alarm[0] = 1;
 }
 
 if (menu_level < 2 && (pos != length-1)) {

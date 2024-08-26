@@ -19,7 +19,7 @@ menu_level = 0;
 
 function displayPrice(items) {
 	var posx = 200;
-	var posy = 760;
+	var posy = 460;
 	draw_sprite_ext(sprite_index, image_index, posx, posy, (array_length(items)*35)/sprite_width*3, 75/sprite_height*3, 0, c_white, 1);
 	for (var i = 0; i < array_length(items); i++) {
 		

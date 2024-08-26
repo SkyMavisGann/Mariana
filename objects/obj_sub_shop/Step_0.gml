@@ -31,9 +31,9 @@ if ((distance_to_object(obj_diver) < 15) && global.inventoried == false && globa
 			}
 		}
 		//before finds light
-		stuntDialogue(9, "Found light");
+		stuntDialogue(5, "Found light");
 		//before finds thorium
-		stuntDialogue(14, "Found thorium");
+		stuntDialogue(6, "Found thorium");
 		
 		
 	}

@@ -12,7 +12,7 @@ if ((distance_to_object(obj_diver) < 15) && global.inventoried == false && globa
 			array_set(global.doorInRoomMain, destination, [[], 
 			[x + global.doorInRoomMain[room][1][0], y + global.doorInRoomMain[room][1][1]]]);
 		}
-		audio_play_sound(sfx_door, 1, false, global.volume_setting, 0, 1);
+		audio_play_sound(sfx_door, 1, false, global.volume_setting, 0, 0.5);
 		saveGame(string(curLocation) + ".save");
 		room_goto(destination);
 		loadGame(string(destination) + ".save", false);

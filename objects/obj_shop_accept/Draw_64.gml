@@ -9,7 +9,7 @@ draw_set_halign(fa_left);
 //center
 
 x = 200
-y = 600
+y = 300
  
 //dr menu background
 

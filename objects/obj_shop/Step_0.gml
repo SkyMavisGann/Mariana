@@ -29,26 +29,67 @@ if pos < 0 {pos = op_length -1};
 //using menu
 if (!instance_exists(obj_text)) {
 	visible = true;
-	if !instance_exists(obj_shop_accept) {
+
 		if (key_accept) {
 			audio_play_sound(sfx_select, 2, false, global.volume_setting);
 			var _sml = menu_level;
 		
 			switch (menu_level) {
 	
-				//pause menu
 				case 0:
-					alarm[0] = 1;
+					switch (pos) {
+					 case 12:
+						 menu_level = 2;
+						 instance_destroy(obj_shop_accept);	
+					 break;
+					default:
+						if !instance_exists(obj_shop_accept) {
+							alarm[0] = 1;
+						}
+					break;
+					}
 				 break;
+				
 				 case 1:
 					switch (pos) {
-						//window settings
-					case 0: 
-			
-					break;
-						//brightness
 					case 1: 
-					menu_level = 0;
+						menu_level = 0;
+					break;
+					}
+				 break;
+				 case 2:
+					switch (pos) {
+						case 0: 
+							menu_level = 0;
+						break;
+						case 1:
+							menu_level = 3;
+						break;
+						case 2:
+						if (room == room_shop_top) {
+							destination = Room1;
+						} else {
+							destination = Room2;
+						}
+							room_goto(destination);
+							loadGame(string(destination) + ".save", false);
+	
+							audio_stop_sound(m_surface_tension);
+							audio_sound_gain(m_hull_sale, 0, 5000);
+						break;
+						
+					}
+				 break;
+				 case 3:
+				 
+					switch (pos) {
+						default:
+							if (!instance_exists(obj_text)) {
+								alarm[1] = 1;
+							}
+						break;
+					case 4:
+						menu_level = 2;
 					break;
 					}
 				 break;
@@ -62,7 +103,6 @@ if (!instance_exists(obj_text)) {
 			op_length = array_length(option[menu_level]);
 
 		}
-	}
 } else {
 	visible = false;
 }

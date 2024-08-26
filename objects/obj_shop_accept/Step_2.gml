@@ -112,7 +112,7 @@ if (!instance_exists(obj_text)) {
 											say(splitText("Do you know how to read the price tag?"));
 										break;
 										case 6:
-											say(splitText("You can't afford " + articleChoose(buyingItem) + buyingItem + " you are poor."));
+											say(splitText("You can't afford " + articleChoose(buyingItem) + buyingItem + ". Now stop wasting my time!"));
 										break;
 										case 7:
 											say(splitText("No " + missingItem + " no " + buyingItem + "."));
