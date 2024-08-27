@@ -42,19 +42,36 @@ switch (room) {
 		option[0, 12] = "Back";
 	break;
 }
-
-topics[0] = "Current";
-topics[1] = "Muro";
-topics[2] = "Seeing in the dark";
-topics[3] = "Sub Shop";
-topics[4] = "Trench"
-topics[5] = "Thorium";
-topics[6] = "New Gods";
-topics[7] = "Yerino";
-topics[8] = "Sea Life";
-topics[9] = "Depth";
-topics[10] = "Creature Parts";
-topics[11] = "Land";
+if (room = room_shop_top) {
+	topics[0] = "Current";
+	topics[1] = "Muro";
+	topics[2] = "Seeing in the dark";
+	topics[3] = "Sub Shop";
+	topics[4] = "Trench"
+	topics[5] = "Thorium";
+	topics[6] = "New Gods";
+	topics[7] = "Yerino";
+	topics[8] = "Sea Life";
+	topics[9] = "Depth";
+	topics[10] = "Creature Parts";
+	topics[11] = "Land";
+} else {
+	if (array_contains(obj_settings.achivements, "GateOpened") != -1) {
+		topics[0] = "Siphoniphore";
+	} else {
+		topics[0] = "Metal Gate";
+	}
+	topics[1] = "Muro";
+	topics[2] = "Gears";
+	topics[3] = "Sub Shop";
+	topics[4] = "Trench"
+	topics[5] = "City";
+	topics[6] = "New Gods";
+	topics[7] = "Sea Life";
+	topics[8] = "Depth";
+	topics[9] = "Creature Parts";
+	topics[10] = "Land";
+}
 
 
 var op_pos = 0;

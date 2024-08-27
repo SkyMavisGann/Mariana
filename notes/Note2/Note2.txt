@@ -6,8 +6,13 @@ x Blast attack siph
 X mural of you the god. Gives final heart.
 X siph sounds
 X Siph reward
+X change icons for death
+X Intro cutscene
 
-muro to have a talk option and a shop option, also talks about the item while hovering over it.
+X muro to have a talk option and a shop option, also talks about the item while hovering over it.
+X Muro talks abt different thigns when on room2
+Xmake coral
+make more glowy plants for second room, and kelp and a plant for brine room
 
 credits
 menu screen

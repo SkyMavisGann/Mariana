@@ -48,6 +48,18 @@ if (!instance_exists(obj_text)) {
 			array_push(obj_settings.achivements, option[3, pos]);
 			say(splitText("Yea, its these black crystals. They glow? It powers my submarine so yea I trade for em. They form in dark areas."));
 		break;
+		case "Metal Gate":
+			array_push(obj_settings.achivements, option[3, pos]);
+			say(splitText("Have you seen the gate yet? It explains why we never see the biggest fish further up if everything is trapped down there. The villagers must have constructed it for protection. And without the villagers around to open it I doubt im going much further. Who needs it anyway right?"));
+		break;
+		case "City":
+			array_push(obj_settings.achivements, option[3, pos]);
+			say(splitText("Man that city is something. I'da never have guess it'd be so intact after what happened. Luckily I'm here now to get all their technology so I can sell it to you, You're welcome."));
+		break;
+		case "Siphoniphore":
+			array_push(obj_settings.achivements, option[3, pos]);
+			say(splitText("What in tarnation have you done? Opening the gate like that. That thing . . . Well, I've never seen anything like it. Its like the Queen of all Siphoniphores, er, maybe the king? How should I know. If you're looking for tips from me you're out of luck my friend. I guess you could go after all the little zooids that dangle from it but you've probably already gathered that."));
+		break;
 	}
 }
 var op_pos = 0;
