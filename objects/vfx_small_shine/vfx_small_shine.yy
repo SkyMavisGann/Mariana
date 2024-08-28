@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "vfx_shine_gap2",
+  "name": "vfx_small_shine",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_Shine_Through_Gap",
-    "path": "sprites/spr_Shine_Through_Gap/spr_Shine_Through_Gap.yy",
+    "name": "spr_small_glow",
+    "path": "sprites/spr_small_glow/spr_small_glow.yy",
   },
   "spriteMaskId": null,
   "visible": true,

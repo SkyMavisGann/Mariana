@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "VFX",
-    "path": "folders/Objects/placables/VFX.yy",
+    "name": "lighting",
+    "path": "folders/Objects/lighting.yy",
   },
   "parentObjectId": null,
   "persistent": false,
