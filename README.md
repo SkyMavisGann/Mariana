@@ -1,5 +1,5 @@
 # Mariana
-Mariana is an underwater exploration and metroidvania indie game. In this game you dropped into an unknown trench to explore. You will find fantastical creatures and rare artifacts. Fight bosses and mini-bosses in order to dive as deep as possible.
+Mariana is an underwater exploration and metroidvania indie game. In this game you are dropped into an unknown trench to explore. You will find fantastical creatures and rare artifacts. Fight bosses and mini-bosses in order to dive as deep as possible.
 
 # features
 <body>
