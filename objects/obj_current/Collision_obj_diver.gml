@@ -13,6 +13,12 @@ with (obj_diver) {
 	if (!place_meeting(x+xChanged,y+yChanged,obj_collision_parent)) {
 		x += xChanged;
 		y += yChanged;	
+		if (!audio_is_playing(sfx_current)) {
+			audio_sound_gain(sfx_current, 0, 0);
+			audio_sound_gain(sfx_current, global.volume_setting, 500);
+			audio_play_sound(sfx_current, 1, true);
+		}
+		
 	}
 }
 

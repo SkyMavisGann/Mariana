@@ -12,7 +12,8 @@ X Intro cutscene
 X muro to have a talk option and a shop option, also talks about the item while hovering over it.
 X Muro talks abt different thigns when on room2
 Xmake coral
-make more glowy plants for second room, and kelp and a plant for brine room
+X make more glowy plants for second room, and kelp and a plant for brine room
+X add sounds effecrts for current, gears and moving gate.
 
 credits
 menu screen

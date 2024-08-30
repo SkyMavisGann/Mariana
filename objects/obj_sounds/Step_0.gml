@@ -1,6 +1,10 @@
+with (obj_diver) {
+	if (distance_to_object(obj_gear_place) > 600) {
+		audio_stop_sound(sfx_gear);
+	}
+}
+
 //random ambient sounds
-
-
 var seconds = current_time / 1000;
 if (round(seconds) % 30 == 0) {
 	if (rando == 2 && instance_exists(obj_diver)) {

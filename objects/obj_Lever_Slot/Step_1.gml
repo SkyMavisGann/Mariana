@@ -25,6 +25,7 @@ if (!empty) {
 		
 	 if keyboard_check_pressed(obj_settings.key_select) {
 		opened = !opened;
+		audio_play_sound_at(sfx_select, x, y, 0, 300, 2000, 1, false,2, global.volume_setting, 0, 0.75);
 		frame = 0;
 		}
 	}

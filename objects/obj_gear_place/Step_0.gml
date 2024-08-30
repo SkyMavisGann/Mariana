@@ -19,3 +19,7 @@ if (tempSpeed == 0 && gearUOO && shaftUOO && leverUOO) {
 }
 
 image_angle += tempSpeed;
+if (tempSpeed != 0 && playOnce) {
+	audio_play_sound_at(sfx_gear, x, y, 0, 50, 600, 3, true,2, global.volume_setting, 0, abs(tempSpeed));
+	playOnce = false;
+}

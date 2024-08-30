@@ -453,3 +453,11 @@ for (var i = 0; i < array_length(global.pets); i++) {
 		instance_create_layer(x, y, "player_layer", global.pets[i]);
 	}
 }
+
+if (!place_meeting(x, y, obj_current)) {
+	if (audio_is_playing(sfx_current)) {
+		audio_sound_gain(sfx_current, 0, 500);
+		
+	}
+}
+stopDeadMusic(sfx_current);
