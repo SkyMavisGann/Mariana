@@ -12,7 +12,10 @@
     "name": "diver",
     "path": "folders/Objects/diver.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_Interactable_Parent",
+    "path": "objects/obj_Interactable_Parent/obj_Interactable_Parent.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

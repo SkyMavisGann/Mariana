@@ -85,7 +85,7 @@ audio_play_sound(sfx_select, 2, false);
 				changeVolume(m_there_is_definitely_a_crab_in_here);
 				changeVolume(m_The_5th_Wall);
 				changeVolume(m_brine);
-				option[1, 3] = ("Volume: " + string(global.volume_setting*100)); 
+				option[1, 3] = ("Volume: " + (string_format(global.volume_setting*100, 3, 0))); 
 			break;
 			//back
 			case 4: 

@@ -1,6 +1,6 @@
 switch (obj_settings.timesEnteredSub) {
 	case 1:
-	say(["Welcome to the SS Sub Shop or the SSSS for short", "God I hate it here.", "Anyway you wanna buy something?"]);
+	say(["Welcome to the SS Sub Shop or the SSSS for short", "Muro's the name.", "Anyway you wanna buy something?"]);
 	break;
 
 	case 2:
@@ -8,7 +8,7 @@ switch (obj_settings.timesEnteredSub) {
 	break;
 
 	case 3:
-	say(splitText("You know, there's a rumor going around that if you swim deep enough, you'll find a whole city down there."));
+	say(splitText("You know, there's a rumor going around that if you swim deep enough, you'll find a whole city down there. Thats right THE city."));
 	break;
 
 

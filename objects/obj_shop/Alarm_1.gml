@@ -60,6 +60,10 @@ if (!instance_exists(obj_text)) {
 			array_push(obj_settings.achivements, option[3, pos]);
 			say(splitText("What in tarnation have you done? Opening the gate like that. That thing . . . Well, I've never seen anything like it. Its like the Queen of all Siphoniphores, er, maybe the king? How should I know. If you're looking for tips from me you're out of luck my friend. I guess you could go after all the little zooids that dangle from it but you've probably already gathered that."));
 		break;
+		case "Gears":
+			array_push(obj_settings.achivements, option[3, pos]);
+			say(splitText("You're looking for gears? I dunno kid, Theres gears in the city but ripping one of those off will have who knows what consequences. Could accidentally shut down the power thats somehow been runnin'. Theres a whole bunch of caves around here. People probably threw their scrap around here somewhere. I guess you should gear up and go look."));
+		break;
 	}
 }
 var op_pos = 0;

@@ -82,10 +82,10 @@ switch (item) {
 						return ["Fins", "Water", "Water"];
 					break;
 					case "Wet Burrito":
-						return ["Oris Tentacle", "Ice"];
+						return ["Fins", "Ice"];
 					break;
-					case "Gear Shaft":
-						return ["Oris Tentacle", "Fins", "Oris Tentacle", "Air Tank"];
+					case "Booster Mod":
+						return ["Fins", "Oris Tentacle", "Air Tank"];
 					break;
 					default:
 						return ["Ice"];

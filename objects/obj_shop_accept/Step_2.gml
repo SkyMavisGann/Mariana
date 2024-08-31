@@ -77,6 +77,16 @@ if (!instance_exists(obj_text)) {
 										case ("Booster"):
 											say(splitText("Enjoy your new "+ buyingItem + "!" + " Now you can boost through the current."));
 										break;
+										case ("Pocket Fish"):
+											if (array_contains(obj_settings.achivements, "BoughtFish") == -1) {
+												say(splitText("Enjoy your new "+ buyingItem + "!"));
+												array_push(obj_settings.achivements, "BoughtFish");
+											} else {
+												say(splitText("Enjoy your new . . . Oh, sorry kid looks like we're fresh out of pocket fish. I already used your items. This is awkward. . . . Oh I got just the thing. A Burrito!"));
+												array_delete(global.inventory, array_length(global.inventory) - 1, 1);
+												buyItem("Wet Burrito");
+											}
+										break;
 										default:
 											say(splitText("Enjoy your new "+ buyingItem + "!"));
 										break;

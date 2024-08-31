@@ -16,7 +16,11 @@ function addItem(itemName){
 		}
 	}
 
-	if (array_contains(global.inventory, "Pocket Fish") && array_contains(global.inventory, "Mystery Key")) {
+	if (array_contains(global.inventory, "Pocket Fish") &&
+	(array_contains(global.inventory, "Mystery Key") ||
+	array_contains(global.inventory, "Red Key") ||
+	array_contains(global.inventory, "Yellow Key") ||
+	array_contains(global.inventory, "Purple Key"))) {
 		array_set(global.inventory, array_contains(global.inventory, "Pocket Fish"), "Holy Fish");
 	}
 	

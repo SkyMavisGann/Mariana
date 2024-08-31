@@ -37,7 +37,7 @@ switch (room) {
 		option[0, 7] = "Wet Burrito";
 		option[0, 8] = "Ring";
 		option[0, 9] = "Broken Compass";
-		option[0, 10] = "Gear Shaft";
+		option[0, 10] = "Scales";
 		option[0, 11] = "Booster Mod";
 		option[0, 12] = "Back";
 	break;

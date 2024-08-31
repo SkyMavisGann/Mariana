@@ -79,7 +79,7 @@ audio_play_sound(sfx_select, 2, false);
 					global.volume_setting = 1.00;
 				}
 				changeVolume(m_watery_grave);
-				option[1, 3] = ("Volume: " + string(global.volume_setting*100)); 
+				option[1, 3] = ("Volume: " + (string_format(global.volume_setting*100, 3, 0))); 
 			break;
 			//back
 			case 4: 

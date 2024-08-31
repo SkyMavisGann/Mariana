@@ -25,3 +25,19 @@ switchDirTime = 150;
 maxAge = 19000 + irandom_range(0, 150);
 
 targets = ds_queue_create();
+
+function findNearestNonAttackedZooid(xpos, ypos) {
+	var minDist = infinity;
+	var nearestZooid = noone;
+	for (var i = 0; i < instance_number(obj_Zooid); i++) {
+		var currentZooid = instance_find(obj_Zooid, i);
+		var curDist = point_distance(xpos, ypos, currentZooid.x, currentZooid.y);
+		//make sure its not been just attacked
+		if (curDist < minDist && currentZooid.flashAlpha <= 0) {
+			minDist = curDist;
+			nearestZooid = currentZooid;
+		}
+	}
+	return nearestZooid;
+
+}

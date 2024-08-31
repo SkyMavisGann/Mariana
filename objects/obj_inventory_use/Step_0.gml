@@ -233,10 +233,12 @@ audio_play_sound(sfx_select, 2, false);
 									var nearestFish = instance_nearest(x, y, obj_Cat_Fish)
 									if (distance_to_object(nearestFish) < 500) {
 										if (array_contains(global.pets, obj_Cat_Fish) != -1) {
-											say(splitText("You hold out the fish food. Your pet swims over and eats it."));
+											say(splitText("You hold out the fish food. But your pet already loves you."));
 										} else {
 											global.petsAge[array_length(global.pets)] = obj_Cat_Fish.age;
 											array_push(global.pets, obj_Cat_Fish);
+											say(splitText("You've gained a new pet!"));
+											array_delete(global.inventory, obj_inventory.pos, 1) 
 										}
 									
 									}
@@ -267,8 +269,16 @@ audio_play_sound(sfx_select, 2, false);
 			break;
 			//Drop
 		    case 1:
-				dropItem(convertTo("obj", string(global.inventory[obj_inventory.pos])));
-				instance_destroy();
+				switch(global.inventory[obj_inventory.pos]) {
+					case "Pocket Fish":
+						say(["No I don't think so. If you did that it wouldn't be in your pocket now would it?"]);
+						instance_destroy();
+					break;
+					default:
+						dropItem(convertTo("obj", string(global.inventory[obj_inventory.pos])));
+						instance_destroy();
+					break;
+				}
 			break;
 		    //left
 		    case 2: 

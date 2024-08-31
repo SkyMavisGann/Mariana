@@ -24,7 +24,7 @@ option[0, 3] = "Quit Game"
 option[1, 0] = "Video";
 option[1, 1] = "Gameplay";
 option[1, 2] = "Controls";
-option[1, 3] = ("Volume: " + (string(global.volume_setting*100)));
+option[1, 3] = ("Volume: " + (string_format(global.volume_setting*100, 3, 0)));
 option[1, 4] = "Back";
 
 //controls
