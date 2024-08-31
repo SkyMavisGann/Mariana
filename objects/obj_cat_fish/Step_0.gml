@@ -43,10 +43,11 @@ if (instance_exists(obj_diver)) {
 			if (instance_exists(ds_queue_head(targets))) {
 				move_towards_point(ds_queue_head(targets).x, ds_queue_head(targets).y, swim_speed);
 				if (place_meeting(x, y, ds_queue_head(targets))) {
+					var sca = scale;
 					with (ds_queue_head(targets)) {
 						if (flashAlpha <= 0.25) {
 							flashAlpha = 1;
-							HP -= clamp(scale, 0.8, 2);
+							HP -= clamp(sca, 0.8, 2);
 						}
 					}
 					ds_queue_dequeue(targets);

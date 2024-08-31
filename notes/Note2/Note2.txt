@@ -15,9 +15,10 @@ Xmake coral
 X make more glowy plants for second room, and kelp and a plant for brine room
 X add sounds effecrts for current, gears and moving gate.
 
-credits
+
 X menu screen
-houses shattered windows
+X houses shattered windows
+credits
 
 Want
 x A siph attack that sends lasers out of zooids
