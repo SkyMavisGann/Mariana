@@ -164,7 +164,11 @@ audio_play_sound(sfx_select, 2, false);
 					option[4, 0] = "Automatic Pickup: " + toBoolOrBinary(obj_settings.Automatic_pickup);
 				break;
 				case 1:
-						menu_level = 1;
+				obj_settings.Debug_Console = !obj_settings.Debug_Console;
+				option[4, 1] = "Debug Console: " + toBoolOrBinary(obj_settings.Debug_Console);
+				break;
+				case 2:
+					menu_level = 1;
 				break;
 			}
 		 break;

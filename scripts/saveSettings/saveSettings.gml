@@ -31,7 +31,8 @@ function saveSettings(){
 
 						blood : blood,
 						Borderless : Borderless,
-						Automatic_pickup : Automatic_pickup
+						Automatic_pickup : Automatic_pickup,
+						Debug_Console : Debug_Console
 					}
 					array_push(_saveData, _saveEntity);
 				}

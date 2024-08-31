@@ -31,42 +31,47 @@ gamepad_set_axis_deadzone(0, 0.3);
 	Borderless = false;
 	
 	Automatic_pickup = true;
+	Debug_Console = false;
+	try {
+	if (file_exists("settings.save")) {
+		var _buffer = buffer_load("settings.save");
+		var _string = buffer_read(_buffer, buffer_string);
+		buffer_delete(_buffer);
+		var _loadData = json_parse(_string);
 
-if (file_exists("settings.save")) {
-	var _buffer = buffer_load("settings.save");
-	var _string = buffer_read(_buffer, buffer_string);
-	buffer_delete(_buffer);
-	var _loadData = json_parse(_string);
+		var _loadEntity = array_pop(_loadData);	
+		if (struct_names_count(_loadEntity) == 21) {
+			global.volume_setting = _loadEntity.volume_setting;
+			key_escape = _loadEntity.key_escape;
+			key_select = _loadEntity.key_select;
+			key_dash = _loadEntity.key_dash;
 
-	var _loadEntity = array_pop(_loadData);	
-	if (struct_names_count(_loadEntity) == 20) {
-		global.volume_setting = _loadEntity.volume_setting;
-		key_escape = _loadEntity.key_escape;
-		key_select = _loadEntity.key_select;
-		key_dash = _loadEntity.key_dash;
+			key_down = _loadEntity.key_down;
+			key_up = _loadEntity.key_up;
 
-		key_down = _loadEntity.key_down;
-		key_up = _loadEntity.key_up;
+			key_left = _loadEntity.key_left;
+			key_right = _loadEntity.key_right;
 
-		key_left = _loadEntity.key_left;
-		key_right = _loadEntity.key_right;
+			key_map = _loadEntity.key_map;
+			key_attack = _loadEntity.key_attack;
 
-		key_map = _loadEntity.key_map;
-		key_attack = _loadEntity.key_attack;
+			key_inventory = _loadEntity.key_inventory;
 
-		key_inventory = _loadEntity.key_inventory;
-
-		textSpeed = _loadEntity.textSpeed;
-		textpos = _loadEntity.textpos;
-		fullscreen = _loadEntity.fullscreen;
-		Resolution = _loadEntity.Resolution; 
-		respos = _loadEntity.respos;
-		bloodEnable = _loadEntity.bloodEnable;
-		blood = _loadEntity.blood;
-		Borderless = _loadEntity.Borderless;
-		Automatic_pickup = _loadEntity.Automatic_pickup;
+			textSpeed = _loadEntity.textSpeed;
+			textpos = _loadEntity.textpos;
+			fullscreen = _loadEntity.fullscreen;
+			Resolution = _loadEntity.Resolution; 
+			respos = _loadEntity.respos;
+			bloodEnable = _loadEntity.bloodEnable;
+			blood = _loadEntity.blood;
+			Borderless = _loadEntity.Borderless;
+			Automatic_pickup = _loadEntity.Automatic_pickup;
+			Debug_Console = _loadEntity.Debug_Console;
+		}
 	}
-}
+	} catch (e) {
+		show_debug_message(e);
+	}
 // saying for text
 currentlySaying = [];
 timesEnteredSub = 0;

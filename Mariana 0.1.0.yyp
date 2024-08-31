@@ -66,8 +66,12 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sub_shop","folderPath":"folders/Sprites/sub_shop.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Steamworks","folderPath":"folders/Steamworks.yy",},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"GMEXT-Steamworks.html","CopyToMask":0,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"GMEXT-Steamworks.html","CopyToMask":-1,"filePath":"datafiles",},
+  ],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
@@ -140,6 +144,7 @@
     {"id":{"name":"spr_seaweed","path":"sprites/spr_seaweed/spr_seaweed.yy",},},
     {"id":{"name":"spr_wall_mural","path":"sprites/spr_wall_mural/spr_wall_mural.yy",},},
     {"id":{"name":"sfx_siph3","path":"sounds/sfx_siph3/sfx_siph3.yy",},},
+    {"id":{"name":"Steamworks","path":"extensions/Steamworks/Steamworks.yy",},},
     {"id":{"name":"vfx_shine_gap2","path":"objects/vfx_shine_gap2/vfx_shine_gap2.yy",},},
     {"id":{"name":"a_log","path":"animcurves/a_log/a_log.yy",},},
     {"id":{"name":"obj_current","path":"objects/obj_current/obj_current.yy",},},

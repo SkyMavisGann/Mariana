@@ -9,6 +9,8 @@ sprite_index = spr_yerino;
 
 //REAL DEATH FINAL
 if (sprite_index = spr_yerino_die) {
+	global.beingYerinoChased = false;
+	audio_play_sound_at(sfx_yerino3,x, y, 0, 100, 2200, 2, false, 1, global.volume_setting, 0, random_range(1.6, 1.8));
 	if (audio_is_playing(m_with_baited_breath_loop)) {
 		switchMusicTo(m_with_baited_breath_loop, m_victory, false, 0);
 	} else {

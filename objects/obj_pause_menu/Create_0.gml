@@ -48,7 +48,8 @@ option[3, 5] = "Apply";
 option[3, 6] = "Back";
 
 option[4, 0] = "Automatic Pickup: " + toBoolOrBinary(obj_settings.Automatic_pickup);
-option[4, 1] = "Back";
+option[4, 1] = "Debug Console: " + toBoolOrBinary(obj_settings.Debug_Console);
+option[4, 2] = "Back";
 
 op_length = 0;
 menu_level = 0;

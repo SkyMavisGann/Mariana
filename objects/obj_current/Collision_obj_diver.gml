@@ -26,7 +26,6 @@ if (block && underneathLine()) {
 	if (instance_exists(obj_diver) && obj_diver.swim_speed != 10) {
 		obj_diver.y = obj_diver.y - ((obj_diver.vsp + 0.1));
 		obj_diver.x = obj_diver.x - ((obj_diver.hsp + 0.1));
-		show_debug_message("underline");
 	}
 }
 

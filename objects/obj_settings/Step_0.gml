@@ -154,7 +154,7 @@
 	// load after death
 	if (needsDeathLoaded == true) {
 		global.player_health = global.max_player_health;
-	
+		global.beingYerinoChased = false;
 	
 		global.oxygen = 60;
 		switchMusicTo(m_peace_of_mind, sfx_move_selected, false, 100);

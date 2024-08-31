@@ -439,15 +439,15 @@ if (image_index >= image_number - 0.07) {
 
 
 }
-
-if (keyboard_check_pressed(vk_f1)) {
-	if (!instance_exists(obj_text_input)) {
-		debugMenu = instance_create_layer(x, y, "menu_layer", obj_text_input);
-	} else {
-		instance_destroy(debugMenu);
+if (obj_settings.Debug_Console) {
+	if (keyboard_check_pressed(vk_f1)) {
+		if (!instance_exists(obj_text_input)) {
+			debugMenu = instance_create_layer(x, y, "menu_layer", obj_text_input);
+		} else {
+			instance_destroy(debugMenu);
+		}
 	}
 }
-
 for (var i = 0; i < array_length(global.pets); i++) {
 	if (!instance_exists(global.pets[i])) {
 		instance_create_layer(x, y, "player_layer", global.pets[i]);

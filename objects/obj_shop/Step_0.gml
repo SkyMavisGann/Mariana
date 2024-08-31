@@ -29,6 +29,19 @@ if pos < 0 {pos = op_length -1};
 //using menu
 if (!instance_exists(obj_text)) {
 	visible = true;
+	if (global.beingYerinoChased) {
+		if (room == room_shop_top) {
+			destination = Room1;
+		} else {
+			destination = Room2;
+		}
+		room_goto(destination);
+		loadGame(string(destination) + ".save", false);
+	
+		audio_stop_sound(m_surface_tension);
+		audio_sound_gain(m_hull_sale, 0, 5000);
+		
+	}
 
 		if (key_accept) {
 			audio_play_sound(sfx_select, 2, false, global.volume_setting);

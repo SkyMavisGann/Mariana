@@ -54,6 +54,7 @@ if !variable_global_exists("equipped") {
 	global.pets = [];
 	global.petsAge = [];
 	global.spawnedBody = false;
+	global.beingYerinoChased = false;
 	//player_attack_damage = 1;
 	inventory_full = false;
 	obj_oxygen_indicator.refilling = 0;

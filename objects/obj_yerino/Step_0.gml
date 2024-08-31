@@ -17,9 +17,10 @@ if (array_contains(global.bosses_beaten, "Yerino")) {
 	
 	// Target player
 
-	if (obj_diver.y >= 8000 && (distance_to_object(obj_diver) > 400)) {
+	if (obj_diver.y >= 8000 && (distance_to_object(obj_diver) > 400) || (global.beingYerinoChased && (distance_to_object(obj_diver) > 400))) {
 		move_towards_point(obj_diver.x, obj_diver.y, 3.6 + clamp((obj_diver.y - 8500)/500, 0, 20));
 	} else {
+		
 		if (!(place_meeting(x, y+swim_speed, obj_collision_parent) || (place_meeting(x, y-swim_speed, obj_collision_parent)))) {
 		speed = 0;
 		}
@@ -33,13 +34,19 @@ if (array_contains(global.bosses_beaten, "Yerino")) {
 	stopDeadMusic(m_surface_tension);
 
 	if musicStart == true {
+		
 		musicFallToLoop(m_with_baited_breath_start, m_with_baited_breath_loop);
+
+		
 	}
 
 	if distance_to_object(obj_diver) < 500 {
-
+		global.beingYerinoChased = true;
 		if (musicStart == false) {
-			switchMusicTo(m_surface_tension, m_with_baited_breath_start, false, 4000);
+			if ((!audio_is_playing(m_with_baited_breath_start) && !audio_is_playing(m_with_baited_breath_loop))) {
+				switchMusicTo(m_surface_tension, m_with_baited_breath_start, false, 4000);
+			}
+			audio_sound_gain(m_surface_tension, 0, 0);
 			musicStart = true;
 		}
 	
