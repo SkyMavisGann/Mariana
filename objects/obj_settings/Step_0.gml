@@ -1,4 +1,4 @@
-
+steam_update();
 	if (needsToBeLoaded == true) {
 		try {
 			var _loadData = json_parse(obj_settings.needsLoading);

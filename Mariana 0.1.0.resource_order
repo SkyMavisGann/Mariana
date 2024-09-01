@@ -313,6 +313,7 @@
     {"name":"vfx_helm_burst","order":7,"path":"objects/vfx_helm_burst/vfx_helm_burst.yy",},
     {"name":"obj_thorium_crystal","order":4,"path":"objects/obj_thorium_crystal/obj_thorium_crystal.yy",},
     {"name":"obj_Zooid","order":16,"path":"objects/obj_Zooid/obj_Zooid.yy",},
+    {"name":"sfx_zapSiph","order":37,"path":"sounds/sfx_zapSiph/sfx_zapSiph.yy",},
     {"name":"spr_breathe","order":2,"path":"sprites/spr_breathe/spr_breathe.yy",},
     {"name":"spr_Yellow_Key","order":38,"path":"sprites/spr_Yellow_Key/spr_Yellow_Key.yy",},
     {"name":"spr_Chair","order":48,"path":"sprites/spr_Chair/spr_Chair.yy",},

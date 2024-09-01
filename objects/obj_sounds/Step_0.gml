@@ -2,6 +2,9 @@ with (obj_diver) {
 	if (distance_to_object(obj_gear_place) > 600) {
 		audio_stop_sound(sfx_gear);
 	}
+	if (!instance_exists(obj_warning_gate)) {
+		audio_stop_sound(sfx_large_scrape);
+	}
 }
 
 //random ambient sounds

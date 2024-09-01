@@ -50,7 +50,7 @@ if (array_contains(global.bosses_beaten, "Siphi")) {
 						if (instance_exists(stemBody[i].zooid)) {
 							if (stemBody[i].zooid.sprite_index == spr_zooid) {
 								stemBody[i].zooid.sprite_index = spr_zooid_beam;
-								audio_play_sound_at(sfx_zap,stemBody[i].zooid.x, stemBody[i].zooid.y, 0, 100, 1200, 2, false, 1, global.volume_setting / 6, 0, random_range(1.2, 1.6));
+								audio_play_sound_at(sfx_zapSiph,stemBody[i].zooid.x, stemBody[i].zooid.y, 0, 100, 1200, 2, false, 1, global.volume_setting / 6, 0, random_range(1.2, 1.6));
 							}
 						}
 					}
