@@ -2,12 +2,14 @@
 // You can write your code in this editor
 var speed_x = x - xprevious;
 var speed_y = y - yprevious;
-
-if (speed != 0) {
-	sprite_index = spr_crabioli_without_arm_walk;
-} else {
-	sprite_index = spr_crabioli_without_arm;
+if (sprite_index != spr_crabioli_without_arm_jump) {
+	if (speed != 0) {
+		sprite_index = spr_crabioli_without_arm_walk;
+	} else {
+		sprite_index = spr_crabioli_without_arm;
+	}
 }
+
 
 // Get the Y speed of the fish by subtracting the current Y position
 // from the previous Y position

@@ -4,7 +4,8 @@ flashColor = c_white;
 debug = false;
 aTimer = 0;
 swim_speed = 3;
-
+//should be -1 to go back 1 to go forward
+DiverCollidedInAttack = false;
 
 //for booster mod
 swimAccelerationX = 0;
@@ -20,7 +21,7 @@ default_move_speed = swim_speed;
 input_direction = 0;
 
 attacking = 0;
-attackingANI = 0;
+isAttacking = 0;
 attacked_recently = 0;
 ANItimer = 0;
 boosterTimer = -1
@@ -28,8 +29,8 @@ boosterCooldown = 0;
 
 attackedFromX = 0;
 attackedFromY = 0;
-loadPetAge = false;
 step = 0;
+knockbackOnce = true;
 
 bubbleTimer = 0;
 

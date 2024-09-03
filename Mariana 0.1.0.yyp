@@ -331,6 +331,7 @@
     {"id":{"name":"obj_Holy_Fish","path":"objects/obj_Holy_Fish/obj_Holy_Fish.yy",},},
     {"id":{"name":"spr_oxygen_indicator","path":"sprites/spr_oxygen_indicator/spr_oxygen_indicator.yy",},},
     {"id":{"name":"spr_Metal_windows_Shattered2","path":"sprites/spr_Metal_windows_Shattered2/spr_Metal_windows_Shattered2.yy",},},
+    {"id":{"name":"spr_crabioli_without_arm_jump","path":"sprites/spr_crabioli_without_arm_jump/spr_crabioli_without_arm_jump.yy",},},
     {"id":{"name":"spr_tubeworm","path":"sprites/spr_tubeworm/spr_tubeworm.yy",},},
     {"id":{"name":"obj_Mystery_Key","path":"objects/obj_Mystery_Key/obj_Mystery_Key.yy",},},
     {"id":{"name":"obj_item_desc","path":"objects/obj_item_desc/obj_item_desc.yy",},},
@@ -590,6 +591,7 @@
     {"id":{"name":"obj_Oris_Tentacle","path":"objects/obj_Oris_Tentacle/obj_Oris_Tentacle.yy",},},
     {"id":{"name":"obj_Mauler_Fin","path":"objects/obj_Mauler_Fin/obj_Mauler_Fin.yy",},},
     {"id":{"name":"changeVolume","path":"scripts/changeVolume/changeVolume.yy",},},
+    {"id":{"name":"Room1_Soul1","path":"rooms/Room1_Soul1/Room1_Soul1.yy",},},
     {"id":{"name":"spr_Metal_House","path":"sprites/spr_Metal_House/spr_Metal_House.yy",},},
     {"id":{"name":"faceDirection2","path":"scripts/faceDirection2/faceDirection2.yy",},},
     {"id":{"name":"spr_oris_squid_tentacle_end","path":"sprites/spr_oris_squid_tentacle_end/spr_oris_squid_tentacle_end.yy",},},
@@ -688,6 +690,7 @@
     {"roomId":{"name":"Room2_City1_Red1","path":"rooms/Room2_City1_Red1/Room2_City1_Red1.yy",},},
     {"roomId":{"name":"Room2_City1_Yellow1","path":"rooms/Room2_City1_Yellow1/Room2_City1_Yellow1.yy",},},
     {"roomId":{"name":"Room2_City1_Mural1","path":"rooms/Room2_City1_Mural1/Room2_City1_Mural1.yy",},},
+    {"roomId":{"name":"Room1_Soul1","path":"rooms/Room1_Soul1/Room1_Soul1.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},

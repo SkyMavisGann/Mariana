@@ -22,7 +22,7 @@ if (!instance_exists(obj_text)) {
 		break;
 		case "Land":
 			array_push(obj_settings.achivements, option[3, pos]);
-			say(splitText("Yea I do miss the land when I'm down here, the sunlight, the lack of fish nibbling at your toes... But then again, if I lived on land, I'd have drop the word sea from my full title \"Sea Cowboy Merchant\". Speaking of which, how about this rare pearl I just found? It's said to bring good luck to anyone who owns it. Don't believe me? Why?"));
+			say(splitText("Yea I do miss the land when I'm down here, the sunlight, the lack of fish nibbling at your toes. . . But then again, if I lived on land, I'd have drop the word sea from my full title \"Sea Cowboy Merchant\". Speaking of which, how about this rare pearl I just found? It's said to bring good luck to anyone who owns it. Don't believe me? Why?"));
 		break;
 		case "New Gods":
 			array_push(obj_settings.achivements, option[3, pos]);
@@ -30,11 +30,11 @@ if (!instance_exists(obj_text)) {
 		break;
 		case "Yerino":
 			array_push(obj_settings.achivements, option[3, pos]);
-			say(splitText("You know, there's a reason why they call the beast down here Yerino. It's because it'll rip yer insides right out ino . . Nevermind. I once saw a whole crew of divers go up against it and let's just say there wasn't much left of them after. I think its cause they made one crucial mistake. The Yerino is a deep sea creature, something about the water pressure being higher makes it faster. If you want to fight the Yerino, fight it as close to the surface as possible."));
+			say(splitText("You know, there's a reason why they call the beast down here Yerino. It's because it'll rip yer insides right out ino . . . ya know what Nevermind. I once saw a whole crew of divers go up against it and let's just say there wasn't much left of them after. I think its cause they made one crucial mistake. The Yerino is a deep sea creature, something about the water pressure being higher makes it faster. If you want to fight the Yerino, fight it as close to the surface as possible."));
 		break;
 		case "Sea Life":
 			array_push(obj_settings.achivements, option[3, pos]);
-			say(splitText("So, you wanna know more about life at sea? Well, let me tell you, it's not all sunshine and rainbows. There was this one time where I was stuck on a dinghy for three days with nothing but a pack of saltines and a rusty harmonica. I tell you what, I never wanna hear the tune 'Oh Susanna' again."));
+			say(splitText("So, you wanna know more about life at sea? Well, lemme think . . . I guess there was this one time where I was trapped on this dinghy for three days with nothing but a pack of saltines and a rusty harmonica. It was the worst meal I've ever had, but the saltines weren't bad."));
 		break;
 		case "Depth":
 			array_push(obj_settings.achivements, option[3, pos]);
@@ -47,6 +47,18 @@ if (!instance_exists(obj_text)) {
 		case "Thorium":
 			array_push(obj_settings.achivements, option[3, pos]);
 			say(splitText("Yea, its these black crystals. They glow? It powers my submarine so yea I trade for em. They form in dark areas."));
+		break;
+		case "Creatures":
+			array_push(obj_settings.achivements, option[3, pos]);
+			say(splitText("The creatures down here? Yea they are all pretty friendly unless you get on their bad side. Even the Yerino is passive if you just leave it alone. Well he is to me anyway, I d'know if he has anything against you."));
+		break;
+		case "Surface":
+			array_push(obj_settings.achivements, option[3, pos]);
+			say(splitText("Why're you askin' about the surface like you never been? Aren't you from around here? Or did you travel from far away just to see what the new god did? Regardless I couldn't really tell you even if I wanted to, I've been down here for a long time."));
+		break;
+		case "Me":
+			array_push(obj_settings.achivements, option[3, pos]);
+			say(splitText("You wanna talk about you? Thats kinda strange. I'll humor you, Well . . . You're a bit strange. I like that you'll buy my stuff. And why don't you take off the helmet? There's air in here. Uh okay guess not. If I were to describe you in one word I guess I'd say: Somehow you talk a lot and yet hardly at all. Well, I guess thats not even close to one word."));
 		break;
 		case "Metal Gate":
 			array_push(obj_settings.achivements, option[3, pos]);

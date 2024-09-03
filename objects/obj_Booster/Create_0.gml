@@ -7,4 +7,4 @@ randDir2 = irandom_range(1,2);
 despawn = 52000;
 pickupability = false;
 description = "A water jet pack. Pressing shift will boost you forward with compressed air. Seems to be fueled by thorium. It has a couple of empty slots for some reason. Can be equipped."
-shopDescription = "Have you ever seen a seahorse? Those little guys can really move when they want to. They're like the race cars of the sea. Speaking of speed, have you considered buying my booster pack? You never know when you might need it."
+shopDescription = "Have you ever seen a seahorse? Those little guys can really move when they want to. Speaking of speed, have you considered buying my booster pack? You never know when you might need it."

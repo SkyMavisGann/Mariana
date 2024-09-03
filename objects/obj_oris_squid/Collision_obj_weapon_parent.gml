@@ -3,8 +3,9 @@
 // Hurt ----------------------------------------Sprite Input
 if obj_diver.attacking = 1 {
 	if (flashAlpha = 0) {
-	flashAlpha = 1;
-	HP -= global.attack_damage;
+		obj_diver.DiverCollidedInAttack = true;
+		flashAlpha = 1;
+		HP -= global.attack_damage;
 	}
 }
 

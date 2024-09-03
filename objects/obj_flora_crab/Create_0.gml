@@ -5,7 +5,7 @@ scale = 2;
 image_xscale = scale;
 image_yscale = scale;
 
-maxHP = 2;
+maxHP = 1;
 HP = maxHP;
 damage = 1;
 age = 0;
@@ -13,7 +13,7 @@ laidEggs = false;
 layingEggsAge = 0;
 
 
-default_swim_speed = (1.9);
+default_swim_speed = (1.5);
 swim_speed = default_swim_speed;
 
 fallSpeed = (swim_speed+0.5);

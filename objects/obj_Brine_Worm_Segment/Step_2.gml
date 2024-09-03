@@ -1,4 +1,16 @@
-
+if (!variable_instance_exists(id, "KnockbackOnce")) {
+		KnockbackOnce = true;
+}
+if (place_meeting(x, y, obj_weapon_parent)) {
+	if (obj_diver.attacking == 1) {
+		if (KnockbackOnce) {
+			obj_diver.DiverCollidedInAttack = true;
+			KnockbackOnce = false;
+		}
+	}
+} else {
+	KnockbackOnce = true;
+}
 
 	// check if you are the last tentacle
 	if (myNumber == (array_length(allTentaclesAbove) - 1)) {

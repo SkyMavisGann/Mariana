@@ -51,7 +51,10 @@ if (array_contains(global.bosses_beaten, "Crab")) {
 						speed = 0;
 						image_xscale = scale;
 						onceJump = true;
-						alarm[0] = 30;
+						sprite_index = spr_crabioli_without_arm_jump;
+						image_index = 0;
+						audio_play_sound_at(sfx_sand,x, y, 0, 100, 1500, 1, false, 1, global.volume_setting, 0, 0.75);
+						alarm[0] = 60;
 					}
 				}
 			} else if (afterGrabbingWait < 1) {
@@ -94,6 +97,9 @@ if (array_contains(global.bosses_beaten, "Crab")) {
 		}
 	
 	}
+	if (sprite_index == spr_crabioli_without_arm_jump && image_index >= image_number - 1) {
+		sprite_index = spr_crabioli_without_arm;
+	} 
 
 
 	if (!place_meeting(x, y+fallSpeed, obj_collision_parent)) {

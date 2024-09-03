@@ -50,11 +50,15 @@ if (room = room_shop_top) {
 	topics[4] = "Trench"
 	topics[5] = "Thorium";
 	topics[6] = "New Gods";
-	topics[7] = "Yerino";
-	topics[8] = "Sea Life";
+	topics[7] = "Creatures";
+	topics[8] = "Yerino";
 	topics[9] = "Depth";
 	topics[10] = "Creature Parts";
 	topics[11] = "Land";
+	topics[12] = "Sea Life";
+	topics[13] = "Surface";
+	topics[14] = "Me";
+	
 } else {
 	if (array_contains(obj_settings.achivements, "GateOpened") != -1) {
 		topics[0] = "Siphoniphore";

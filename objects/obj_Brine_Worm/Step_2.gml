@@ -1,4 +1,16 @@
-
+if (!variable_instance_exists(id, "KnockbackOnce")) {
+		KnockbackOnce = true;
+}
+if (place_meeting(x, y, obj_weapon_parent)) {
+	if (obj_diver.attacking == 1) {
+		if (KnockbackOnce) {
+			obj_diver.DiverCollidedInAttack = true;
+			KnockbackOnce = false;
+		}
+	}
+} else {
+	KnockbackOnce = true;
+}
 if (instance_exists(obj_diver) && distance_to_object(obj_diver) < 9000) {
 	
 	var starfish = instance_nearest(x,y, obj_Starfish_place);

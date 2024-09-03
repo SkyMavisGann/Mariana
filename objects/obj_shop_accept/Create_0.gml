@@ -39,11 +39,11 @@ switch (item) {
 					break;
 					//Oxygen Tank
 					case "Air Tank":
-						return ["Ice", "Ice", "Ice"];
+						return ["Ice", "Ice"];
 					break;
 					// Soggy Sandwich
 					case "Soggy Sandwich":
-						return ["Fish Eye", "Ice"];
+						return ["Fish Eye"];
 					break;
 					case "Ancient Map":
 						return ["Fish Eye", "Fish Eye"];
@@ -55,10 +55,10 @@ switch (item) {
 						return ["Soggy Sandwich", "Mauler Fin"];
 					break;
 					case "Mermaid Repellant":
-						return ["Water", "Ice", "Scales"];
+						return ["Water", "Scales"];
 					break;
 					case "Water Copter":
-						return ["Air Tank", "Pearl", "Scrap"];
+						return ["Pearl", "Scrap"];
 					break;
 					case "Pearl":
 						return ["Scales"];
@@ -70,13 +70,13 @@ switch (item) {
 						return ["Thorium", "Soggy Sandwich", "Pearl"];
 					break;
 					case "Ring":
-						return ["Thorium", "Scrap", "Ice"];
+						return ["Scrap", "Ice"];
 					break;
 					case "Steel Harpoon":
 						return ["Scrap", "Scrap"];
 					break;
 					case "Night Vision Goggles":
-						return ["Pearl", "Ice", "Fins"];
+						return ["Pearl", "Fins"];
 					break;
 					case "Fish Food":
 						return ["Fins", "Water", "Water"];
@@ -85,7 +85,7 @@ switch (item) {
 						return ["Fins", "Ice"];
 					break;
 					case "Booster Mod":
-						return ["Fins", "Oris Tentacle", "Air Tank"];
+						return ["Fins", "Oris Tentacle"];
 					break;
 					default:
 						return ["Ice"];

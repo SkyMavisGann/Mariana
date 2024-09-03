@@ -45,40 +45,44 @@ if (playIntroAnimation) {
 			swimAccelerationY = clamp(swimAccelerationY + (yChanged * 0.02), -9, 9);
 			speY = clamp(speY + swimAccelerationY, -abs(swimMax), abs(swimMax));
 		} else {
-			audio_sound_gain(sfx_boost, 0, 500);
-			var Adrag = 0.1;
-			if (swimAccelerationX > 0) {
-				swimAccelerationX -= Adrag;
-			} else if (swimAccelerationX < 0) {
-				swimAccelerationX += Adrag;
-			}
-			if (swimAccelerationY > 0) {
-				swimAccelerationY -= Adrag;
-			} else if (swimAccelerationY < 0) {
-				swimAccelerationY += Adrag;
+			if (global.equipped[8] == "Booster Mod") {
+				audio_sound_gain(sfx_boost, 0, 500);
+				var Adrag = 0.1;
+				if (swimAccelerationX > 0) {
+					swimAccelerationX -= Adrag;
+				} else if (swimAccelerationX < 0) {
+					swimAccelerationX += Adrag;
+				}
+				if (swimAccelerationY > 0) {
+					swimAccelerationY -= Adrag;
+				} else if (swimAccelerationY < 0) {
+					swimAccelerationY += Adrag;
+				}
 			}
 		}
-		if (!place_meeting(x+speX,y+speY,obj_collision_parent)) {
-			x += speX;
-			y += speY;
-		}
-		if (place_meeting(x+speX,y,obj_collision_parent)) {
-			swimAccelerationX = 0;
-			speX = 0;
+		if (global.equipped[8] == "Booster Mod") {
+			if (!place_meeting(x+speX,y+speY,obj_collision_parent)) {
+				x += speX;
+				y += speY;
+			}
+			if (place_meeting(x+speX,y,obj_collision_parent)) {
+				swimAccelerationX = 0;
+				speX = 0;
 			
-		}
-		if (place_meeting(x,y+speY,obj_collision_parent)) {
-			swimAccelerationY = 0;
-			speY = 0;
-		}
-		if (speY == 0 && speX == 0) {
-			playIntroAnimation = false;
+			}
+			if (place_meeting(x,y+speY,obj_collision_parent)) {
+				swimAccelerationY = 0;
+				speY = 0;
+			}
+			if (speY == 0 && speX == 0) {
+				playIntroAnimation = false;
+			}
 		}
 }
 
 
 //floating animation
-if (attackingANI = 0 && ((sprite_index != spr_divr_attacking_side) || (sprite_index != spr_diver_attacking_up) || (sprite_index != spr_diver_attacking_down))) {
+if (isAttacking = 0 && ((sprite_index != spr_divr_attacking_side) || (sprite_index != spr_diver_attacking_up) || (sprite_index != spr_diver_attacking_down))) {
 	if ((keyboard_check(obj_settings.key_left) = 0) && (keyboard_check(obj_settings.key_right) = 0)) {
 	sprite_index = spr_floating;
 
@@ -133,7 +137,7 @@ while_counter = 0;
 
 //set index to normal diver
 if (place_meeting(x,y+swim_speed,obj_collision_parent)) {
-	 if attackingANI = 0 {
+	 if isAttacking = 0 {
 		sprite_index = spr_diver;
 	}
 }
@@ -242,7 +246,7 @@ if (abs(speY) < drag) {
 //booster stuff
 if (global.equipped[1] == "Booster") {
 	if (global.equipped[8] == "Booster Mod") {
-		if ( keyboard_check(obj_settings.key_dash)) {
+		if (keyboard_check(obj_settings.key_dash)) {
 			
 			var angleBetween = point_direction(x, y, mouse_x, mouse_y) + 90;
 			var hypot = sqrt(sqr(mouse_x) + sqr(mouse_y));
@@ -334,6 +338,34 @@ if (global.equipped[1] == "Booster") {
 		}
 	}
 }
+//still want deceleration to happen even without the booster mod
+if (global.equipped[8] != "Booster Mod") {
+	audio_sound_gain(sfx_boost, 0, 500);
+	var Adrag = 0.1;
+	if (swimAccelerationX > 0) {
+		swimAccelerationX -= Adrag;
+	} else if (swimAccelerationX < 0) {
+		swimAccelerationX += Adrag;
+	}
+	if (swimAccelerationY > 0) {
+		swimAccelerationY -= Adrag;
+	} else if (swimAccelerationY < 0) {
+		swimAccelerationY += Adrag;
+	}
+	
+	if (!place_meeting(x+speX,y+speY,obj_collision_parent)) {
+		x += speX;
+		y += speY;
+	}
+	if (place_meeting(x+speX,y,obj_collision_parent)) {
+		swimAccelerationX = 0;
+		speX = 0;
+	}
+	if (place_meeting(x,y+speY,obj_collision_parent)) {
+		swimAccelerationY = 0;
+		speY = 0;
+	}
+}
 if (audio_is_playing(sfx_boost) && audio_sound_get_gain(sfx_boost) == 0 && global.volume_setting != 0) {
 	audio_stop_sound(sfx_boost);
 }
@@ -348,10 +380,11 @@ if (global.oxygen <= 0 && bubbleTimer == 59) {
 	delt(1, x, y+1);
 }
 
-
-if (keyboard_or_mouse_check_pressed(obj_settings.key_attack)) {
 	/// @description attacking
+if (keyboard_or_mouse_check_pressed(obj_settings.key_attack)) {
+
 	if (global.inventoried == false && (obj_game.mapOpen == false)) {
+		//choose damage
 	switch (global.equipped[0]) {
 		case "Basic Harpoon":
 			global.attack_damage = 1;
@@ -366,78 +399,94 @@ if (keyboard_or_mouse_check_pressed(obj_settings.key_attack)) {
 			global.attack_damage = 1;
 		break;
 	}
-	if (attacking == 0) {
-	image_index = 0;
-	attacking = 1;
-	}
 
-	attackingANI = 1;
-	ANItimer = 0;
-
-	attacked_recently = 120;
 	// attacking
 		if (aTimer <= 0) {
+			if (attacking == 0) {
+				image_index = 0;
+				attacking = 1;
+			}
+	
+			isAttacking = 1;
+			ANItimer = 0;
+
+			attacked_recently = 120;
 
 			aTimer = 58;
+			switch (input_direction) {
+				case 0:
+					image_xscale = 1;
 
-			if (input_direction = 0) {
-				image_xscale = 1;
+					sprite_index = spr_divr_attacking_side;
+					audio_sound_gain(sfx_attacking_any,global.volume_setting, 0)
+					audio_play_sound(sfx_attacking_any, 5, false);
+				break;
+				case 180:
+					 image_xscale = -1;
 
-				sprite_index = spr_divr_attacking_side;
-				audio_sound_gain(sfx_attacking_any,global.volume_setting, 0)
-				audio_play_sound(sfx_attacking_any, 5, false);
-			} else {
-			 if (input_direction = 180)
-			 {
-			 image_xscale = -1;
-
-			 sprite_index = spr_divr_attacking_side;
-			 audio_sound_gain(sfx_attacking_any,global.volume_setting, 0)
-			 audio_play_sound(sfx_attacking_any, 5, false);
-			 } else {
-				 if (input_direction = 90) {
-		
+					 sprite_index = spr_divr_attacking_side;
+					 audio_sound_gain(sfx_attacking_any,global.volume_setting, 0)
+					 audio_play_sound(sfx_attacking_any, 5, false);
+				break;
+				case 90:
 					sprite_index = spr_diver_attacking_up;
-				   if sprite_index = spr_diver_attacking_up {
-			   audio_sound_gain(sfx_attacking_any,global.volume_setting, 0);
-			audio_play_sound(sfx_attacking_any, 5, false);
-				   }
-			   } else {
-			    if (input_direction = 270) {
-			
+					audio_sound_gain(sfx_attacking_any,global.volume_setting, 0);
+					audio_play_sound(sfx_attacking_any, 5, false);
+				break;
+				case 270:
+					if (sprite_index != spr_diver_attacking_down) {
+						global.attack_damage *= 1.25; 
+					}
 					sprite_index = spr_diver_attacking_down;
 			
-					if sprite_index = spr_diver_attacking_down {
-						audio_sound_gain(sfx_attacking_down,global.volume_setting, 0);
-						audio_play_sound(sfx_attacking_down, 5, false);
-						global.attack_damage *= irandom_range(1.01, 1.5); 
-						swim_speed = 6.5;
-					}
-				}
-			   }
-			 }
+					audio_sound_gain(sfx_attacking_down,global.volume_setting, 0);
+					audio_play_sound(sfx_attacking_down, 5, false);
+					
+					swim_speed = 6.5;
+				break;
 			}
 		}
+	}
+}
+//attacking knock forward
+if (attacking == 1) {
+	if (knockbackOnce) {
+		knockbackOnce = false;
+		if (!place_meeting(x, y, obj_current)) {
+			speX = speX + lengthdir_x(4, input_direction);
+
+			speY = speY + lengthdir_y(4, input_direction);
+		}
+	}
+	if (DiverCollidedInAttack) {
+		DiverCollidedInAttack = false;
+		speX = speX - lengthdir_x(5, input_direction);
+		speY = speY - lengthdir_y(5, input_direction);
+	}
+} else {
+	knockbackOnce = true;
 }
 
-}
+
+
 
 
 if (image_index >= image_number - 0.07) {
 	if (sprite_index != spr_diver && (sprite_index != spr_floating) && sprite_index != spr_swimming) {
-		attackingANI = 0;
+		isAttacking = 0;
 
 		if ANItimer > 0 {
 			ANItimer -= 1;
 		}
 		sprite_index = spr_floating;
-		if (attacking == 1) {
-			attacking = 0;
-		}
+
 		swim_speed = default_move_speed;
 	}
-
-
+}
+if (sprite_index == spr_floating || sprite_index == spr_swimming || sprite_index == spr_diver) {
+	if (attacking == 1) {
+		attacking = 0;
+	}
 }
 if (obj_settings.Debug_Console) {
 	if (keyboard_check_pressed(vk_f1)) {
