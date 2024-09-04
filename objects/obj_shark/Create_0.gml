@@ -13,7 +13,7 @@ image_xscale = scale;
 image_yscale = scale;
 
 if (distance_to_object(obj_yerino) > 600) {
-	maxHP = 4;
+	maxHP = 3;
 } else {
 	maxHP = 2;
 }

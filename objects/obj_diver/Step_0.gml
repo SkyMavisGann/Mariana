@@ -22,7 +22,7 @@ if (playIntroAnimation) {
 			var TentacleY = ((hypot * 1) * dcos(angleBetween + image_angle));
 			var xChanged = (TentacleX / max(abs(TentacleX), abs(TentacleY)));
 			var yChanged = (TentacleY / max(abs(TentacleX), abs(TentacleY)));
-			flashAlpha = 0.31;
+			
 			var _room = Room1;
 			if (array_length(global.roomsWithCorpses) > 0) {
 			var _name = room_get_name(array_last(global.roomsWithCorpses));
@@ -40,6 +40,7 @@ if (playIntroAnimation) {
 			switch (_room) {
 					case Room1_thorium1:
 						if (seconds < 500) {
+							flashAlpha = 2;
 							swimAccelerationX = 1.5;
 							speX = 2.5;
 							swimAccelerationY = 2.2;
@@ -48,6 +49,7 @@ if (playIntroAnimation) {
 					break;
 					case Room1_side1:
 						if (seconds < 500) {
+							flashAlpha = 2;
 							swimAccelerationX = 2.4;
 							speX = 4;
 							swimAccelerationY = 1.8;
@@ -56,6 +58,7 @@ if (playIntroAnimation) {
 					break;
 					case Room1_Harpoon1:
 						if (seconds < 500) {
+							flashAlpha = 2;
 							swimAccelerationX = 2.4;
 							speX = 4;
 							swimAccelerationY = 2.0;
@@ -64,6 +67,7 @@ if (playIntroAnimation) {
 					break;
 					case Room1_Soul1:
 						if (seconds < 500) {
+							flashAlpha = 2;
 							swimAccelerationX = 2.2;
 							speX = 4;
 							swimAccelerationY = 2.0;
@@ -72,6 +76,7 @@ if (playIntroAnimation) {
 					break;
 					case Room2:
 						if (seconds < 500) {
+							flashAlpha = 2;
 							swimAccelerationX = 2.3;
 							speX = 2.5;
 							swimAccelerationY = 2.5;
@@ -80,6 +85,7 @@ if (playIntroAnimation) {
 					break;
 					case Room2_City1:
 						if (seconds < 500) {
+							flashAlpha = 2;
 							swimAccelerationX = 2.3;
 							speX = 2.5;
 							swimAccelerationY = 2.5;
@@ -88,22 +94,25 @@ if (playIntroAnimation) {
 					break;
 					case Room2_Brine1:
 						if (seconds < 500) {
+							flashAlpha = 2;
 							swimAccelerationX = 2.3;
 							speX = 2.5;
-							swimAccelerationY = 2.5;
+							swimAccelerationY = 2.7;
 							speY = 4;
 						}
 					break;
 					case Room2_Puzzle1:
 						if (seconds < 500) {
+							flashAlpha = 2;
 							swimAccelerationX = 2.3;
 							speX = 2.5;
-							swimAccelerationY = 2.5;
+							swimAccelerationY = 2.7;
 							speY = 4;
 						}
 					break;
 					default:
 					if (seconds < 500) {
+						flashAlpha = 2;
 						swimAccelerationX = 1.5;
 						speX = 1;
 						swimAccelerationY = 1.5;
@@ -261,7 +270,7 @@ if (flashAlpha > 0) {
 }
 
 //being flung after getting hit
-if (flashAlpha > 0.32) {
+if (flashAlpha > 0.32 && global.player_health < global.max_player_health) {
 	var xway = x - attackedFromX;
 	var yway = y - attackedFromY;
 	if (!place_meeting(x + xway,y + yway, obj_collision_parent)) {
@@ -415,7 +424,7 @@ if (global.equipped[1] == "Booster") {
 			boosterCooldown--;
 		}
 		if (boosterTimer > 0) {
-			swim_speed = 10;
+			swim_speed = 12;
 			if (delta_time & 10 == 0) {
 				instance_create_layer(x + irandom_range(-10, 10) ,y + irandom_range(-10, 10), "behind_diver", vfx_bubble);
 			}

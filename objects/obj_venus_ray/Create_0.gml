@@ -19,7 +19,7 @@ layingEggsAge = 0;
 switchDirTime = 150;
 maxAge = 29000 + irandom_range(0, 150);
 
-default_swim_speed = (random(1.00) + 0.3);
+default_swim_speed = (random(0.8) + 0.3);
 swim_speed = default_swim_speed;
 
 needsToMoveLeftRight = -1;

@@ -8,7 +8,7 @@ if ((distance_to_object(obj_diver) < 15) && global.inventoried == false && globa
 		if ((array_contains(obj_settings.achivements, "Doored")) == -1) {
 			array_push(obj_settings.achivements, "Doored");
 		}
-		if (array_contains(global.inventory, lock)) {
+		if (array_contains(global.inventory, lock) != -1) {
 			saveGame(string(curLocation) + ".save");
 			room_goto(destination);
 			loadGame(string(destination) + ".save", false);

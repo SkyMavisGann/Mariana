@@ -43,7 +43,7 @@ audio_play_sound(sfx_select, 2, false);
 			case 1: 
 			switchMusicTo(m_watery_grave, sfx_pickup, false, 100);
 			
-			for (var i = 0; i < 25; i++) {
+			for (var i = 0; i < 50; i++) {
 				if file_exists(string(i) + ".save")
 				{
 					file_delete(string(i) + ".save");

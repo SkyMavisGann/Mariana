@@ -35,7 +35,7 @@ if distance_to_object(obj_diver) < range {
 					if (abs(x - diverx) > swim_speed && abs(y - divery) > swim_speed) {
 						if (bTimer < 1) {
 							move_towards_point(diverx, divery, swim_speed+1);
-							if (instance_number(obj_poison) < 50 && age % 20 == 0) {
+							if (instance_number(obj_poison) < 50 && age % 40 == 0) {
 								instance_create_layer(x, y, "player_layer", obj_poison);
 							}
 							charge_attack = 1;
