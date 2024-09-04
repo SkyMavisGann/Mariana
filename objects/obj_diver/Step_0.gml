@@ -143,39 +143,6 @@ if (playIntroAnimation) {
 				
 			swimAccelerationY = clamp(swimAccelerationY + (yChanged * 0.02), -500, 500);
 			speY = clamp(speY + swimAccelerationY, -abs(swimMax + 100), abs(swimMax + 100));
-		} else {
-			if (global.equipped[8] == "Booster Mod") {
-				audio_sound_gain(sfx_boost, 0, 500);
-				var Adrag = 0.1;
-				if (swimAccelerationX > 0) {
-					swimAccelerationX -= Adrag;
-				} else if (swimAccelerationX < 0) {
-					swimAccelerationX += Adrag;
-				}
-				if (swimAccelerationY > 0) {
-					swimAccelerationY -= Adrag;
-				} else if (swimAccelerationY < 0) {
-					swimAccelerationY += Adrag;
-				}
-			}
-		}
-		if (global.equipped[8] == "Booster Mod") {
-			if (!place_meeting(x+speX,y+speY,obj_collision_parent)) {
-				x += speX;
-				y += speY;
-			}
-			if (place_meeting(x+speX,y,obj_collision_parent)) {
-				swimAccelerationX = 0;
-				speX = 0;
-			
-			}
-			if (place_meeting(x,y+speY,obj_collision_parent)) {
-				swimAccelerationY = 0;
-				speY = 0;
-			}
-			if (speY == 0 && speX == 0) {
-				playIntroAnimation = false;
-			}
 		}
 }
 
