@@ -33,6 +33,7 @@ show_debug_message(x + y);
 
 function getHurt(dam = global.attack_damage) {
 		if (flashAlpha == 0) {
+			obj_diver.DiverCollidedInAttack = true;
 		flashAlpha = 1;
 		HP -= dam;
 		moving = 1;

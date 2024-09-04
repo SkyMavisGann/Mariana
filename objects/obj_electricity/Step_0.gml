@@ -1,4 +1,4 @@
-speed = 7;
+speed = 6;
 
 if ((place_meeting(x, y, obj_collision_parent))) {
 	audio_stop_sound(sfx_zap);

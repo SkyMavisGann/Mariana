@@ -1,0 +1,1 @@
+lostelId = 0;

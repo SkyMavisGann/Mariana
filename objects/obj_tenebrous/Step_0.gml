@@ -5,10 +5,10 @@ if distance_to_object(obj_diver) < 350 {
 	if bTimer >= 1 {
 		bTimer -= 1;
 		if (!place_meeting(x, y, obj_collision_parent)) {
-			move_towards_point(obj_diver.x+randX, obj_diver.y+randY, -swim_speed);
+			move_towards_point(obj_diver.x+randX, obj_diver.y+randY, -(swim_speed + 1));
 		}
 		charge_attack = 0;
-		if (bTimer == 4) {
+		if (bTimer == 2) {
 			instance_create_layer(x, y, "light", obj_electricity);
 		}
 	}
@@ -32,7 +32,7 @@ if distance_to_object(obj_diver) < 350 {
 							charge_attack = 1;
 						}
 				} else {
-				bTimer = 40;
+				bTimer = 60;
 				randX = irandom_range(-50,50);
 				randY = irandom_range(-50,50);
 				}
@@ -46,7 +46,9 @@ if distance_to_object(obj_diver) < 350 {
 		if (HP <= 0) {
 		InFrames = 200; 
 	    swim_speed = 0;
-		instance_create_layer(x, y, "player_layer", obj_Scrap);
+		if (irandom_range(0,1) == 0) {
+			instance_create_layer(x, y, "player_layer", obj_Scrap);
+		}
 		instance_destroy();
 		}
 

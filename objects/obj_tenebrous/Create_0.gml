@@ -23,7 +23,7 @@ layingEggsAge = 0;
 switchDirTime = 200;
 maxAge = 21000 + irandom_range(0, 150);
 
-default_swim_speed = 3.5;
+default_swim_speed = 2.5;
 swim_speed = default_swim_speed;
 
 

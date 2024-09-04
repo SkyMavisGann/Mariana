@@ -26,6 +26,14 @@ if (room == Room1_thorium1) {
 	var level = playerY / 1000;
 	draw_sprite_ext(spr_static, image_index, playerX, playerY, 3, 3, 0, c_white, level / 6);
 }
+if (room == Room1_thorium2) {
+	var level = playerY;
+	draw_sprite_ext(spr_static, image_index, playerX, playerY, 3, 3, 0, c_white, level / 3);
+}
+if (room == Room1_thorium3) {
+	var level = playerY;
+	draw_sprite_ext(spr_static, image_index, playerX, playerY, 3, 3, 0, c_white, level / 1);
+}
 
 if (!surface_exists(surf)) {
 	surf = surface_create(sprite_width * 3, sprite_height * 3);
@@ -35,6 +43,16 @@ surface_set_target(surf);
 switch(room) {
 	case (Room1_thorium1):
 		var level = playerY / 1000;
+		draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, level);		
+		draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, level);
+	break;
+	case (Room1_thorium2):
+		var level = playerY;
+		draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, level);		
+		draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, level);
+	break;
+	case (Room1_thorium3):
+		var level = playerY;
 		draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, level);		
 		draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, level);
 	break;

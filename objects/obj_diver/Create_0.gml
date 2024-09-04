@@ -43,6 +43,7 @@ bossRewardAnimationFrame = 6;
 bossRewardAnimationFrameTimer = 0;
 playIntroAnimation = false;
 
+
 gamepad_set_axis_deadzone(0, 0.3);
 
 if !variable_global_exists("equipped") {

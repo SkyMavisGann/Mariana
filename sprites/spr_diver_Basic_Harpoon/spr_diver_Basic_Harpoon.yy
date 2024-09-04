@@ -4,7 +4,7 @@
   "name": "spr_diver_Basic_Harpoon",
   "bbox_bottom": 53,
   "bbox_left": 17,
-  "bbox_right": 58,
+  "bbox_right": 55,
   "bbox_top": 15,
   "bboxMode": 0,
   "collisionKind": 1,

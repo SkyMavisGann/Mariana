@@ -1,0 +1,1 @@
+instance_create_layer(x, y-10, "light", obj_electricity_Small);

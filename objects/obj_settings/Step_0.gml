@@ -20,22 +20,10 @@ steam_update();
 					global.oceanDepth = _loadEntity.oceanDepth;
 					global.spawnedBody = _loadEntity.spawnedBody;
 			
-			
-					//0.1.0
-					try {
-						global.roomsWithCorpses = _loadEntity.roomsWithCorpses;
-						global.doorInRoomMain = _loadEntity.doorInRoomMain;
-						global.pets = _loadEntity.pets;
-					} catch(e) {
-						global.roomsWithCorpses = [];
-						global.doorInRoomMain = [];
-						global.pets = [];
-				
-						for (var i = 0; i < real(Room3); i++) {
-							array_push(global.doorInRoomMain, 0);
-						}
-						array_set(global.doorInRoomMain, Room1, [[Room1], [0, 0]]);
-					}
+					global.roomsWithCorpses = _loadEntity.roomsWithCorpses;
+					global.doorInRoomMain = _loadEntity.doorInRoomMain;
+					global.pets = _loadEntity.pets;
+					
 					//0.1.2
 					try {
 						global.petsAge  = _loadEntity.petsAge;
@@ -184,6 +172,7 @@ steam_update();
 		var num_dest = _loadEntity.num_dest;
 	
 		obj_diver.playIntroAnimation = true;
+		
 	
 		for (var i = 0; i < num_dead; i++) {
 			_loadEntity = array_pop(_loadData);

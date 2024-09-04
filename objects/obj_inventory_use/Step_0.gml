@@ -86,10 +86,12 @@ audio_play_sound(sfx_select, 2, false);
 							break;
 							case "Soggy Sandwich":
 							instance_destroy();
-							if global.player_health < global.max_player_health {
-								global.player_health += 1;
+							if global.player_health <= global.max_player_health - 2 {
+								global.player_health += 2;
+							} else {
+								global.player_health = global.max_player_health;
 							}
-								 array_delete(global.inventory, obj_inventory.pos, 1) 
+							array_delete(global.inventory, obj_inventory.pos, 1) 
 							break;
 							case "Fish Soul":
 								instance_destroy();
@@ -103,8 +105,8 @@ audio_play_sound(sfx_select, 2, false);
 							break;
 							case "Wet Burrito":
 							instance_destroy();
-							if global.player_health <= global.max_player_health - 2 {
-								global.player_health += 2;
+							if global.player_health <= global.max_player_health - 3 {
+								global.player_health += 3;
 							} else {
 								global.player_health = global.max_player_health;
 							}

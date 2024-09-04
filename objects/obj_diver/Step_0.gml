@@ -22,13 +22,95 @@ if (playIntroAnimation) {
 			var TentacleY = ((hypot * 1) * dcos(angleBetween + image_angle));
 			var xChanged = (TentacleX / max(abs(TentacleX), abs(TentacleY)));
 			var yChanged = (TentacleY / max(abs(TentacleX), abs(TentacleY)));
-			if (seconds < 500) {
-				swimAccelerationX = 6;
-				speX = 10;
-				swimAccelerationY = 6;
-				speY = 12;
+			flashAlpha = 0.31;
+			var _room = Room1;
+			if (array_length(global.roomsWithCorpses) > 0) {
+			var _name = room_get_name(array_last(global.roomsWithCorpses));
+				if (_name != "Room2") {
+				
+					var _nameEmpty = string_delete(_name, string_length(_name), 1);
+					var _nameFirst = _nameEmpty + "1"
+				
+				} else {
+					var _nameFirst = _name;
+				}
+				_room = asset_get_index(_nameFirst);
 			}
 			
+			switch (_room) {
+					case Room1_thorium1:
+						if (seconds < 500) {
+							swimAccelerationX = 1.5;
+							speX = 2.5;
+							swimAccelerationY = 2.2;
+							speY = 4;
+						}
+					break;
+					case Room1_side1:
+						if (seconds < 500) {
+							swimAccelerationX = 2.4;
+							speX = 4;
+							swimAccelerationY = 1.8;
+							speY = 2.5;
+						}
+					break;
+					case Room1_Harpoon1:
+						if (seconds < 500) {
+							swimAccelerationX = 2.4;
+							speX = 4;
+							swimAccelerationY = 2.0;
+							speY = 2.5;
+						}
+					break;
+					case Room1_Soul1:
+						if (seconds < 500) {
+							swimAccelerationX = 2.2;
+							speX = 4;
+							swimAccelerationY = 2.0;
+							speY = 3.5;
+						}
+					break;
+					case Room2:
+						if (seconds < 500) {
+							swimAccelerationX = 2.3;
+							speX = 2.5;
+							swimAccelerationY = 2.5;
+							speY = 4;
+						}
+					break;
+					case Room2_City1:
+						if (seconds < 500) {
+							swimAccelerationX = 2.3;
+							speX = 2.5;
+							swimAccelerationY = 2.5;
+							speY = 4;
+						}
+					break;
+					case Room2_Brine1:
+						if (seconds < 500) {
+							swimAccelerationX = 2.3;
+							speX = 2.5;
+							swimAccelerationY = 2.5;
+							speY = 4;
+						}
+					break;
+					case Room2_Puzzle1:
+						if (seconds < 500) {
+							swimAccelerationX = 2.3;
+							speX = 2.5;
+							swimAccelerationY = 2.5;
+							speY = 4;
+						}
+					break;
+					default:
+					if (seconds < 500) {
+						swimAccelerationX = 1.5;
+						speX = 1;
+						swimAccelerationY = 1.5;
+						speY = 2;
+					}
+					break;
+				}
 			if (!audio_is_playing(sfx_splash)) {
 				audio_play_sound(sfx_splash, 0, false, global.volume_setting, 0, 1);
 			}
@@ -39,11 +121,11 @@ if (playIntroAnimation) {
 			if (delta_time & 10 == 0) {
 				instance_create_layer(x + irandom_range(-10, 10) ,y + irandom_range(-10, 10), "behind_diver", vfx_bubble);
 			}
-			swimAccelerationX = clamp(swimAccelerationX + (xChanged * 0.02), -9, 9);
-			speX = clamp(speX + swimAccelerationX, -abs(swimMax), abs(swimMax));
+			swimAccelerationX = clamp(swimAccelerationX + (xChanged * 0.02), -500, 500);
+			speX = clamp(speX + swimAccelerationX, -abs(swimMax + 100), abs(swimMax + 100));
 				
-			swimAccelerationY = clamp(swimAccelerationY + (yChanged * 0.02), -9, 9);
-			speY = clamp(speY + swimAccelerationY, -abs(swimMax), abs(swimMax));
+			swimAccelerationY = clamp(swimAccelerationY + (yChanged * 0.02), -500, 500);
+			speY = clamp(speY + swimAccelerationY, -abs(swimMax + 100), abs(swimMax + 100));
 		} else {
 			if (global.equipped[8] == "Booster Mod") {
 				audio_sound_gain(sfx_boost, 0, 500);
@@ -215,12 +297,14 @@ if (instance_exists(obj_diver_death) && obj_diver_death.image_index == obj_diver
 		
 		with (instance_create_layer(x, y, "player_layer", obj_dead_diver)) {
 			container = global.inventory;
+			array_push(global.roomsWithCorpses, room);
 		}
 		global.spawnedBody = true;
+		
 		saveGame(string(room) + ".save");
 		saveGame("savedgame.save");
 		show_debug_message("Died");
-		array_push(global.roomsWithCorpses, room);
+		
 	}
 	room_goto(roomDeath);
 }
