@@ -10,6 +10,8 @@ run = 0;
 if !variable_global_exists("next") {
 	global.next = -1;
 	global.previous_x = obj_diver.x;
+	global.playerSpeX = 0;
+	global.playerSpeY = 0;
 }
 
 

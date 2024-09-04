@@ -76,11 +76,19 @@ if (playIntroAnimation) {
 					break;
 					case Room2:
 						if (seconds < 500) {
-							flashAlpha = 2;
-							swimAccelerationX = 2.3;
-							speX = 2.5;
-							swimAccelerationY = 2.5;
-							speY = 4;
+							if (array_contains(obj_settings.achivements, "GateOpened") == -1) {
+								flashAlpha = 2;
+								swimAccelerationX = 2.3;
+								speX = 2.5;
+								swimAccelerationY = 2.5;
+								speY = 4;
+							} else {
+								flashAlpha = 2;
+								swimAccelerationX = 2.3;
+								speX = 2.5;
+								swimAccelerationY = 2.9;
+								speY = 4;
+							}
 						}
 					break;
 					case Room2_City1:

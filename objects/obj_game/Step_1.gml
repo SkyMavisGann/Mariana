@@ -3,6 +3,8 @@ if instance_exists(obj_diver) {
 	if obj_diver.y > room_height {
 		global.previous_x = obj_diver.x;
 		global.next = 0;
+		global.playerSpeX = obj_diver.speX;
+		global.playerSpeY = obj_diver.speY;
 	}
 	
 

@@ -17,6 +17,8 @@ switch(global.next) {
 		audio_sound_gain(m_surface_tension, 0, 5000)
 		audio_sound_gain(m_with_baited_breath_loop, 0, 5000);
 		audio_sound_gain(m_with_baited_breath_start, 0, 5000);
+		obj_diver.speX = global.playerSpeX;
+		obj_diver.speY = global.playerSpeY;
 		
 		
 		obj_sounds.musicTimer = 240;
@@ -24,7 +26,6 @@ switch(global.next) {
 		break;
 	
 	case 3:
-		show_debug_message(global.previous_x)
 		obj_diver.x = global.previous_x
 		obj_diver.y = room_height;
 		audio_sound_gain(m_aquifer, 0, 5000)
