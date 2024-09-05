@@ -102,7 +102,7 @@ if (array_contains(global.bosses_beaten, "Siphi")) {
 			default_swim_speed = 0;
 			swim_speed = 0;
 	
-	
+		steam_set_achievement("ACHIEVEMENT_KILL_SIPH");
 		if (audio_is_playing(m_hydrogen_loop)) {
 			switchMusicTo(m_hydrogen_loop, m_victory, false, 0);
 		} else {

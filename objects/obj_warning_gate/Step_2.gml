@@ -1,5 +1,6 @@
 if (opening || array_contains(obj_settings.achivements, "GateOpened") != -1) {
 	giveAchievement("GateOpened");
+	steam_set_achievement("ACHIEVEMENT_OPEN_GATE");
 	var index = (array_contains(obj_settings.achivements, "GateOpened"));
 	if (array_length(obj_settings.achivements) == index + 1) {
 		giveAchievement(0);

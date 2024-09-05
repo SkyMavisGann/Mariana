@@ -100,6 +100,9 @@ audio_play_sound(sfx_select, 2, false);
 									global.max_player_health += 1;
 									global.player_health += 1;
 									audio_play_sound(sfx_Gain_Health, 1, false, global.volume_setting, 0, 1);
+									if (global.max_player_health == 10) {
+										steam_set_achievement("ACHIEVEMENT_MAX_HEALTH");
+									}
 								}
 								array_delete(global.inventory, obj_inventory.pos, 1) 
 							break;

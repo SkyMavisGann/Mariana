@@ -12,7 +12,7 @@ scale = 3
 image_xscale = scale;
 image_yscale = scale;
 
-maxHP = 27;
+maxHP = 24;
 HP = maxHP;
 maxInFrames = 80;
 InFrames = 0 ;

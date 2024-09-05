@@ -211,8 +211,12 @@ if (room == Room2_City1_Mural1 && instance_exists(obj_diver) && obj_diver.x < 11
 	if ((array_contains(obj_settings.achivements, "SuvivorMural")) == -1) {
 		array_push(obj_settings.achivements, "SuvivorMural");
 		if global.max_player_health < 10 {
+			steam_set_achievement("ACHIEVEMENT_VIEW_MURAL");
 			say(["Seeing the survivors mural. . .", "It strengthens your resolve."]);
 			global.max_player_health += 1;
+			if (global.max_player_health == 10) {
+				steam_set_achievement("ACHIEVEMENT_MAX_HEALTH");
+			}
 			audio_play_sound(sfx_Gain_Health, 1, false, global.volume_setting, 0, 1);
 		}
 	}

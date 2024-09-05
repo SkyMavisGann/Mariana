@@ -120,11 +120,21 @@ if (playIntroAnimation) {
 					break;
 					default:
 					if (seconds < 500) {
-						flashAlpha = 2;
-						swimAccelerationX = 1.5;
-						speX = 1;
-						swimAccelerationY = 1.5;
-						speY = 2;
+							
+						if (global.equipped[1] != "Booster") {
+							flashAlpha = 2;
+							swimAccelerationX = 1.5;
+							speX = 1;
+							swimAccelerationY = 1.5;
+							speY = 2;
+						} else {
+							flashAlpha = 2;
+							swimAccelerationX = 2.0;
+							speX = 2.5;
+							swimAccelerationY = 2.2;
+							speY = 5;
+
+						}
 					}
 					break;
 				}
