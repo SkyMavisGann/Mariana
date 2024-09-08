@@ -58,6 +58,7 @@ if (room = room_shop_top) {
 	topics[12] = "Sea Life";
 	topics[13] = "Surface";
 	topics[14] = "Me";
+	topics[15] = "Inside a Game";
 	
 } else {
 	if (array_contains(obj_settings.achivements, "GateOpened") != -1) {
@@ -71,10 +72,15 @@ if (room = room_shop_top) {
 	topics[4] = "Trench"
 	topics[5] = "City";
 	topics[6] = "New Gods";
-	topics[7] = "Sea Life";
-	topics[8] = "Depth";
-	topics[9] = "Creature Parts";
+	topics[7] = "Creatures";
+	topics[8] = "Refund"
+	topics[9] = "Depth";
+	topics[10] = "Creature Parts";
 	topics[10] = "Land";
+	topics[12] = "Sea Life";
+	topics[13] = "Surface";
+	topics[14] = "Me";
+	topics[15] = "Inside a Game";
 }
 
 

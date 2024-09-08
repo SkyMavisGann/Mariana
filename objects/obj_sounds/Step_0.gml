@@ -157,6 +157,19 @@ if (musicTimer = 0) {
 			audio_play_sound(switchto, 1000, true);
 		}
 	break;
+	case Credits:
+	//Standard
+	// fade music would be playing then stop dead music
+	//set volume to zero
+	//set to volume setting with fade then if the song isn't already playing play it
+		audio_sound_gain(m_aquifer, 0, 600);
+		var switchto = m_good_night;
+		if (audio_is_playing(switchto) != true) {
+			audio_sound_gain(switchto, 0, 0);
+			audio_sound_gain(switchto, global.volume_setting, 500);
+			audio_play_sound(switchto, 1000, false);
+		}
+	break;
 	case room_shop_middle:
 	//Standard
 	// fade music would be playing then stop dead music

@@ -126,8 +126,13 @@ switch(room) {
 	break;
 	case (Credits):
 		var level = obj_credit_scrolling.y / 8000;
-		draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 5.5, 5.5, 0, c_white, clamp(level, 0, 10));	
-		draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 5.5, 5.5, 0, c_white, clamp(level, 0, 10));
+		if (hasLight != 1) {
+			draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 5.5, 5.5, 0, c_white, clamp(level, 0, 10));	
+			draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 5.5, 5.5, 0, c_white, clamp(level, 0, 10));
+		} else {
+			draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 10.5, 10.5, 0, c_white, clamp(level, 0, 10));	
+			draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 10.5, 10.5, 0, c_white, clamp(level, 0, 10));
+		}
 	break;
 	default:
 	

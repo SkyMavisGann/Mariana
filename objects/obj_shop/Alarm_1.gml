@@ -14,7 +14,7 @@ if (!instance_exists(obj_text)) {
 		break;
 		case "Sub Shop":
 			array_push(obj_settings.achivements, option[3, pos]);
-			say(splitText("I inherited this shop from my father, or at least I think he was my father. It's hard to tell for sure when all I found was a skeleton in a submarine. But I like to think he'd be proud of me."));
+			say(splitText("I inherited this shop from my father. Well I think he was my father. It's hard to tell for sure when all I found was a skeleton in a submarine. But I like to think he'd be proud of me."));
 		break;
 		case "Trench":
 			array_push(obj_settings.achivements, option[3, pos]);
@@ -22,7 +22,7 @@ if (!instance_exists(obj_text)) {
 		break;
 		case "Land":
 			array_push(obj_settings.achivements, option[3, pos]);
-			say(splitText("Yea I do miss the land when I'm down here, the sunlight, the lack of fish nibbling at your toes. . . But then again, if I lived on land, I'd have drop the word sea from my full title \"Sea Cowboy Merchant\". Speaking of which, how about this rare pearl I just found? It's said to bring good luck to anyone who owns it. Don't believe me? Why?"));
+			say(splitText("Yea I do miss the land when I'm down here, the sunlight, the lack of fish nibbling at your toes. . . Sure but if I did live on land I'd have drop the word sea from my full title \"Sea Cowboy Merchant\". Speaking of which, how about this rare pearl I just found? It's said to bring good luck to anyone who owns it. Don't believe me? Why?"));
 		break;
 		case "New Gods":
 			array_push(obj_settings.achivements, option[3, pos]);
@@ -58,7 +58,7 @@ if (!instance_exists(obj_text)) {
 		break;
 		case "Me":
 			array_push(obj_settings.achivements, option[3, pos]);
-			say(splitText("You wanna talk about you? Thats kinda strange. I'll humor you, Well . . . You're a bit strange. I like that you'll buy my stuff. And why don't you take off the helmet? There's air in here. Uh okay guess not. If I were to describe you in one word I guess I'd say: Somehow you talk a lot and yet hardly at all. Well, I guess thats not even close to one word."));
+			say(splitText("You wanna talk about you? Thats kinda strange. I'll humor you, Well . . . You're a bit strange. I like that you'll buy my stuff. And why don't you take off the helmet? There's air in here. Okay guess not. If I were to describe you in one word I guess I'd say: Somehow you talk a lot and yet hardly at all. Well, I guess thats not even close to one word."));
 		break;
 		case "Metal Gate":
 			array_push(obj_settings.achivements, option[3, pos]);
@@ -75,6 +75,14 @@ if (!instance_exists(obj_text)) {
 		case "Gears":
 			array_push(obj_settings.achivements, option[3, pos]);
 			say(splitText("You're looking for gears? I dunno kid, Theres gears in the city but ripping one of those off will have who knows what consequences. Could accidentally shut down the power thats somehow been runnin'. Theres a whole bunch of caves around here. People probably threw their scrap around here somewhere. I guess you should gear up and go look."));
+		break;
+		case "Refund":
+			array_push(obj_settings.achivements, option[3, pos]);
+			say(splitText("Wait you want one of the many refunds I've offered? I think you outta check the fine print bucko. I said I'd give you any money you gave me back. You've never given me any offical currency. So yea basically im not giving you anything if you don't understand. Besides I already used all your items."));
+		break;
+		case "Inside a Game":
+			array_push(obj_settings.achivements, option[3, pos]);
+			say(splitText("You want to play a game? Alright here a game for you. First close your eyes then ill hold up an amount of fingers and you try to guess how many im holding up. Ready Go . . . . . . . Wow lucky guesser. Nobody ever chooses five when they play that game."));
 		break;
 	}
 }
