@@ -24,19 +24,20 @@ if (array_contains(obj_settings.achivements, "Lunked") != -1 && instance_exists(
 		var lowerTent = obj_Siph_Tentacle.stemBody[myNumber - 1];
 		if (instance_exists(lowerTent)) {
 			if (keyboard_or_mouse_check_pressed(mb_right)) {
-			IEx = mouse_x - obj_Siph_Tentacle.x;
-			IEy = mouse_y - obj_Siph_Tentacle.y;
+			obj_siph_seg_player.IEx = mouse_x - obj_Siph_Tentacle.x;
+			obj_siph_seg_player.IEy = mouse_y - obj_Siph_Tentacle.y;
 			obj_diver.attacking = 1;
 			}
-			if (IEx != 0 && IEy != 0) {
-				if (abs(x - (obj_Siph_Tentacle.x + IEx)) < 5 && abs(y - (obj_Siph_Tentacle.y + IEy)) < 5) {
-					IEx = 0;
-					IEy = 0;
+			if (obj_siph_seg_player.IEx != 0 && obj_siph_seg_player.IEy != 0) {
+				obj_diver.attacking = 1;
+				if (abs(x - (obj_Siph_Tentacle.x + obj_siph_seg_player.IEx)) < 5 && abs(y - (obj_Siph_Tentacle.y + obj_siph_seg_player.IEy)) < 5) {
+					obj_siph_seg_player.IEx = 0;
+					obj_siph_seg_player.IEy = 0;
 					obj_diver.attacking = 0;
 				}
 			
 			}
-				move_towards_point(obj_Siph_Tentacle.x + IEx, obj_Siph_Tentacle.y + IEy, obj_Siph_Tentacle.swim_speed);
+				move_towards_point(obj_Siph_Tentacle.x + obj_siph_seg_player.IEx, obj_Siph_Tentacle.y + obj_siph_seg_player.IEy, obj_Siph_Tentacle.swim_speed);
 		}
 	}
 }

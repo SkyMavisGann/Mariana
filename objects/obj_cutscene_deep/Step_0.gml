@@ -1,7 +1,7 @@
 // get input
 key_w = keyboard_check_pressed(obj_settings.key_up);
 key_s = keyboard_check_pressed(obj_settings.key_down);
-key_accept = keyboard_check_pressed(vk_anykey);
+key_accept = keyboard_check_pressed(obj_settings.key_select) || gamepad_button_check_pressed(0, gp_face1);
 
 //storen number of otpions
 

@@ -15,5 +15,5 @@ image_xscale = scale;
 image_yscale = scale;
 length = sprite_width - 24 - (3 * scale);
 
-IEx = 0;
-IEy = 0;
+obj_siph_seg_player.IEx = 0;
+obj_siph_seg_player.IEy = 0;

@@ -6,13 +6,33 @@ if (text_counter >= 6.28) {
 	text_counter += 0.01;
 }
 text_opacity = (sin(text_counter)/4)+0.25;
-
-if (keyboard_check_pressed(obj_settings.key_escape) && timer == 0) {
-global.paused = !global.paused;
-saveSettings();
-timer = 5;
+if ((gamepad_axis_value(0, gp_axislv) > 0.3) || gamepad_button_check(0, gp_face1)) {
+	lastUsedGamePad = 10000;
+}
+if (lastUsedGamePad > 0) {
+	lastUsedGamePad -= 1;
+}
+if (gamepad_is_connected(0) == 0 && isUsingGamePad) {
+	PauseGame();
+}
+if (gamepad_is_connected(0) > 0 && lastUsedGamePad > 1) {
+	isUsingGamePad = true;
+} else {
+	isUsingGamePad = false;
 }
 
+
+if ((keyboard_check_pressed(obj_settings.key_escape) || gamepad_button_check_pressed(0, gp_start)) && timer == 0) {
+	PauseGame();
+}
+if (steam_is_overlay_activated() && steampauseOnce) {
+	global.paused = true;
+	saveSettings();
+	timer = 5;
+	steampauseOnce = false;
+} else {
+	steampauseOnce = true;
+}
 
 if (global.paused == true && run = 0 && !instance_exists(obj_pause_menu)) {
 	instance_create_layer(0, 0, "menu_layer", obj_pause_menu);
@@ -38,7 +58,7 @@ if (global.paused == true) {
 if timer >= 1 {timer -= 1}
 
 //open inventory
-if (keyboard_check_pressed(obj_settings.key_inventory) && global.paused == false) {
+if ((keyboard_check_pressed(obj_settings.key_inventory) || gamepad_button_check_pressed(0, gp_face4)) && global.paused == false) {
 	global.inventoried = !global.inventoried;
 }
 
@@ -105,7 +125,7 @@ itemScript("game");
 // map
 if (string_copy(room_get_name(room), 0, 9) != "room_shop") {
 	if (global.equipped[4] == "Ancient Map") {
-		if (keyboard_check_pressed(obj_settings.key_map) && global.paused == false) {
+		if ((keyboard_check_pressed(obj_settings.key_map) || gamepad_button_check_pressed(0, gp_face3)) && global.paused == false) {
 			mapOpen = !mapOpen;
 		}
 	}

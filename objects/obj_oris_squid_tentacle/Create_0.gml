@@ -8,3 +8,5 @@ image_index = irandom_range(0, 1);
 
 flashAlpha = 0;
 flashColor = c_white;
+
+alignOnce = true;

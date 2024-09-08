@@ -5,32 +5,7 @@ if y < 0 {
 
 
 if (distance_to_object(obj_diver) < 800) {
-tentaclesRight[0].x = x + sprite_width / 3.82;
-tentaclesRight[0].y = y + sprite_height / 2;
-
-tentaclesFarRight[0].x = x + sprite_width / 3;
-tentaclesFarRight[0].y = y + sprite_height / 2;
-
-tentaclesLeft[0].x = x - sprite_width / 3.50;
-tentaclesLeft[0].y = y + sprite_height / 2;
-
-tentaclesFarLeft[0].x = x - sprite_width / 3;
-tentaclesFarLeft[0].y = y + sprite_height / 2;
-
-tentaclesBack[0].x = x - sprite_width / 8.2;
-tentaclesBack[0].y = y + sprite_height / 2;
-
-middleRight.x = x + sprite_width / 128;
-middleRight.y = y + sprite_height / 2;
-
-middleLeft.x = x - sprite_width / 12;
-middleLeft.y = y + sprite_height / 2;
-	age++;
-
-	image_xscale = clamp(scale, 1, 5.5);
-	image_yscale = clamp(scale, 1, 5.5);
-	scale = age / 10000;
-
+	alignTentacles();
 	if (age > maxAge && age % 500 == 0) {
 		HP = HP - 1;
 	}

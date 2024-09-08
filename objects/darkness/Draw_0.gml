@@ -18,6 +18,10 @@ if (instance_exists(obj_diver)) {
 	x = obj_diver.x;
 	y = obj_diver.y;
 }
+if (instance_exists(obj_credit_scrolling)) {
+	x = obj_credit_scrolling.x;
+	y = obj_credit_scrolling.y;
+}
 if (instance_exists(obj_diver)) {
 	playerX = obj_diver.x;
 	playerY = obj_diver.y;
@@ -120,10 +124,15 @@ switch(room) {
 		draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 10));
 		draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 2.5, 2.5, 0, c_white, clamp(level, 0, 10));
 	break;
+	case (Credits):
+		var level = obj_credit_scrolling.y / 8000;
+		draw_sprite_ext(darkG, color, sprite_xoffset, sprite_yoffset, 5.5, 5.5, 0, c_white, clamp(level, 0, 10));	
+		draw_sprite_ext(darkD, hasLight, sprite_xoffset, sprite_yoffset, 5.5, 5.5, 0, c_white, clamp(level, 0, 10));
+	break;
 	default:
 	
 	break;
-}
+} 
 gpu_set_colorwriteenable(0.1, 0.1, 0.1, 1);
 gpu_set_blendmode_ext(bm_zero,bm_inv_src_color);
 for (var i = 0; i < instance_number(obj_light_parent); i++) {
@@ -161,14 +170,16 @@ with (obj_diver) {
 
 
 if (!global.paused) {
-	if (dark == true) {
-		if (obj_diver.blindness <= 1) {obj_diver.blindness = obj_diver.blindness + 0.1;}
-	} else {
-		if (obj_diver.blindness > 0) {
-			obj_diver.blindness = obj_diver.blindness - 0.1;
+	if (instance_exists(obj_diver)) {
+		if (dark == true) {
+			if (obj_diver.blindness <= 1) {obj_diver.blindness = obj_diver.blindness + 0.1;}
+		} else {
+			if (obj_diver.blindness > 0) {
+				obj_diver.blindness = obj_diver.blindness - 0.1;
+			}
 		}
+		draw_sprite_ext(darkD, 0, obj_diver.x, obj_diver.y, image_xscale * 10, image_yscale * 10, 0, c_gray, clamp(obj_diver.blindness, 0, 0.99));
 	}
-	draw_sprite_ext(darkD, 0, obj_diver.x, obj_diver.y, image_xscale * 10, image_yscale * 10, 0, c_gray, clamp(obj_diver.blindness, 0, 0.99));
 }
 
 

@@ -1,7 +1,4 @@
-// get input
-key_w = keyboard_check_pressed(obj_settings.key_up);
-key_s = keyboard_check_pressed(obj_settings.key_down);
-key_accept = keyboard_check_pressed(obj_settings.key_select);
+
 
 //storen number of otpions
 op_length = array_length(option[menu_level]);
@@ -153,4 +150,15 @@ if (!instance_exists(obj_text)) {
 	}
 } else {
 	instance_destroy();	
+}
+
+// sound
+if (key_s) {
+	audio_play_sound(sfx_move_selected, 2 ,false);
+	audio_sound_gain(sfx_move_selected, global.volume_setting, 0);
+}
+
+if (key_w) {
+	audio_play_sound(sfx_move_selected, 2 ,false);
+	audio_sound_gain(sfx_move_selected, global.volume_setting, 0);
 }

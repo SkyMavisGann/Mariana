@@ -1,0 +1,2 @@
+unsplitText = 
+"THE END";

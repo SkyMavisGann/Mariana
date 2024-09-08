@@ -1,5 +1,5 @@
 if ((distance_to_object(obj_diver) < 20) && global.inventoried == false && global.paused == false) {
-	if keyboard_check_pressed(obj_settings.key_select) {
+	if (keyboard_check_pressed(obj_settings.key_select) || gamepad_button_check_pressed(0, gp_face1)) {
 		opened = !opened;
 		if (opened) {
 		audio_play_sound_at(sfx_chest_close, x, y, 0, 100, 600, 1, false,2, global.volume_setting * 0.5, 0, 1);

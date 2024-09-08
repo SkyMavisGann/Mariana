@@ -324,7 +324,7 @@ if (abs(speY) < drag) {
 //booster stuff
 if (global.equipped[1] == "Booster") {
 	if (global.equipped[8] == "Booster Mod") {
-		if (keyboard_check(obj_settings.key_dash)) {
+		if (keyboard_check(obj_settings.key_dash) || gamepad_button_check(0, gp_shoulderlb)) {
 			
 			var angleBetween = point_direction(x, y, mouse_x, mouse_y) + 90;
 			var hypot = sqrt(sqr(mouse_x) + sqr(mouse_y));
@@ -394,7 +394,7 @@ if (global.equipped[1] == "Booster") {
 			speY = 0;
 		}
 	} else {
-		if ( keyboard_or_mouse_check_pressed(obj_settings.key_dash) && boosterCooldown <= 0) {
+		if ( (keyboard_or_mouse_check_pressed(obj_settings.key_dash) || gamepad_button_check(0, gp_shoulderlb)) && boosterCooldown <= 0) {
 			boosterTimer = 15;
 			boosterCooldown = 30;
 			audio_sound_gain(sfx_boost, global.volume_setting, 0);
@@ -459,7 +459,7 @@ if (global.oxygen <= 0 && bubbleTimer == 59) {
 }
 
 	/// @description attacking
-if (keyboard_or_mouse_check_pressed(obj_settings.key_attack)) {
+if (keyboard_or_mouse_check_pressed(obj_settings.key_attack) || gamepad_button_check_pressed(0, gp_shoulderrb)) {
 
 	if (global.inventoried == false && (obj_game.mapOpen == false)) {
 		//choose damage
@@ -561,11 +561,21 @@ if (image_index >= image_number - 0.07) {
 		swim_speed = default_move_speed;
 	}
 }
-if (sprite_index == spr_floating || sprite_index == spr_swimming || sprite_index == spr_diver) {
-	if (attacking == 1) {
-		attacking = 0;
+if (!instance_exists(obj_siph_seg_player)) {
+	if (sprite_index == spr_floating || sprite_index == spr_swimming || sprite_index == spr_diver) {
+		if (attacking == 1) {
+			attacking = 0;
+		}
+	}
+} else {
+	var tentMoving = (obj_siph_seg_player.IEx != 0 || obj_siph_seg_player.IEy != 0);
+	if ((sprite_index == spr_floating || sprite_index == spr_swimming || sprite_index == spr_diver) && !tentMoving && !mouse_check_button(mb_right)) {
+		if (attacking == 1) {
+			attacking = 0;
+		}
 	}
 }
+
 if (obj_settings.Debug_Console) {
 	if (keyboard_check_pressed(vk_f1)) {
 		if (!instance_exists(obj_text_input)) {

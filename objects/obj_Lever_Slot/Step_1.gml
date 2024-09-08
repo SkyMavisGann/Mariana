@@ -2,7 +2,7 @@ var needItem = "Lever";
 if ((distance_to_object(obj_diver) < 15) && global.inventoried == false && global.paused == false && empty) {
 	
 
-	if keyboard_check_pressed(obj_settings.key_select) {
+	if keyboard_check_pressed(obj_settings.key_select || gamepad_button_check_pressed(0, gp_face1)) {
 		
 		if (array_contains(global.inventory, needItem) != -1) {
 			array_delete_element(global.inventory, needItem);

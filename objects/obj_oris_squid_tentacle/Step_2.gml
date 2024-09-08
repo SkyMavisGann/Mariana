@@ -1,4 +1,5 @@
-if (distance_to_object(obj_diver) < 800 || x == 0) {
+if (distance_to_object(obj_diver) < 800 || x == 0 || alignOnce) {
+	alignOnce = false;
 	flashAlpha = squidId.flashAlpha;
 	image_xscale = squidId.image_xscale * scaledValue;
 	image_yscale = squidId.image_yscale * scaledValue;

@@ -30,9 +30,10 @@ randomTimer = 0;
 maxRandomTimer = 50;
 loop = 0;
 audioOnce = true;
-
-EEx = obj_diver.x;
-EEy = obj_diver.y;
+if (instance_exists(obj_diver)) {
+	EEx = obj_diver.x;
+	EEy = obj_diver.y;
+}
 
 numberOfSegments = 125;
 for  (var i = 0; i < numberOfSegments; i++) {

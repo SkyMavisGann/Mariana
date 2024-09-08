@@ -105,3 +105,7 @@ window_center();
 alarm[0] = 1;
 
 placeholderEquippment = [];
+global.joystickPressVertical = 0;
+global.joystickPressHorizontal = 0;
+global.vertCanChange = true;
+global.hoziCanChange = true;

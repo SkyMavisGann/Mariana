@@ -1,5 +1,5 @@
 if ((distance_to_object(obj_diver) < 15) && global.inventoried == false && global.paused == false) {
-	if (keyboard_check_pressed(obj_settings.key_select) && !instance_exists(obj_text)) {
+	if ((keyboard_check_pressed(obj_settings.key_select) || gamepad_button_check_pressed(0, gp_face1)) && !instance_exists(obj_text)) {
 		if (room == Room1) {
 			array_set(global.doorInRoomMain, destination, [[], [x, y]]);
 		} else {

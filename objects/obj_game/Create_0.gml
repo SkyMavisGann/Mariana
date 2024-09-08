@@ -13,7 +13,7 @@ if !variable_global_exists("next") {
 	global.playerSpeX = 0;
 	global.playerSpeY = 0;
 }
-
+steampauseOnce = true;
 
 randDir = irandom_range(0,0);
 randDir2 = irandom_range(0,0);
@@ -40,4 +40,11 @@ cameraScaleMinimum = 1;
 cameraScaleMaximum = 1.5;
 cameraScalingSpeed = 0.001;
 changeOnce = true;
+isUsingGamePad = false;
+lastUsedGamePad = 0;
+function PauseGame() {
+	global.paused = !global.paused;
+	saveSettings();
+	timer = 5;
+}
 

@@ -1,7 +1,7 @@
 // get input
-key_A = keyboard_check_pressed(obj_settings.key_left);
-key_D = keyboard_check_pressed(obj_settings.key_right);
-key_accept = keyboard_check_pressed(obj_settings.key_select);
+key_A = keyboard_check_pressed(obj_settings.key_left) || (gamepad_button_check_pressed(0, gp_padl) || global.joystickPressHorizontal <= -0.8);
+key_D = keyboard_check_pressed(obj_settings.key_right) || (gamepad_button_check_pressed(0, gp_padr) || global.joystickPressHorizontal >= 0.8);
+key_accept = keyboard_check_pressed(obj_settings.key_select) || gamepad_button_check_pressed(0, gp_face1);
 
 //storen number of otpions
 op_length = array_length(global.inventory);
@@ -52,7 +52,7 @@ if !instance_exists(obj_inventory_use) && !instance_exists(obj_text) && (string_
 	}
 }
 // sound
-if (keyboard_check_pressed(obj_settings.key_left) || keyboard_check_pressed(obj_settings.key_right)) {
+if (key_A || key_D) {
 	audio_play_sound(sfx_move_selected, 2 ,false);
 	audio_sound_gain(sfx_move_selected, global.volume_setting, 0);
 }

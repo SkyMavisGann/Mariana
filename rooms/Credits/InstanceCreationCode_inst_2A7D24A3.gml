@@ -1,0 +1,2 @@
+unsplitText = 
+"By Ky Gann"

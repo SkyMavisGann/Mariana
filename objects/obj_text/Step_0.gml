@@ -1,7 +1,7 @@
 // get input
-key_w = keyboard_check_pressed(obj_settings.key_up);
-key_s = keyboard_check_pressed(obj_settings.key_down);
-key_accept = (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any));
+key_w = (keyboard_check(obj_settings.key_up) || (gamepad_axis_value(0, gp_axislv) < 0));
+key_s = (keyboard_check(obj_settings.key_down) || (gamepad_axis_value(0, gp_axislv) > 0));
+key_accept = (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any) || gamepad_button_check_pressed(0, gp_face1));
 var length = array_length(obj_settings.currentlySaying);
 
 if (key_accept == 1 || keyboard_or_mouse_check_pressed(mb_any)) {

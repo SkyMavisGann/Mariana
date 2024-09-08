@@ -1,7 +1,7 @@
 // get input
-key_w = keyboard_check_pressed(obj_settings.key_up);
-key_s = keyboard_check_pressed(obj_settings.key_down);
-key_accept = keyboard_check_pressed(obj_settings.key_select);
+key_w = (keyboard_check_pressed(obj_settings.key_up) || (gamepad_button_check_pressed(0, gp_padu)) || global.joystickPressVertical <= -0.8);
+key_s = (keyboard_check_pressed(obj_settings.key_down) || (gamepad_button_check_pressed(0, gp_padd)) || global.joystickPressVertical >= 0.8);
+key_accept = keyboard_check_pressed(obj_settings.key_select) || gamepad_button_check_pressed(0, gp_face1);
 
 //storen number of otpions
 op_length = array_length(option[menu_level]);
@@ -320,12 +320,12 @@ audio_play_sound(sfx_select, 2, false);
 }
 
 // sound
-if (keyboard_check_pressed(obj_settings.key_down)) {
+if (key_s) {
 	audio_play_sound(sfx_move_selected, 2 ,false);
 	audio_sound_gain(sfx_move_selected, global.volume_setting, 0);
 }
 
-if (keyboard_check_pressed(obj_settings.key_up)) {
+if (key_w) {
 	audio_play_sound(sfx_move_selected, 2 ,false);
 	audio_sound_gain(sfx_move_selected, global.volume_setting, 0);
 }

@@ -110,7 +110,9 @@ if (array_contains(global.bosses_beaten, "Crab")) {
 		InFrames = 200; 
 	    swim_speed = 0;
 		instance_create_layer(x, y, "player_layer", obj_Crab_Claw);
+		steam_set_overlay_notification_position(steam_overlay_notification_position_bottom_right);
 		steam_set_achievement("ACHIEVEMENT_KILL_CRAB");
+		
 	
 		switchMusicTo(m_there_is_definitely_a_crab_in_here, m_victory, false, 0);
 		if (!array_contains(global.bosses_beaten, "Crab")) {
