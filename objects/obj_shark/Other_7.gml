@@ -8,8 +8,6 @@ sprite_index = spr_shark;
 
 //REAL DEATH FINAL
 if (sprite_index = spr_shark_die) {
-	if (irandom_range(0,1) == 1) {
-		instance_create_layer(x, y, "player_layer", obj_Mauler_Fin);
-	}
+	instance_create_layer(x, y, "player_layer", obj_Mauler_Fin);
 	instance_destroy()
 }

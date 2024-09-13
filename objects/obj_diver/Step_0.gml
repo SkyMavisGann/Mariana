@@ -3,6 +3,9 @@ if aTimer >= 1 {aTimer -= 1;}
 if (!instance_exists(harpoon1)) {
 	instance_create_layer(0, 0, "player_layer", harpoon1);
 }
+if (!instance_exists(obj_health_bar)) {
+	instance_create_layer(0, 0, "menu_layer", obj_health_bar);
+}
 
 if (array_contains(obj_settings.achivements, "PlayedTheGame") == -1) {
 	playIntroAnimation = true;
@@ -68,10 +71,10 @@ if (playIntroAnimation) {
 					case Room1_Soul1:
 						if (seconds < 500) {
 							flashAlpha = 2;
-							swimAccelerationX = 2.2;
-							speX = 4;
-							swimAccelerationY = 2.0;
-							speY = 3.5;
+							swimAccelerationX = 2.3;
+							speX = 4.1;
+							swimAccelerationY = 2.1;
+							speY = 3.6;
 						}
 					break;
 					case Room2:

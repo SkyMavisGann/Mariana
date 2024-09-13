@@ -58,6 +58,7 @@ if !variable_global_exists("equipped") {
 	global.spawnedBody = false;
 	global.beingYerinoChased = false;
 	//player_attack_damage = 1;
+	//potential bug here, not sure how but i made this code essentailly not run bc of new gme btn, havne't found any bugs with it yet though
 	inventory_full = false;
 	obj_oxygen_indicator.refilling = 0;
 	global.bosses_beaten = [0.0];

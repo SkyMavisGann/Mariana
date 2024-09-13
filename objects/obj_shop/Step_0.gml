@@ -17,6 +17,13 @@ if (!instance_exists(obj_text)) {
 // enable clicking
 for(var i = 0; i < array_length(buttons); i++) {
 	var object = buttons[i];
+	if (object.hovering) {
+		var newPos = object.index;
+		if (pos != newPos) {
+			pos = newPos;
+			audio_play_sound(sfx_move_selected, 2, false, global.volume_setting);
+		}
+	}
 	if (object.pressed == true) {
 		pos = object.index;
 		key_accept = true;
@@ -74,6 +81,7 @@ if (!instance_exists(obj_text)) {
 				 case 2:
 					switch (pos) {
 						case 0: 
+							global.inventoried = true;
 							menu_level = 0;
 						break;
 						case 1:

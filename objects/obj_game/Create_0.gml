@@ -48,3 +48,5 @@ function PauseGame() {
 	timer = 5;
 }
 
+itemsDisplayCurrently = [];
+itemsDisplayTime = [];

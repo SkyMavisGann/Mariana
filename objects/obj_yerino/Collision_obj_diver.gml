@@ -1,7 +1,7 @@
 if (flashAlpha <= 0 && (sprite_index == spr_yerino_mouth_move)) {
 	if ((image_xscale > 0 && (obj_diver.x >= x)) || (image_xscale < 0 && (obj_diver.x <= x))) {
 		if image_index = 2 {
-			delt(damage + 1, x, y);
+			deltAlph(damage + 1, x, y, 3);
 		} else {
 			if ((global.player_health % 2) = 0) {
 				for (var i = 0; i < 2; i++) {
@@ -12,9 +12,9 @@ if (flashAlpha <= 0 && (sprite_index == spr_yerino_mouth_move)) {
 				}
 			}
 			if (y > (room_height - 3000)) {
-				delt(damage + 1, x, y);
+				deltAlph(damage + 1, x, y, 3);
 			} else {
-				delt(damage , x, y);
+				deltAlph(damage , x, y, 3);
 			}
 		}
 	}

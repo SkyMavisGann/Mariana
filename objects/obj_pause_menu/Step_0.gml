@@ -12,6 +12,13 @@ op_length = array_length(option[menu_level]);
 // enable clicking
 for(var i = 0; i < array_length(buttons); i++) {
 	var object = buttons[i];
+	if (object.hovering) {
+		var newPos = object.index;
+		if (pos != newPos) {
+			pos = newPos;
+			audio_play_sound(sfx_move_selected, 2, false, global.volume_setting);
+		}
+	}
 	if (object.pressed == true) {
 		pos = object.index;
 		key_accept = true;
@@ -42,8 +49,14 @@ audio_play_sound(sfx_select, 2, false);
 			break;
 			//settings
 		    case 1: menu_level = 1;  break;
+			case 2:
+				saveGame("savedgame.save");
+				instance_destroy(obj_settings);
+				instance_create_layer(0, 0, "menu_layer", obj_settings);
+				room_goto(roomStartScreen);
+			break;
 		    //end game
-		    case 2:
+		    case 3:
 				saveGame("savedgame.save");
 				game_end(); 
 			break;

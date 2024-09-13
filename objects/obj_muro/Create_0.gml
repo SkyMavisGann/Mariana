@@ -6,7 +6,7 @@ if (global.beingYerinoChased) {
 } else {
 	switch (obj_settings.timesEnteredSub) {
 		case 1:
-		say(["Welcome to the SS Sub Shop or the SSSS for short", "Muro's the name.", "Anyway you wanna buy something?"]);
+		say(["Welcome to the SS Sub Shop or the SSSS for short.", "Muro's the name. Are you new?", "if you want to dive deeper you'll have to get through the current.", "Here at the sub shop you can trade for goods.", "I might have a thing or two to get by a current. Also if you have any questions about", "getting deeper you can always ask."]);
 		break;
 
 		case 2:

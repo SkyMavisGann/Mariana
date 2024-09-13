@@ -30,7 +30,7 @@ if (!instance_exists(obj_text)) {
 		break;
 		case "Yerino":
 			array_push(obj_settings.achivements, option[3, pos]);
-			say(splitText("You know, there's a reason why they call the beast down here Yerino. It's because it'll rip yer insides right out ino . . . ya know what Nevermind. I once saw a whole crew of divers go up against it and let's just say there wasn't much left of them after. I think its cause they made one crucial mistake. The Yerino is a deep sea creature, something about the water pressure being higher makes it faster. If you want to fight the Yerino, fight it as close to the surface as possible."));
+			say(splitText("You know, there's a reason why they call the beast down here Yerino. It's because it'll rip yer insides right out ino . . . ya know what Nevermind. I once saw a whole crew of divers go up against it and let's just say there wasn't much left of them after. I think its cause they made one crucial mistake. The Yerino is a deep sea creature, something about the water pressure being higher makes it faster. If you want to fight the Yerino, fight it closer to the surface, like maybe at least higher then my submarine."));
 		break;
 		case "Sea Life":
 			array_push(obj_settings.achivements, option[3, pos]);
@@ -83,6 +83,10 @@ if (!instance_exists(obj_text)) {
 		case "Inside a Game":
 			array_push(obj_settings.achivements, option[3, pos]);
 			say(splitText("You want to play a game? Alright here a game for you. First close your eyes then ill hold up an amount of fingers and you try to guess how many im holding up. Ready Go . . . . . . . Wow lucky guesser. Nobody ever chooses five when they play that game."));
+		break;
+		case "Finding Bodies":
+			array_push(obj_settings.achivements, option[3, pos]);
+			say(splitText("You're looking for bodies of other divers? Yea that makes perfect sense. I can trade you for this map that'll show you the trench that'll probably help with the whole locatinizing of things."));
 		break;
 	}
 }

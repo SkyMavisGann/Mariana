@@ -8,4 +8,4 @@ despawn = 52000;
 pickupability = false;
 
 sprite_index = convertTo("spr", object_get_name(object_index));
-description = "This piece of technology shows how healthy you are. It looks almost new. Can be equipped.";
+description = "This piece of technology shows how healthy you are at any time by checking inventory. It looks almost new. Can be equipped.";

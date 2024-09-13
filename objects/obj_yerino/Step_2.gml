@@ -28,8 +28,12 @@ if flashAlpha = 0 {
 }
 if (place_meeting(x, y+10, obj_collision_parent) || (place_meeting(x, y-10, obj_collision_parent))) {
 	speed = 10;
-	show_debug_message("line 44");
 }
 
 
+//create limbs
+if (!instance_exists(obj_yerino_body)) {
+	instance_create_depth(x, y, depth-1, obj_yerino_body);
+	instance_create_depth(x, y, depth-1, obj_yerino_jaw);
 
+}

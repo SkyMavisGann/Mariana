@@ -10,6 +10,13 @@ op_length = array_length(option[menu_level]);
 // enable clicking
 for(var i = 0; i < array_length(buttons); i++) {
 	var object = buttons[i];
+	if (object.hovering) {
+		var newPos = object.index;
+		if (pos != newPos) {
+			pos = newPos;
+			audio_play_sound(sfx_move_selected, 2, false, global.volume_setting);
+		}
+	}
 	if (object.pressed == true) {
 		pos = object.index;
 		key_accept = true;
@@ -98,8 +105,13 @@ audio_play_sound(sfx_select, 2, false);
 								if global.max_player_health < 10 {
 									say(["Your resolve strengthens."]);
 									global.max_player_health += 1;
-									global.player_health += 1;
+									obj_health_bar.alpha = 5;
+									obj_health_bar.needToAnimateBreak = true;
+									obj_health_bar.frame = 0.9;
+									obj_health_bar.curveSpeed = -0.05;
 									audio_play_sound(sfx_Gain_Health, 1, false, global.volume_setting, 0, 1);
+											
+											
 									if (global.max_player_health == 10) {
 										steam_set_achievement("ACHIEVEMENT_MAX_HEALTH");
 									}

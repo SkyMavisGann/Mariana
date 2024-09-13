@@ -6,6 +6,13 @@ op_length = array_length(option[menu_level]);
 // enable clicking
 for(var i = 0; i < array_length(buttons); i++) {
 	var object = buttons[i];
+	if (object.hovering) {
+		var newPos = object.index;
+		if (pos != newPos) {
+			pos = newPos;
+			audio_play_sound(sfx_move_selected, 2, false, global.volume_setting);
+		}
+	}
 	if (object.pressed == true) {
 		pos = object.index;
 		key_accept = true;
@@ -23,7 +30,7 @@ if pos < 0 {pos = op_length -1};
 if (!instance_exists(obj_text)) {
 	
 	if key_accept {
-	audio_play_sound(sfx_select, 2, false, global.volume_setting);
+	
 		var _sml = menu_level;
 		
 		switch (menu_level) {

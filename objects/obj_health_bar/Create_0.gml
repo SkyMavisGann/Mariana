@@ -11,3 +11,11 @@ head_scale = 4
 
 op_length = global.max_player_health;
 
+alpha = 0;
+alpChangeSpe = 0.05;
+
+needToAnimateBreak = 0;
+frame = 0;
+defaultCurveSpeed = 0.05;
+curveSpeed = defaultCurveSpeed;
+

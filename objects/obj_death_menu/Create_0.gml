@@ -22,3 +22,7 @@ op_length = 0;
 menu_level = 0;
 
 buttons = [];
+
+with (obj_button) {
+	instance_destroy();
+}

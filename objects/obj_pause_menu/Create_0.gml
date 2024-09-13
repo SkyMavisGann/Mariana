@@ -15,7 +15,8 @@ image_yscale = scale;
 //pause menu
 option[0, 0] = "Resume Game";
 option[0, 1] = "Settings";
-option[0, 2] = "Save and Quit";
+option[0, 2] = "Main Menu";
+option[0, 3] = "Save and Quit";
 //settings
 option[1, 0] = "Video";
 option[1, 1] = "Gameplay";

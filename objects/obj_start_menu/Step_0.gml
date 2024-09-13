@@ -9,6 +9,13 @@ op_length = array_length(option[menu_level]);
 // enable clicking
 for(var i = 0; i < array_length(buttons); i++) {
 	var object = buttons[i];
+		if (object.hovering) {
+		var newPos = object.index;
+		if (pos != newPos) {
+			pos = newPos;
+			audio_play_sound(sfx_move_selected, 2, false, global.volume_setting);
+		}
+	}
 	if (object.pressed == true) {
 		pos = object.index;
 		key_accept = true;
@@ -49,6 +56,26 @@ audio_play_sound(sfx_select, 2, false);
 					file_delete(string(i) + ".save");
 				}
 			}
+			
+			//every global needs to be reset
+			global.max_player_health = 2;
+			global.attack_damage = 1;
+			global.inventory = ["Air Tank", "Soggy Sandwich"];
+			global.equipped = ["Basic Harpoon", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
+			global.player_health = global.max_player_health;
+			global.pets = [];
+			global.petsAge = [];
+			global.spawnedBody = false;
+			global.beingYerinoChased = false;
+			global.bosses_beaten = [0.0];
+			global.oceanDepth = 425;
+			global.roomsWithCorpses = [];
+	
+			global.doorInRoomMain = [];
+			for (var i = 0; i < real(room_shop_bottom); i++) {
+				array_push(global.doorInRoomMain, 0);
+			}
+			array_set(global.doorInRoomMain, Room1, [[Room1], [0, 0]]);
 			room_goto(CutScene);
 			break;
 			//settings

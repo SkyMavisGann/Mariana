@@ -6,7 +6,7 @@ op_space = 64;
 
 pos = 0;
 once = false;
-option[2, 0] = "Shop";
+option[2, 0] = "Trade";
 option[2, 1] = "Talk";
 option[2, 2] = "Leave";
 //pause menu
@@ -46,10 +46,10 @@ if (room = room_shop_top) {
 	topics[0] = "Current";
 	topics[1] = "Muro";
 	topics[2] = "Seeing in the dark";
-	topics[3] = "Sub Shop";
-	topics[4] = "Trench"
-	topics[5] = "Thorium";
-	topics[6] = "New Gods";
+	topics[3] = "Finding Bodies";
+	topics[4] = "Sub Shop";
+	topics[5] = "Trench"
+	topics[6] = "Thorium";
 	topics[7] = "Creatures";
 	topics[8] = "Yerino";
 	topics[9] = "Depth";
@@ -59,6 +59,7 @@ if (room = room_shop_top) {
 	topics[13] = "Surface";
 	topics[14] = "Me";
 	topics[15] = "Inside a Game";
+	topics[16] = "New Gods";
 	
 } else {
 	if (array_contains(obj_settings.achivements, "GateOpened") != -1) {
@@ -68,10 +69,10 @@ if (room = room_shop_top) {
 	}
 	topics[1] = "Muro";
 	topics[2] = "Gears";
-	topics[3] = "Sub Shop";
-	topics[4] = "Trench"
-	topics[5] = "City";
-	topics[6] = "New Gods";
+	topics[3] = "Finding Bodies";
+	topics[4] = "Sub Shop";
+	topics[5] = "Trench"
+	topics[6] = "City";
 	topics[7] = "Creatures";
 	topics[8] = "Refund"
 	topics[9] = "Depth";
@@ -81,6 +82,7 @@ if (room = room_shop_top) {
 	topics[13] = "Surface";
 	topics[14] = "Me";
 	topics[15] = "Inside a Game";
+	topics[16] = "New Gods";
 }
 
 

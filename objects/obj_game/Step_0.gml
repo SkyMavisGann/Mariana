@@ -23,7 +23,11 @@ if (gamepad_is_connected(0) > 0 && lastUsedGamePad > 1) {
 
 
 if ((keyboard_check_pressed(obj_settings.key_escape) || gamepad_button_check_pressed(0, gp_start)) && timer == 0) {
-	PauseGame();
+	if (global.paused == false && global.inventoried == true) {
+		global.inventoried = false;
+	} else {
+		PauseGame();
+	}
 }
 if (steam_is_overlay_activated() && steampauseOnce) {
 	global.paused = true;
@@ -65,7 +69,6 @@ if ((keyboard_check_pressed(obj_settings.key_inventory) || gamepad_button_check_
 if (global.inventoried == true) {
 	instance_activate_object(obj_inventory);
 	if healthOnce == false {
-		instance_create_layer(0, 0, "menu_layer", obj_health_bar);
 		instance_create_layer(0, 0, "menu_layer", obj_depth_meter);
 		healthOnce = true;
 	}
@@ -75,9 +78,6 @@ if (global.inventoried == false) {
 	instance_deactivate_object(obj_inventory);
 	global.inventory_menu = false;
 	healthOnce = false;
-	with (obj_health_bar) {
-		instance_destroy();
-	}
 	with (obj_depth_meter) {
 		instance_destroy();
 	}
@@ -233,6 +233,10 @@ if (room == Room2_City1_Mural1 && instance_exists(obj_diver) && obj_diver.x < 11
 		if global.max_player_health < 10 {
 			steam_set_achievement("ACHIEVEMENT_VIEW_MURAL");
 			say(["Seeing the survivors mural. . .", "It strengthens your resolve."]);
+			obj_health_bar.alpha = 5;
+			obj_health_bar.needToAnimateBreak = true;
+			obj_health_bar.frame = 0.9;
+			obj_health_bar.curveSpeed = -0.05;
 			global.max_player_health += 1;
 			if (global.max_player_health == 10) {
 				steam_set_achievement("ACHIEVEMENT_MAX_HEALTH");

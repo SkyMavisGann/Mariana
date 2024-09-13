@@ -18,7 +18,7 @@ gamepad_set_axis_deadzone(0, 0.3);
 	key_map = vk_tab;
 	key_attack = mb_left;
 
-	key_inventory = ord("I");
+	key_inventory = ord("E");
 
 	textSpeed = 0.5;
 	textpos = 1;
@@ -94,8 +94,9 @@ previousRoom = Room1;
 code = "bimble";
 
 achivements = [];
-
-instance_create_layer(500, 500, "Instances", obj_start_menu);
+if (room == roomStartScreen) {
+	instance_create_layer(500, 500, "Instances", obj_start_menu);
+}
 
 window_set_fullscreen(obj_settings.fullscreen);
 window_set_size(obj_settings.Resolution[0], obj_settings.Resolution[1]);

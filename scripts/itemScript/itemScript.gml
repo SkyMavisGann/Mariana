@@ -84,6 +84,8 @@ function itemScript(itemName){
 				if (obj_diver.inventory_full == false) {
 					instance_destroy();
 					addItem(itemName);
+					array_push(obj_game.itemsDisplayCurrently, itemName);
+					array_push(obj_game.itemsDisplayTime, 2);
 				}
 			}
 		}

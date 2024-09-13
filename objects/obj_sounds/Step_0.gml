@@ -56,6 +56,8 @@ if (musicTimer = 0) {
 		audio_sound_gain(m_surface_tension, 0, 600);
 		audio_sound_gain(m_The_5th_Wall, 0, 600);
 		audio_sound_gain(m_hull_sale, 0, 600);
+		audio_sound_gain(m_with_baited_breath_loop, 0, 600);
+		audio_sound_gain(m_with_baited_breath_start, 0, 600);
 		audio_sound_gain(m_brine, 0, 600);
 		if (!audio_is_playing(m_aquifer)) {
 			audio_sound_gain(m_aquifer, 0, 0);
@@ -82,6 +84,8 @@ if (musicTimer = 0) {
 	//set volume to zero
 	//set to volume setting with fade then if the song isn't already playing play it
 		audio_sound_gain(m_surface_tension, 0, 600);
+		audio_sound_gain(m_with_baited_breath_loop, 0, 600);
+		audio_sound_gain(m_with_baited_breath_start, 0, 600);
 		
 		audio_sound_gain(m_thorium, 0, 0);
 		audio_sound_gain(m_thorium, global.volume_setting, 2000);
@@ -95,6 +99,8 @@ if (musicTimer = 0) {
 	//set volume to zero
 	//set to volume setting with fade then if the song isn't already playing play it
 		audio_sound_gain(m_surface_tension, 0, 600);
+		audio_sound_gain(m_with_baited_breath_loop, 0, 600);
+		audio_sound_gain(m_with_baited_breath_start, 0, 600);
 		
 		audio_sound_gain(m_shifting_tide, 0, 0);
 		audio_sound_gain(m_shifting_tide, global.volume_setting, 2000);
@@ -111,6 +117,8 @@ if (musicTimer = 0) {
 	case Room1_Harpoon1:
 		audio_sound_gain(m_there_is_definitely_a_crab_in_here, 0, 600);
 		audio_sound_gain(m_are_there_any_crabs_in_here, 0, 600);
+		audio_sound_gain(m_with_baited_breath_loop, 0, 600);
+		audio_sound_gain(m_with_baited_breath_start, 0, 600);
 		audio_sound_gain(m_surface_tension, global.volume_setting, 2000);
 		if (audio_is_playing(m_surface_tension) != true) {
 			audio_play_sound(m_surface_tension, 1000, true);

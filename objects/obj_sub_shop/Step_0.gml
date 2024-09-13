@@ -3,6 +3,7 @@ if ((distance_to_object(obj_diver) < 15) && global.inventoried == false && globa
 		if ((array_contains(obj_settings.achivements, "SubShopped")) == -1) {
 				array_push(obj_settings.achivements, "SubShopped");
 		}
+		audio_play_sound_at(sfx_valve_turn, x, y, 0, 100, 700, 2, false, 1, global.volume_setting, 0, 0.9);
 		saveGame(string(curLocation) + ".save");
 		room_goto(destination);
 		loadGame(string(destination) + ".save", false);
