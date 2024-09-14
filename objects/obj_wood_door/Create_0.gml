@@ -6,3 +6,5 @@ code = "bimble";
 curLocation = room;
 
 lock = "";
+
+SendThroughDoor = false;

@@ -1,7 +1,9 @@
 key_accept = (keyboard_check_pressed(vk_enter));
 _drawtext = keyboard_string;
+try {
 
-if (key_accept) {
+
+	if (key_accept) {
 	var commandArray = string_split(_drawtext, " ");
 	keyboard_string = "";
 	switch (commandArray[0]) {
@@ -30,10 +32,20 @@ if (key_accept) {
 				instance_destroy();
 			} else {
 				if (array_length(commandArray) == 2) {
-					buyItem(convertTo("name", commandArray[1]));
+					if (object_exists(asset_get_index(commandArray[1]))) {
+						buyItem(convertTo("name", commandArray[1]));
+					} else {
+						say(["No such object: " + convertTo("name", commandArray[1])]);
+						instance_destroy();
+					}
 				} else if (array_length(commandArray) > 2) {
 					for (var i = 0; i < commandArray[2]; i++) {
-						buyItem(convertTo("name", commandArray[1]));
+						if (object_exists(asset_get_index(commandArray[1]))) {
+							buyItem(convertTo("name", commandArray[1]));
+						} else {
+						say(["No such object: " + convertTo("name", commandArray[1])]);
+						instance_destroy();
+						}
 					}
 				}
 			}
@@ -47,3 +59,7 @@ if (key_accept) {
 }
 
 
+} catch (e) {
+	say(splitText(e));
+	instance_destroy();
+}
