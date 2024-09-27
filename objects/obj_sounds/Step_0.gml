@@ -43,6 +43,8 @@ if (musicTimer = 0) {
 	case Room1:
 	audio_sound_gain(m_thorium, 0, 1000);
 	audio_sound_gain(m_shifting_tide, 0, 1000);
+	audio_sound_gain(m_hydrogen_loop, 0, 600);
+	audio_sound_gain(m_hydrogen_start, 0, 600);
 	
 		if (!audio_is_playing(m_surface_tension)) {
 			if (!audio_is_playing(m_with_baited_breath_start)) {
@@ -144,6 +146,8 @@ if (musicTimer = 0) {
 	//set volume to zero
 	//set to volume setting with fade then if the song isn't already playing play it
 		audio_sound_gain(m_aquifer, 0, 600);
+		audio_sound_gain(m_hydrogen_loop, 0, 600);
+		audio_sound_gain(m_hydrogen_start, 0, 600);
 		var switchto = m_The_5th_Wall;
 		if (audio_is_playing(switchto) != true) {
 			audio_sound_gain(switchto, 0, 0);
@@ -157,6 +161,8 @@ if (musicTimer = 0) {
 	// fade music would be playing then stop dead music
 	//set volume to zero
 	//set to volume setting with fade then if the song isn't already playing play it
+		audio_sound_gain(m_hydrogen_loop, 0, 600);
+		audio_sound_gain(m_hydrogen_start, 0, 600);
 		audio_sound_gain(m_aquifer, 0, 600);
 		var switchto = m_brine;
 		if (audio_is_playing(switchto) != true) {
@@ -171,6 +177,8 @@ if (musicTimer = 0) {
 	//set volume to zero
 	//set to volume setting with fade then if the song isn't already playing play it
 		audio_sound_gain(m_aquifer, 0, 600);
+		audio_sound_gain(m_hydrogen_loop, 0, 600);
+		audio_sound_gain(m_hydrogen_start, 0, 600);
 		var switchto = m_good_night;
 		if (audio_is_playing(switchto) != true) {
 			audio_sound_gain(switchto, 0, 0);
@@ -184,6 +192,8 @@ if (musicTimer = 0) {
 	//set volume to zero
 	//set to volume setting with fade then if the song isn't already playing play it
 		audio_sound_gain(m_aquifer, 0, 600);
+		audio_sound_gain(m_hydrogen_loop, 0, 600);
+		audio_sound_gain(m_hydrogen_start, 0, 600);
 		var switchto = m_hull_sale;
 		if (audio_is_playing(switchto) != true) {
 			audio_sound_gain(switchto, 0, 0);

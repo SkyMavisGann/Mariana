@@ -112,6 +112,7 @@
     {"name":"inst_34F654F1","path":"rooms/Room2_City1_Lever2/Room2_City1_Lever2.yy",},
     {"name":"inst_58DED681","path":"rooms/Room2_City1_Lever2/Room2_City1_Lever2.yy",},
     {"name":"inst_1C173056","path":"rooms/Room2_City1_Lever2/Room2_City1_Lever2.yy",},
+    {"name":"inst_29FE99BD","path":"rooms/Room2_City1_Lever2/Room2_City1_Lever2.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -329,6 +330,7 @@
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_shaft","path":"objects/obj_shaft/obj_shaft.yy",},"propertyId":{"name":"needsShafted","path":"objects/obj_shaft/obj_shaft.yy",},"value":"False",},
           ],"rotation":90.0,"scaleX":2.0,"scaleY":2.0,"x":1877.0,"y":738.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1C173056","colour":2063597411,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":0.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Gear_Shaft_Slot","path":"objects/obj_Gear_Shaft_Slot/obj_Gear_Shaft_Slot.yy",},"properties":[],"rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":1318.0,"y":851.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_29FE99BD","colour":16777215,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall_back","path":"objects/obj_wall_back/obj_wall_back.yy",},"properties":[],"rotation":0.0,"scaleX":1.4705882,"scaleY":1.4705882,"x":320.0,"y":224.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Assets_1","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_B530280","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"rotation":0.0,"scaleX":1.0,"scaleY":3.8235292,"spriteId":{"name":"spr_wall_back","path":"sprites/spr_wall_back/spr_wall_back.yy",},"x":448.0,"y":128.0,},

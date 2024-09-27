@@ -443,6 +443,7 @@
     {"id":{"name":"spr_breathe","path":"sprites/spr_breathe/spr_breathe.yy",},},
     {"id":{"name":"spr_Yellow_Key","path":"sprites/spr_Yellow_Key/spr_Yellow_Key.yy",},},
     {"id":{"name":"spr_Chair","path":"sprites/spr_Chair/spr_Chair.yy",},},
+    {"id":{"name":"vfx_Brine_Worm_Particle","path":"particles/vfx_Brine_Worm_Particle/vfx_Brine_Worm_Particle.yy",},},
     {"id":{"name":"spr_sub_shop_int","path":"sprites/spr_sub_shop_int/spr_sub_shop_int.yy",},},
     {"id":{"name":"spr_crabioli","path":"sprites/spr_crabioli/spr_crabioli.yy",},},
     {"id":{"name":"spr_purple_coral","path":"sprites/spr_purple_coral/spr_purple_coral.yy",},},

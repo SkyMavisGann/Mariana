@@ -59,8 +59,8 @@ draw_sprite_ext(sprite_index, image_index, x, y, width/sprite_width*3, height/sp
 			var _c = c_aqua;
 			var _drawtext = "GO";
 			audio_play_sound(sfx_magic, 0, false, global.volume_setting / 2, 0, 1);
-			var Vx = (display_get_width() / 2) - (sprite_width * scale) + irandom_range(-10, 10);
-			var Vy = (display_get_height() / 2) - (sprite_height * scale) + irandom_range(-10, 10);;
+			var Vx = (1920 / 2) - (sprite_width * scale) + irandom_range(-10, 10);
+			var Vy = (1080 / 2) - (sprite_height * scale) + irandom_range(-10, 10);;
 			draw_text_transformed_color(Vx, Vy, _drawtext, scale, scale, 0, _c, _c, _c, _c, 1 );
 		}
 		if (seconds >= 2500 && seconds < 3500) {
@@ -68,8 +68,8 @@ draw_sprite_ext(sprite_index, image_index, x, y, width/sprite_width*3, height/sp
 			var _c = c_aqua;
 			var _drawtext = "DOWN";
 			audio_play_sound(sfx_magic, 0, false, global.volume_setting / 2, 0, 1);
-			var Vx = (display_get_width() / 2) - (sprite_width * scale) + irandom_range(-10, 10);;
-			var Vy = (display_get_height() / 2) - (sprite_height * scale) + irandom_range(-10, 10);;
+			var Vx = (1920 / 2) - (sprite_width * scale) + irandom_range(-10, 10);;
+			var Vy = (1080 / 2) - (sprite_height * scale) + irandom_range(-10, 10);;
 			draw_text_transformed_color(Vx, Vy, _drawtext, scale, scale, 0, _c, _c, _c, _c, 1 );
 		}
 		if (seconds > 4000) {

@@ -9,7 +9,7 @@ op_space = 44;
 pos = 0;
 
 //pause menu
-option[0, 0] = "Buy";
+option[0, 0] = "Trade";
 option[0, 1] = "Back";
 
 

@@ -4,7 +4,7 @@ if !variable_global_exists("oxygen") {
 }
 
 refilling = 0;
-oxygen_time = 1840;
+oxygen_time = 1240;
 oxygen_timer = oxygen_time;
 
 frame = 0;

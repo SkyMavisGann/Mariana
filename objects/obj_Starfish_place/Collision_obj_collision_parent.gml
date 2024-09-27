@@ -4,7 +4,7 @@ if (speed != 0) {
 			if (!place_meeting(x, y, obj_diver)) {
 				if (once == false) {
 					once = true;
-					alarm[0] = 35;
+					alarm[0] = 15;
 				}
 			}
 		}

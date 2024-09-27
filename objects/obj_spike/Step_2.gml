@@ -8,7 +8,7 @@ if (instance_exists(obj_diver)) {
 
 	if (place_meeting(x - speed_x, y - speed_y, obj_diver)) {
 		if (spe > crash_speed) {
-			deltAlph(damage, x, y, 3);
+			deltAlph(damage, x, y, 1);
 		}
 	}
 }

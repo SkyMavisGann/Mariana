@@ -17,14 +17,17 @@ if (!instance_exists(obj_text)) {
 // enable clicking
 for(var i = 0; i < array_length(buttons); i++) {
 	var object = buttons[i];
-	if (object.hovering) {
+	if (!instance_exists(object)) {
+		summonButtonsOnce = true;
+	}
+	if (instance_exists(object) && object.hovering) {
 		var newPos = object.index;
 		if (pos != newPos) {
 			pos = newPos;
 			audio_play_sound(sfx_move_selected, 2, false, global.volume_setting);
 		}
 	}
-	if (object.pressed == true) {
+	if (instance_exists(object) && object.pressed == true) {
 		pos = object.index;
 		key_accept = true;
 		audio_play_sound(sfx_select, 2, false, global.volume_setting);

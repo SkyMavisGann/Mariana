@@ -1,14 +1,18 @@
+var angleBetween = 90;
+var hypot = sqrt(sqr(cx) + sqr(cy));
+var TentacleX = ((hypot * 1) * dsin(angleBetween + image_angle));
+var TentacleY = ((hypot * 1) * dcos(angleBetween + image_angle));
+var xChange = TentacleX * 1;
+var yChange = TentacleY * 1;
+var xChanged = xChange / max(abs(xChange), abs(yChange)) * pushSpeed;
+var yChanged = yChange / max(abs(xChange), abs(yChange)) * pushSpeed;
+
+
 with (obj_Starfish_place) { 
 	if (place_meeting(x, y, obj_current)) {
-		var speed_y = y - yprevious;
-		if (!place_meeting(x+8,y,obj_collision_parent)) {
-			x = x + 8;
-		}
-		if (y - obj_current.y > 5) {
-			if (speed_y > 0) {
-				y = y - speed_y;
-			}
+		if (!place_meeting(x+xChanged,y+yChanged,obj_collision_parent)) {
+			x += xChanged;
+			y += yChanged;	
 		}
 	}
 }
-

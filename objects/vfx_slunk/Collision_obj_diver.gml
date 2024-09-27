@@ -5,6 +5,7 @@ if (image_xscale <= 0) {
 	obj_diver.bossRewardAnimationFrame = 0;
 	if (!array_contains(obj_settings.achivements, "Lunked")) {
 		array_push(obj_settings.achivements, "Lunked");
+		say(["Left Click to attack."]);
 	}
 }
 

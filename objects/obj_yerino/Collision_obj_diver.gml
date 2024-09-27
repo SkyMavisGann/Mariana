@@ -1,3 +1,4 @@
+
 if (flashAlpha <= 0 && (sprite_index == spr_yerino_mouth_move)) {
 	if ((image_xscale > 0 && (obj_diver.x >= x)) || (image_xscale < 0 && (obj_diver.x <= x))) {
 		if image_index = 2 {
@@ -12,7 +13,7 @@ if (flashAlpha <= 0 && (sprite_index == spr_yerino_mouth_move)) {
 				}
 			}
 			if (y > (room_height - 3000)) {
-				deltAlph(damage + 1, x, y, 3);
+				deltAlph(damage + 9, x, y, 3);
 			} else {
 				deltAlph(damage , x, y, 3);
 			}

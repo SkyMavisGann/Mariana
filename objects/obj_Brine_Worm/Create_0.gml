@@ -1,4 +1,4 @@
-
+self.part_system = part_system_create(vfx_Brine_Worm_Particle);
 
 
 stemBody = [];

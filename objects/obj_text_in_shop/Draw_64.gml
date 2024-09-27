@@ -27,7 +27,7 @@ y = 700;
 
 var textSpeed = obj_settings.textSpeed;
 if (pos != length) {
-	if (draw_char < text_length[menu_level]) {
+	if (draw_char < string_length(textToDisplay[menu_level])) {
 		if (string_length(textToDisplay) > draw_char) {
 			var currentLetter = string_char_at(textToDisplay[menu_level], draw_char);
 			if (currentLetter == "," || currentLetter == "." || currentLetter == "?" || currentLetter == "!" || currentLetter == ";") {

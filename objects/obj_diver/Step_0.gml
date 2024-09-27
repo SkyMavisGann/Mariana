@@ -43,7 +43,7 @@ if (playIntroAnimation) {
 			switch (_room) {
 					case Room1_thorium1:
 						if (seconds < 500) {
-							flashAlpha = 2;
+							flashAlpha = 10;
 							swimAccelerationX = 1.5;
 							speX = 2.5;
 							swimAccelerationY = 2.2;
@@ -52,7 +52,7 @@ if (playIntroAnimation) {
 					break;
 					case Room1_side1:
 						if (seconds < 500) {
-							flashAlpha = 2;
+							flashAlpha = 10;
 							swimAccelerationX = 2.4;
 							speX = 4;
 							swimAccelerationY = 1.8;
@@ -61,7 +61,7 @@ if (playIntroAnimation) {
 					break;
 					case Room1_Harpoon1:
 						if (seconds < 500) {
-							flashAlpha = 2;
+							flashAlpha = 10;
 							swimAccelerationX = 2.4;
 							speX = 4;
 							swimAccelerationY = 2.0;
@@ -70,7 +70,7 @@ if (playIntroAnimation) {
 					break;
 					case Room1_Soul1:
 						if (seconds < 500) {
-							flashAlpha = 2;
+							flashAlpha = 12;
 							swimAccelerationX = 2.3;
 							speX = 4.1;
 							swimAccelerationY = 2.1;
@@ -80,13 +80,13 @@ if (playIntroAnimation) {
 					case Room2:
 						if (seconds < 500) {
 							if (array_contains(obj_settings.achivements, "GateOpened") == -1) {
-								flashAlpha = 2;
+								flashAlpha = 20;
 								swimAccelerationX = 2.3;
 								speX = 2.5;
 								swimAccelerationY = 2.5;
 								speY = 4;
 							} else {
-								flashAlpha = 2;
+								flashAlpha = 30;
 								swimAccelerationX = 2.3;
 								speX = 2.5;
 								swimAccelerationY = 2.9;
@@ -96,7 +96,7 @@ if (playIntroAnimation) {
 					break;
 					case Room2_City1:
 						if (seconds < 500) {
-							flashAlpha = 2;
+							flashAlpha = 20;
 							swimAccelerationX = 2.3;
 							speX = 2.5;
 							swimAccelerationY = 2.5;
@@ -105,7 +105,7 @@ if (playIntroAnimation) {
 					break;
 					case Room2_Brine1:
 						if (seconds < 500) {
-							flashAlpha = 2;
+							flashAlpha = 20;
 							swimAccelerationX = 2.3;
 							speX = 2.5;
 							swimAccelerationY = 2.7;
@@ -114,7 +114,7 @@ if (playIntroAnimation) {
 					break;
 					case Room2_Puzzle1:
 						if (seconds < 500) {
-							flashAlpha = 2;
+							flashAlpha = 20;
 							swimAccelerationX = 2.3;
 							speX = 2.5;
 							swimAccelerationY = 2.7;
@@ -131,7 +131,7 @@ if (playIntroAnimation) {
 							swimAccelerationY = 1.5;
 							speY = 2;
 						} else {
-							flashAlpha = 2;
+							flashAlpha = 10;
 							swimAccelerationX = 2.0;
 							speX = 2.5;
 							swimAccelerationY = 2.2;
@@ -355,7 +355,7 @@ if (global.equipped[1] == "Booster") {
 				
 				swimAccelerationY = clamp(swimAccelerationY + (yChanged * 0.02), -9, 9);
 				speY = clamp(speY + swimAccelerationY, -abs(swimMax), abs(swimMax));
-				global.oxygen -= 0.05;
+				global.oxygen -= 0.025;
 			} else {
 				
 				var Adrag = 0.1;

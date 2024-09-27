@@ -8,22 +8,24 @@ op_length = array_length(global.inventory);
 
 
 // enable clicking
-for(var i = 0; i < array_length(buttons); i++) {
-	var object = buttons[i];
-	if (instance_exists(object) && object.hovering) {
-		var newPos = object.index;
-		if (pos != newPos) {
-			pos = newPos;
-			audio_play_sound(sfx_move_selected, 2, false, global.volume_setting);
+if (room != room_shop_top && room != room_shop_middle) {
+	for(var i = 0; i < array_length(buttons); i++) {
+		var object = buttons[i];
+		if (instance_exists(object) && object.hovering) {
+			var newPos = object.index;
+			if (pos != newPos) {
+				pos = newPos;
+				audio_play_sound(sfx_move_selected, 2, false, global.volume_setting);
+			}
 		}
-	}
-	if (instance_exists(object) && object.pressed == true) {
-		pos = object.index;
-		audio_play_sound(sfx_select, 2, false, global.volume_setting);
-		key_accept = true;
-		buttons = [];
-		with (obj_button) {
-		instance_destroy();
+		if (instance_exists(object) && object.pressed == true) {
+			pos = object.index;
+			audio_play_sound(sfx_select, 2, false, global.volume_setting);
+			key_accept = true;
+			buttons = [];
+			with (obj_button) {
+			instance_destroy();
+			}
 		}
 	}
 }

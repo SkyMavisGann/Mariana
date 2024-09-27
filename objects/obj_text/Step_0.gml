@@ -5,14 +5,14 @@ key_accept = (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb
 var length = array_length(obj_settings.currentlySaying);
 
 if (key_accept == 1 || keyboard_or_mouse_check_pressed(mb_any)) {
-	if (draw_char >= text_length[menu_level]) {
+	if (draw_char >= string_length(obj_settings.currentlySaying[menu_level])) {
 		pos++;
 		if (pos != length) {
 			menu_level++;
 		}
 		draw_char = 0;
 	} else {
-		draw_char = text_length[menu_level];
+		draw_char = string_length(obj_settings.currentlySaying[menu_level]);
 	}
 		audio_play_sound(sfx_select, 2 ,false, global.volume_setting);
 		
@@ -32,7 +32,7 @@ if (pos == length) {
 }
 
 if (menu_level < 2 && (pos != length-1)) {
-	if (draw_char >= text_length[menu_level]) {
+	if (draw_char >= string_length(obj_settings.currentlySaying[menu_level])) {
 		menu_level++;
 		pos++;
 		draw_char = 0;

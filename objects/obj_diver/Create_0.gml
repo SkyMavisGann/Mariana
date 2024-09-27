@@ -1,6 +1,6 @@
 flashAlpha = 0;
 flashColor = c_white;
-
+collectingPrevious = true;
 debug = false;
 aTimer = 0;
 swim_speed = 3;

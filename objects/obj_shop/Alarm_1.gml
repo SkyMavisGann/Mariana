@@ -42,7 +42,7 @@ if (!instance_exists(obj_text)) {
 		break;
 		case "Creature Parts":
 			array_push(obj_settings.achivements, option[3, pos]);
-			say(splitText("Why am I trading for all these creature parts? I have my reasons. If you could I'd rather you get the parts from corpses instead of getting them fresh. Nobody knows if they feel pain or not. I hope they don't. Anyway would you stop yapping and buy something already?"));
+			say(splitText("Why am I trading for all these creature parts? I have my reasons. If you could I'd rather you get the parts from corpses instead of getting them fresh. Nobody knows if they feel pain or not. I hope they don't. Anyway would you stop yapping and trade me something already?"));
 		break;
 		case "Thorium":
 			array_push(obj_settings.achivements, option[3, pos]);
@@ -82,11 +82,15 @@ if (!instance_exists(obj_text)) {
 		break;
 		case "Inside a Game":
 			array_push(obj_settings.achivements, option[3, pos]);
-			say(splitText("You want to play a game? Alright here a game for you. First close your eyes then ill hold up an amount of fingers and you try to guess how many im holding up. Ready Go . . . . . . . Wow lucky guesser. Nobody ever chooses five when they play that game."));
+			say(splitText("What are you on about? Inside what game? You want to play a game? Alright here a game for you. First close your eyes then ill hold up an amount of fingers and you try to guess how many im holding up. Ready Go . . . . . . . Wow lucky guesser. Nobody ever chooses five when they play that game."));
 		break;
 		case "Finding Bodies":
 			array_push(obj_settings.achivements, option[3, pos]);
 			say(splitText("You're looking for bodies of other divers? Yea that makes perfect sense. I can trade you for this map that'll show you the trench that'll probably help with the whole locatinizing of things."));
+		break;
+		case "Blue Rocks":
+			array_push(obj_settings.achivements, option[3, pos]);
+			say(splitText("Blue rocks? Ohh you must be talking about blueschist. Yea its a rock that crumbles when it comes in contact with specific organic matter. Luckily humans seem to be one of the species that work. How do you not know that all you have to do it touch it. Huh maybe your suit is too thick or something, Well theres a few other creatures down here that work."));
 		break;
 	}
 }

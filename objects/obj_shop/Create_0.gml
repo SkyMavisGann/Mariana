@@ -69,7 +69,7 @@ if (room = room_shop_top) {
 	}
 	topics[1] = "Muro";
 	topics[2] = "Gears";
-	topics[3] = "Finding Bodies";
+	topics[3] = "Blue Rocks";
 	topics[4] = "Sub Shop";
 	topics[5] = "Trench"
 	topics[6] = "City";

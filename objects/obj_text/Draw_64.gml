@@ -26,7 +26,7 @@ y = 780;
 
 var textSpeed = obj_settings.textSpeed;
 if (pos != length) {
-	if (draw_char < text_length[menu_level]) {
+	if (draw_char < string_length(obj_settings.currentlySaying[menu_level])) {
 		if (string_length(obj_settings.currentlySaying) > draw_char) {
 			var currentLetter = string_char_at(obj_settings.currentlySaying[menu_level], draw_char);
 			if (currentLetter == "," || currentLetter == "." || currentLetter == "?" || currentLetter == "!" || currentLetter == ";") {
@@ -35,7 +35,7 @@ if (pos != length) {
 			if (currentLetter == " ") {
 				var room_name = string_copy(room_get_name(room), 0, 9);
 				if (room_name == "room_shop") {
-					audio_play_sound(asset_get_index("sfx_muro" + string(irandom_range(1,4))), 2 ,false, global.volume_setting);
+					audio_play_sound(asset_get_index("sfx_muro" + string(irandom_range(1,4))), 2 ,false, global.volume_setting, 0, 1);
 				}
 			}
 		}

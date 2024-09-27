@@ -40,6 +40,11 @@ function itemScript(itemName){
 	   }
 	 randDir2 = 0;
 	}
+	if (place_meeting(x,y,obj_collision_parent)) {
+		move_towards_point(obj_diver.x, obj_diver.y, 1);
+	} else {
+		speed = 0;
+	}
 	
 	var full_length;
 	//if diver exists give him item and delete self

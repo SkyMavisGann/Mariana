@@ -94,6 +94,7 @@
     {"name":"inst_771F064","path":"rooms/Room2_City1_Lever1/Room2_City1_Lever1.yy",},
     {"name":"inst_5FA5B93F","path":"rooms/Room2_City1_Lever1/Room2_City1_Lever1.yy",},
     {"name":"inst_66D6A1A6","path":"rooms/Room2_City1_Lever1/Room2_City1_Lever1.yy",},
+    {"name":"inst_40B7BA02","path":"rooms/Room2_City1_Lever1/Room2_City1_Lever1.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -237,6 +238,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_74954FE6","colour":4289901234,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_gear_place","path":"objects/obj_gear_place/obj_gear_place.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_gear_place","path":"objects/obj_gear_place/obj_gear_place.yy",},"propertyId":{"name":"rotationSpeed","path":"objects/obj_gear_place/obj_gear_place.yy",},"value":"1",},
           ],"rotation":0.0,"scaleX":1.5,"scaleY":1.5,"x":491.0,"y":1649.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_40B7BA02","colour":16777215,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wood","path":"objects/obj_wood/obj_wood.yy",},"properties":[],"rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":1088.0,"y":1984.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Assets_1","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_371BFB4D","animationSpeed":1.0,"colour":4278190080,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"rotation":0.0,"scaleX":11.5,"scaleY":8.75,"spriteId":{"name":"spr_Metal_House","path":"sprites/spr_Metal_House/spr_Metal_House.yy",},"x":736.0,"y":1456.0,},

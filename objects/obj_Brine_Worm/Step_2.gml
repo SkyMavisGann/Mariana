@@ -12,7 +12,11 @@ if (place_meeting(x, y, obj_weapon_parent)) {
 	KnockbackOnce = true;
 }
 if (instance_exists(obj_diver) && distance_to_object(obj_diver) < 9000) {
-	
+	if (abs(y - 1744) < 5) {
+		var _ps = part_system_create(vfx_Brine_Worm_Particle);
+		part_system_draw_order( _ps, true);
+		part_system_position(_ps, x, y);
+	}
 	var starfish = instance_nearest(x,y, obj_Starfish_place);
 	if (abs(y - obj_diver.y) < abs(y - starfish.y) || distance_to_object(starfish) > distance_to_object(obj_diver)) {
 		EEx = obj_diver.x;

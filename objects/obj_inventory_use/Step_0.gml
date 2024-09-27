@@ -145,6 +145,7 @@ audio_play_sound(sfx_select, 2, false);
 								array_delete(global.inventory, obj_inventory.pos, 1);
 							break;
 							case "Booster Mod":
+								say(["Hold shift and aim with your mouse to boost."]);
 								var equippmentSlot = 8;
 								instance_destroy();
 								if (global.equipped[equippmentSlot] != 0.0) {
