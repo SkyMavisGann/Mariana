@@ -9,4 +9,4 @@ pickupability = false;
 
 sprite_index = convertTo("spr", object_get_name(object_index));
 description = "An asortment of fish food. Something may really like this. Can be used."
-shopDescription = "Specific fish go crazy for this stuff. You feed em once and they'll love you forever for it. Im giving you quite the bargain."
+shopDescription = "Specific Cat fish go crazy for this stuff. You feed em once and they'll love you forever for it. Im giving you quite the bargain."
