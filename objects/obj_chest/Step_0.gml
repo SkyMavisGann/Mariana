@@ -1,3 +1,14 @@
+if (onceConvert && array_length(container) > 0) {
+	for (var i = 0; i < array_length(container); i++) {
+		var cur = container[i];
+		if (typeof(cur) != "string") {
+			container[i] = convertTo("name", cur);
+		}
+	}
+	onceConvert = false;
+}
+
+
 if ((distance_to_object(obj_diver) < 20) && global.inventoried == false && global.paused == false) {
 	if (keyboard_check_pressed(obj_settings.key_select) || gamepad_button_check_pressed(0, gp_face1)) {
 		opened = !opened;
@@ -24,7 +35,9 @@ if (array_length(container) > 0) {
 for (var i = 0; i < array_length(container); i++) {
 		var randx = irandom_range(-12,12);
 		var randy = irandom_range(-12,0);
-		instance_create_depth(x+randx, y+randy-10, depth-1, container[i]);
+		if (object_exists(convertTo("obj", container[i]))) {
+			instance_create_depth(x+randx, y+randy-10, depth-1, convertTo("obj", container[i]));
+		}
 		if i = array_length(container)-1 {
 			container = [];
 		}

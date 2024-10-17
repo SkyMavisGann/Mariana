@@ -171,6 +171,10 @@ if (isAttacking = 0 && ((sprite_index != spr_divr_attacking_side) || (sprite_ind
  }
 
 // get keys
+key_a = 0;
+key_d = 0;
+key_s = 0;
+key_w = 0;
 if (global.inventoried == false) {
 		if (swim_speed != 6.5 || swim_speed != 10) {
 		key_w = (keyboard_check(obj_settings.key_up) || (gamepad_axis_value(0, gp_axislv) < 0));

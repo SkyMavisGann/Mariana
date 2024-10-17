@@ -40,7 +40,7 @@ function itemScript(itemName){
 	   }
 	 randDir2 = 0;
 	}
-	if (place_meeting(x,y,obj_collision_parent)) {
+	if (place_meeting(x,y,obj_collision_parent) && instance_exists(obj_diver)) {
 		move_towards_point(obj_diver.x, obj_diver.y, 1);
 	} else {
 		speed = 0;

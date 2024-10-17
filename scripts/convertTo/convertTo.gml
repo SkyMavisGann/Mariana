@@ -10,7 +10,7 @@ function convertTo(type, name){
 				var nameRemovedFirstFour = string_copy(name, 5, string_length(name));
 				var objName = asset_get_index(type + "_" + nameRemovedFirstFour);
 				if (objName == -1) {
-					show_debug_message((type + "_" + underScoredName));
+					show_debug_message(("Converted from name to " + type + "_" + underScoredName + "and could not find asset"));
 				}
 				return objName;
 			} else {
@@ -23,6 +23,9 @@ function convertTo(type, name){
 				return objName;
 			}
 		} else {
+			if (typeof(name) != "string") {
+				name = object_get_name(name);
+			}
 			var nameRemovedFirstFour = string_copy(name, 5, string_length(name));
 			var underScoredName = string_replace_all(nameRemovedFirstFour, "_", " ");
 			

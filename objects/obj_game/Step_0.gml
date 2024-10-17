@@ -5,7 +5,7 @@ if (text_counter >= 6.28) {
 } else {
 	text_counter += 0.01;
 }
-text_opacity = (sin(text_counter)/4)+0.25;
+text_opacity = ((sin(2 * text_counter))+1)/2;
 if ((gamepad_axis_value(0, gp_axislv) > 0.3) || gamepad_button_check(0, gp_face1)) {
 	lastUsedGamePad = 10000;
 }

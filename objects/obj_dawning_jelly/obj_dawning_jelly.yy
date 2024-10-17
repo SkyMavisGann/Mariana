@@ -17,8 +17,8 @@
     "path": "folders/Objects/fish/docile.yy",
   },
   "parentObjectId": {
-    "name": "obj_creature_parent",
-    "path": "objects/obj_creature_parent/obj_creature_parent.yy",
+    "name": "obj_any_behavior_parent",
+    "path": "objects/obj_any_behavior_parent/obj_any_behavior_parent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
