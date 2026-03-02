@@ -45,7 +45,7 @@ x pos - previous x pos.
 If no one is pushing a tentacle they slowly rotate back down to have an angle of 0.
 
 
-This is a work in progress gamemaker game. The sole programmer and composer is Kyle Gann however there are a few artists.
+This is a work in progress gamemaker game. The sole programmer and composer is Sky Mavis Gann however there are a few artists.
 
 
 Sprite credit:
@@ -57,8 +57,5 @@ Phantom:
  - Yerino boss
  - Shopkeeper Muro
 
-Beab:
-- Main menu Background sprite
 
-
-All other sprites were drawn by Kyle Gann.
+All other sprites were drawn by Sky Mavis Gann.
